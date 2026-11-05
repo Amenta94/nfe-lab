@@ -1,7 +1,7 @@
 /* NF-e Lab — service worker: funciona sem internet e recebe arquivos do "Compartilhar" */
-const V = 'nfelab-3fa5326f';
+const V = 'nfelab-b37a7629';
 const SHARE = 'nfelab-share';
-const CORE = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png'];
+const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './maskable-512.png', './apple-touch-icon.png', './favicon-32.png'];
 const CDN = [
   'https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
