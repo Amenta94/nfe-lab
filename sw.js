@@ -1,5 +1,5 @@
 /* NF-e Lab — service worker: funciona sem internet e recebe arquivos do "Compartilhar" */
-const V = 'nfelab-b37a7629';
+const V = 'nfelab-afbe1f83';
 const SHARE = 'nfelab-share';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './maskable-512.png', './apple-touch-icon.png', './favicon-32.png'];
 const CDN = [
@@ -42,10 +42,10 @@ self.addEventListener('fetch', e => {
   if (req.method !== 'GET') return;
   if (url.hostname === 'localhost' || url.hostname === '127.0.0.1') return;           // Baixador XML (Windows)
   if (url.origin === location.origin && url.pathname.endsWith('/share-target')) { e.respondWith(Response.redirect('./', 303)); return; }
-  if (req.mode === 'navigate') {                                                        // página: rede primeiro, cópia local se offline
+  if (req.mode === 'navigate' || (url.origin === location.origin && /\.(webmanifest|js|html)$/.test(url.pathname))) {                                                        // página: rede primeiro, cópia local se offline
     e.respondWith((async () => {
-      try { const r = await fetch(req); const c = await caches.open(V); c.put('./index.html', r.clone()); return r; }
-      catch (err) { return (await caches.match('./index.html')) || (await caches.match('./')) || Response.error(); }
+      try { const r = await fetch(req); if (r.ok) { const c = await caches.open(V); c.put(req.mode === 'navigate' ? './index.html' : req, r.clone()); } return r; }
+      catch (err) { return (await caches.match(req, { ignoreSearch: true })) || (req.mode === 'navigate' ? ((await caches.match('./index.html')) || (await caches.match('./'))) : null) || Response.error(); }
     })());
     return;
   }

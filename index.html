@@ -788,6 +788,12 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
 @keyframes sp{to{transform:rotate(360deg)}}
 @media (max-width:700px){#bxCh{min-width:0;flex:1 1 100%}#bxChE{max-width:none;flex:1}.bxrl,.bxconf{padding-left:0}.bxt th:nth-child(3),.bxt td:nth-child(3){display:none}}
 .bxtok .bxin::placeholder{letter-spacing:0;text-transform:none;font-family:var(--sans);font-size:13px}
+
+.btn.sefaz{position:relative}
+.btn.sefaz.on:after{content:'';position:absolute;top:-3px;right:-3px;width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 2px var(--panel)}
+.btn.sefaz[data-n]:not([data-n=""]):before{content:attr(data-n);position:absolute;top:-8px;left:-6px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--wrn);color:#fff;font:600 10.5px/17px var(--sans);text-align:center}
+.bxauto{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:12.5px;padding:9px 11px;border-radius:9px;background:var(--acc2);cursor:pointer}
+.bxauto input{margin-top:2px}
 </style>
 <script>window.LU={"plus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>", "minus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/></svg>", "paste": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/></svg>", "spark": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z\"/><path d=\"M19 17v4M17 19h4\"/></svg>", "trash": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6h18\"/><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6\"/><path d=\"M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/></svg>", "sheet": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M3 15h18M9 3v18\"/></svg>", "filedown": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z\"/><path d=\"M14 2v5h6\"/><path d=\"M12 18v-6\"/><path d=\"m9 15 3 3 3-3\"/></svg>", "dl": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/><path d=\"M12 15V3\"/></svg>", "cols": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 3v18\"/></svg>", "max": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 3h6v6\"/><path d=\"M9 21H3v-6\"/><path d=\"M21 3l-7 7\"/><path d=\"M3 21l7-7\"/></svg>", "min": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 14h6v6\"/><path d=\"M20 10h-6V4\"/><path d=\"m14 10 7-7\"/><path d=\"m3 21 7-7\"/></svg>", "copy": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>", "search": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/></svg>", "help": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><path d=\"M12 17h.01\"/></svg>", "sun": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></svg>", "moon": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg>", "monitor": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg>", "fit": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m18 8 4 4-4 4\"/><path d=\"M2 12h20\"/><path d=\"m6 8-4 4 4 4\"/></svg>", "x": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>", "panel": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M9 3v18\"/></svg>", "list": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01\"/></svg>", "chev": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>", "back": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"/></svg>", "cloud": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 13v8\"/><path d=\"m8 17 4 4 4-4\"/><path d=\"M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24\"/></svg>", "alert": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4M12 17h.01\"/></svg>", "link": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"/></svg>", "check": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>"};
 (function(){var t='system';try{t=localStorage.getItem('nfelab-theme')||'system'}catch(e){}if(['light','dark','system'].indexOf(t)<0)t='system';window.__thm=t;var r=t==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.dataset.theme=r;document.documentElement.dataset.pref=t})();</script>
@@ -2664,7 +2670,7 @@ render();
 
 /* ===================== Baixar da SEFAZ (ponte com o Baixador XML no Windows) ===================== */
 const BX={url:'http://localhost:8765',tok:'',st:null,err:'',busy:false,log:[],res:{},sel:null,svc:{NFE:true,CTE:false,NFSE:true},m:null,ultimo:''};
-try{BX.tok=localStorage.getItem('nfelab-bx')||''}catch(e){}
+try{BX.tok=localStorage.getItem('nfelab-bx')||'';BX.auto=localStorage.getItem('nfelab-bxauto')==='1'}catch(e){}
 const inClaude=()=>{try{return /claude\.(ai|com)|claudeusercontent/.test(location.hostname)||window.parent!==window}catch(e){return true}};
 async function bxCall(path,body){
   let r;try{r=await fetch(BX.url+path,{method:body?'POST':'GET',headers:Object.assign({'X-Token':BX.tok},body?{'Content-Type':'application/json'}:{}),body:body?JSON.stringify(body):undefined,cache:'no-store'})}
@@ -2676,10 +2682,11 @@ async function bxCall(path,body){
 const bxHora=s=>{if(!s)return '';const d=new Date(s);return isNaN(d)?'':d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})};
 const bxCnpj=c=>String(c).replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,'$1.$2.$3/$4-$5');
 function bxLog(l){(Array.isArray(l)?l:[l]).forEach(x=>BX.log.push(String(x)));if(BX.log.length>400)BX.log=BX.log.slice(-400)}
+function bxDot(on){document.querySelectorAll('[data-sefaz]').forEach(b=>{b.classList.toggle('on',!!on);b.title=on?'Conectado ao Baixador XML: clique para baixar da SEFAZ':'Baixar XML da SEFAZ pelo certificado A1 do Windows (precisa do Baixador XML ligado)'})}
 async function bxConectar(){
   BX.err='';
-  try{BX.st=await bxCall('/status');if(!BX.sel)BX.sel=Object.fromEntries(BX.st.empresas.map(e=>[e.cnpj,e.cert]));try{localStorage.setItem('nfelab-bx',BX.tok)}catch(e){}}
-  catch(e){BX.st=null;BX.err=e.code===0?(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':inClaude()?'claude':'off'):e.code===401?'token':e.message}
+  try{BX.st=await bxCall('/status');bxDot(true);if(!BX.sel)BX.sel=Object.fromEntries(BX.st.empresas.map(e=>[e.cnpj,e.cert]));try{localStorage.setItem('nfelab-bx',BX.tok)}catch(e){}}
+  catch(e){BX.st=null;bxDot(false);BX.err=e.code===0?(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':inClaude()?'claude':'off'):e.code===401?'token':e.message}
   bxRender();
 }
 function openSefaz(){
@@ -2720,6 +2727,7 @@ function bxRender(wait){
   c.innerHTML=hd+`<div class="bxbody">
     <div class="bxsec"><div class="row"><b class="sp">Empresas</b><label class="bxsv"><input type="checkbox" data-bxs="NFE" ${BX.svc.NFE?'checked':''} ${busy?'disabled':''}> NF-e</label><label class="bxsv"><input type="checkbox" data-bxs="CTE" ${BX.svc.CTE?'checked':''} ${busy?'disabled':''}> CT-e</label><label class="bxsv" title="NFS-e padrão nacional (Ambiente de Dados Nacional). Já vem completa, sem Ciência."><input type="checkbox" data-bxs="NFSE" ${BX.svc.NFSE?'checked':''} ${busy?'disabled':''}> NFS-e</label></div>
     <div class="tblw"><table class="t bxt"><thead><tr><th style="width:28px"><input type="checkbox" data-bxall ${busy?'disabled':''} ${nSel&&nSel===E.filter(e=>e.cert).length?'checked':''}></th><th>Empresa</th><th>Certificado</th><th>NF-e</th><th>CT-e</th><th>NFS-e</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <label class="bxauto"><input type="checkbox" id="bxAuto" ${BX.auto?'checked':''}> <b>Baixar automaticamente</b> ao abrir o NF-e Lab e de hora em hora enquanto ele estiver aberto (empresas e tipos marcados acima)</label>
     <div class="row" style="margin-top:10px"><span class="note sp" style="margin:0">Busca tudo o que chegou desde a última consulta (por NSU). Sem documentos novos, a próxima consulta fica liberada em 1 hora. A NFS-e nacional traz só as notas que passaram pelo sistema nacional.</span><button class="btn pri" data-bx="baixar" ${busy||!nSel||(!BX.svc.NFE&&!BX.svc.CTE&&!BX.svc.NFSE)?'disabled':''}>${busy?'<span class="spin"></span>Baixando…':LU.cloud+`Baixar documentos novos${nSel?` (${nSel})`:''}`}</button></div></div>
     ${resBox}
     <div class="bxsec"><b>Por chave de acesso (NF-e)</b><div class="row" style="margin-top:8px"><input id="bxCh" class="bxin mono sp" placeholder="Chave de 44 dígitos" value="${esc(BX.ultimo)}" ${busy?'disabled':''}><select id="bxChE" class="sel bxin" ${busy?'disabled':''}>${E.filter(e=>e.cert).map(e=>`<option value="${e.cnpj}">${esc(e.nome||bxCnpj(e.cnpj))}</option>`).join('')}</select><button class="btn" data-bx="chave" ${busy?'disabled':''}>${LU.dl}Baixar</button></div><p class="note">Escolha a empresa destinatária (ou transportadora) da nota.</p></div>
@@ -2746,7 +2754,9 @@ async function bxBaixar(){
     }catch(err){bxLog(`  erro: ${err.code===0?'conexão com o baixador perdida (a janela foi fechada?)':err.message}`);if(err.code===0||err.code===401){BX.busy=false;BX.st=null;BX.err=err.code===0?'off':'token';bxRender();return}}
     bxRender();
   }
-  BX.busy=false;bxRender();toast(tot?`${tot} arquivo(s) da SEFAZ · ${novos} documento(s) novo(s) no app`:'Nenhum documento novo na SEFAZ.');
+  BX.busy=false;bxRender();const nres=Object.values(BX.res).reduce((a,l)=>a+l.length,0);
+  toast((tot?`SEFAZ: ${tot} arquivo(s) · ${novos} documento(s) novo(s) no app`:'SEFAZ: nenhum documento novo.')+(nres&&!BX.m?` · ${nres} nota(s) só com resumo: abra Baixar da SEFAZ para dar ciência.`:''));
+  bxDot(!!BX.st);const b=document.querySelector('.cbar [data-sefaz]');if(b)b.dataset.n=nres||'';
 }
 async function bxChave(){
   const i=BX.m.querySelector('#bxCh'),ch=(i.value||'').replace(/\D/g,'');BX.ultimo=i.value;
@@ -2781,12 +2791,24 @@ function bxClick(e){
 }
 function bxChange(e){
   const t=e.target;
-  if(t.dataset.bxe){BX.sel[t.dataset.bxe]=t.checked;bxRender()}
-  else if(t.dataset.bxs){BX.svc[t.dataset.bxs]=t.checked;bxRender()}
-  else if(t.hasAttribute('data-bxall')){BX.st.empresas.forEach(x=>{if(x.cert)BX.sel[x.cnpj]=t.checked});bxRender()}
+  if(t.id==='bxAuto'){BX.auto=t.checked;try{localStorage.setItem('nfelab-bxauto',t.checked?'1':'0');localStorage.setItem('nfelab-bxcfg',JSON.stringify({sel:BX.sel,svc:BX.svc}))}catch(x){}toast(t.checked?'Download automático ligado.':'Download automático desligado.');return}
+  if(t.dataset.bxe){BX.sel[t.dataset.bxe]=t.checked;bxSaveCfg();bxRender()}
+  else if(t.dataset.bxs){BX.svc[t.dataset.bxs]=t.checked;bxSaveCfg();bxRender()}
+  else if(t.hasAttribute('data-bxall')){BX.st.empresas.forEach(x=>{if(x.cert)BX.sel[x.cnpj]=t.checked});bxSaveCfg();bxRender()}
 }
 document.addEventListener('click',e=>{if(e.target.closest('[data-sefaz]'))openSefaz()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&BX.m&&!BX.busy)bxClose()});
+
+function bxSaveCfg(){try{localStorage.setItem('nfelab-bxcfg',JSON.stringify({sel:BX.sel,svc:BX.svc}))}catch(e){}}
+try{const c=JSON.parse(localStorage.getItem('nfelab-bxcfg')||'null');if(c){if(c.sel)BX.sel=c.sel;if(c.svc)BX.svc=Object.assign(BX.svc,c.svc)}}catch(e){}
+/* conecta sozinho ao abrir e, se ligado, baixa sozinho (respeitando a espera de 1 hora do próprio baixador) */
+async function bxAutoStart(){
+  if(!BX.tok||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||inClaude())return;
+  try{BX.st=await bxCall('/status');if(!BX.sel)BX.sel=Object.fromEntries(BX.st.empresas.map(e=>[e.cnpj,e.cert]));bxDot(true)}catch(e){bxDot(false);return}
+  if(BX.auto&&!BX.busy){await bxBaixar()}
+}
+setTimeout(bxAutoStart,1200);
+setInterval(()=>{if(BX.auto&&!BX.busy&&BX.tok)bxAutoStart()},61*60*1000);
 /* ===================== NF-e Lab instalável (PWA) ===================== */
 (function(){
   const podeSW='serviceWorker' in navigator&&/^https?:$/.test(location.protocol)&&window.parent===window;
