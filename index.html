@@ -458,8 +458,8 @@ tr.idr .idet{position:sticky;left:12px;max-width:calc(var(--xtw,100%) - 60px)}
 .xtree details[open]>summary:before{transform:rotate(90deg)}
 .xk{margin-left:9px;padding-left:12px;border-left:1px dashed var(--line)}
 .xl{padding:0 4px 0 18px;border-radius:4px;word-break:break-all}
-.xt{color:#7a4fbf}.xa{color:#b45309}.xv{color:#0f7c8f}.xx{color:var(--ink);font-weight:600;margin:0 1px}
-[data-theme=dark] .xt{color:#c4a5f5}[data-theme=dark] .xa{color:#f0b24f}[data-theme=dark] .xv{color:#5fc9d9}
+span.xt{color:#7a4fbf}.xa{color:#b45309}.xv{color:#0f7c8f}.xx{color:var(--ink);font-weight:600;margin:0 1px}
+[data-theme=dark] span.xt{color:#c4a5f5}[data-theme=dark] .xa{color:#f0b24f}[data-theme=dark] .xv{color:#5fc9d9}
 .xc{margin-left:6px;font-size:10.5px;color:var(--mut);background:var(--soft);border-radius:8px;padding:0 6px}
 .xm{background:rgba(240,178,79,.22)}.xcur{background:rgba(240,178,79,.55);outline:1px solid var(--wrn)}
 .xraw{white-space:pre-wrap;font:12px var(--mono);border:1px solid var(--line);border-radius:10px;padding:12px;max-height:70vh;overflow:auto}
@@ -816,10 +816,34 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
 .bxemp>summary{cursor:pointer;list-style:none;font-size:13.5px}.bxemp>summary::-webkit-details-marker{display:none}
 .bxemp>summary:before{content:'▸ ';color:var(--acc)}.bxemp[open]>summary:before{content:'▾ '}
 @media (max-width:700px){.bxkr{grid-template-columns:1fr}}
+.btn.sfz{border-color:color-mix(in srgb,var(--acc) 45%,var(--line));color:var(--acc);font-weight:600}
+.btn.sfz:hover{background:var(--acc2);border-color:var(--acc)}
+.btn.pasta{position:relative}
+.btn.pasta.on{border-color:var(--acc);color:var(--acc);background:var(--acc2);font-weight:600}
+.btn.pasta.on:after{content:'';position:absolute;top:-3px;right:-3px;width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 2px var(--panel);animation:pl 2s infinite}
+@keyframes pl{50%{opacity:.35}}
+.pccard{width:min(760px,96vw);max-height:90vh;overflow:auto;padding:22px}
+.pccard textarea{width:100%;box-sizing:border-box;font:13px/1.5 ui-monospace,Consolas,monospace;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg2,var(--card));color:var(--ink);margin:12px 0 8px;resize:vertical}
+.pcl{display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;padding:12px 4px;border-top:1px solid var(--line)}
+.pcl.pcbad{opacity:.8}
+.pcn{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;background:var(--soft,#eef2f0);color:var(--ink)}
+.pck{font-size:12px;margin:3px 0;word-break:break-all}
+.pcb{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.pcnote{margin-top:12px;padding:12px 14px;border-radius:10px;background:var(--infobg,#eaf2fd);font-size:12.5px;line-height:1.6}
+.btn.pchave{border-color:color-mix(in srgb,var(--brand,#0b7a55) 45%,transparent)}
+@media(max-width:560px){.pcl{grid-template-columns:24px 1fr}.pcb{grid-column:1/-1;justify-content:flex-start}}
+.pchd{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.pchd h2{margin:0 0 4px;font-size:19px}.pchd p{margin:0}
+.pccard textarea#pcTxt{min-height:0;height:84px}
+.btn.pastatroca{padding-inline:10px}
 </style>
-<script>window.LU={"plus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>", "minus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/></svg>", "paste": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/></svg>", "spark": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z\"/><path d=\"M19 17v4M17 19h4\"/></svg>", "trash": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6h18\"/><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6\"/><path d=\"M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/></svg>", "sheet": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M3 15h18M9 3v18\"/></svg>", "filedown": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z\"/><path d=\"M14 2v5h6\"/><path d=\"M12 18v-6\"/><path d=\"m9 15 3 3 3-3\"/></svg>", "dl": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/><path d=\"M12 15V3\"/></svg>", "cols": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 3v18\"/></svg>", "max": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 3h6v6\"/><path d=\"M9 21H3v-6\"/><path d=\"M21 3l-7 7\"/><path d=\"M3 21l7-7\"/></svg>", "min": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 14h6v6\"/><path d=\"M20 10h-6V4\"/><path d=\"m14 10 7-7\"/><path d=\"m3 21 7-7\"/></svg>", "copy": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>", "search": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/></svg>", "help": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><path d=\"M12 17h.01\"/></svg>", "sun": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></svg>", "moon": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg>", "monitor": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg>", "fit": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m18 8 4 4-4 4\"/><path d=\"M2 12h20\"/><path d=\"m6 8-4 4 4 4\"/></svg>", "x": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>", "panel": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M9 3v18\"/></svg>", "list": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01\"/></svg>", "chev": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>", "back": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"/></svg>", "cloud": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 13v8\"/><path d=\"m8 17 4 4 4-4\"/><path d=\"M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24\"/></svg>", "alert": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4M12 17h.01\"/></svg>", "link": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"/></svg>", "check": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>", "key": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"7.5\" cy=\"15.5\" r=\"5.5\"/><path d=\"m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3\"/></svg>"};
+<script>window.LU={"plus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>", "minus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/></svg>", "paste": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/></svg>", "spark": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z\"/><path d=\"M19 17v4M17 19h4\"/></svg>", "trash": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6h18\"/><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6\"/><path d=\"M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/></svg>", "sheet": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M3 15h18M9 3v18\"/></svg>", "filedown": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z\"/><path d=\"M14 2v5h6\"/><path d=\"M12 18v-6\"/><path d=\"m9 15 3 3 3-3\"/></svg>", "dl": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/><path d=\"M12 15V3\"/></svg>", "cols": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 3v18\"/></svg>", "max": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 3h6v6\"/><path d=\"M9 21H3v-6\"/><path d=\"M21 3l-7 7\"/><path d=\"M3 21l7-7\"/></svg>", "min": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 14h6v6\"/><path d=\"M20 10h-6V4\"/><path d=\"m14 10 7-7\"/><path d=\"m3 21 7-7\"/></svg>", "copy": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>", "search": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/></svg>", "help": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><path d=\"M12 17h.01\"/></svg>", "sun": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></svg>", "moon": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg>", "monitor": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg>", "fit": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m18 8 4 4-4 4\"/><path d=\"M2 12h20\"/><path d=\"m6 8-4 4 4 4\"/></svg>", "x": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>", "panel": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M9 3v18\"/></svg>", "list": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01\"/></svg>", "chev": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>", "back": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"/></svg>", "cloud": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 13v8\"/><path d=\"m8 17 4 4 4-4\"/><path d=\"M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24\"/></svg>", "alert": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4M12 17h.01\"/></svg>", "link": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"/></svg>", "check": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>", "folder": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z\"/><path d=\"m9 13 3 3 3-3\"/><path d=\"M12 8v8\"/></svg>", "key": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"7.5\" cy=\"15.5\" r=\"5.5\"/><path d=\"m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3\"/></svg>"};
+window.portalTag=function(ch){ch=String(ch||'').replace(/\D/g,'');return ch.length===50?'nfse':ch.substr(20,2)};
+window.portalURL=function(ch){ch=String(ch||'').replace(/\D/g,'');if(ch.length===50)return 'https://www.nfse.gov.br/consultapublica';if(ch.length!==44)return '';var m=ch.substr(20,2),M={'57':'CTESSL','67':'CTESSL','58':'MDFESSL','66':'NF3ESSL','62':'NFCOMSSL','63':'BPESSL'};
+if(m==='55')return 'https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8=&nfe='+ch;
+return M[m]?'https://dfe-portal.svrs.rs.gov.br/'+M[m]+'/DownloadXMLDFe':'';};
 (function(){var t='system';try{t=localStorage.getItem('nfelab-theme')||'system'}catch(e){}if(['light','dark','system'].indexOf(t)<0)t='system';window.__thm=t;var r=t==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.dataset.theme=r;document.documentElement.dataset.pref=t})();</script>
-<style>.instbtn{margin-right:2px}@media(display-mode:standalone){header{padding-top:max(10px,env(safe-area-inset-top))}}</style>
+<style>#updbar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:90;display:flex;align-items:center;gap:10px;padding:10px 12px 10px 16px;border-radius:12px;background:var(--panel);color:var(--ink);border:1px solid color-mix(in srgb,var(--acc) 45%,var(--line));box-shadow:0 12px 36px rgba(0,0,0,.22);font-size:13px;max-width:92vw}.instbtn{margin-right:2px}@media(display-mode:standalone){header{padding-top:max(10px,env(safe-area-inset-top))}}</style>
 </head>
 <body>
 <header>
@@ -849,8 +873,8 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
       <div class="row" style="justify-content:center;gap:10px;margin-top:22px">
         <label for="file" class="btn pri lg">Selecionar XMLs ou .zip</label>
         <button class="btn lg" data-paste>Colar o conteúdo do XML</button>
-        <button class="btn lg sefaz" data-sefaz><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13v8"/><path d="m8 17 4 4 4-4"/><path d="M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24"/></svg>Baixar da SEFAZ</button>
-        <button class="btn lg" data-sample>Ver com documentos de exemplo</button>
+        <button class="btn lg pchave" data-pchave title="Baixar o XML pela chave de acesso no portal oficial (NF-e, CT-e, MDF-e, NF3e, NFCom, BP-e e NFS-e) — sem instalar nada"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Baixar XML pela chave</button>
+        <button class="btn lg" data-enter title="Abrir a área de trabalho: chaves de acesso, Portal SEFAZ, Pasta automática"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>Entrar no app</button>
         <button class="btn lg" data-help>? Como usar</button>
       </div>
     </div>
@@ -860,8 +884,9 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
     <div class="cbar card">
       <label for="file" class="btn pri"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Adicionar XMLs</label>
       <button class="btn" data-paste><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>Colar XML</button>
-      <button class="btn" data-sample><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></svg>Exemplo</button>
-      <button class="btn sefaz" data-sefaz title="Baixar XML da SEFAZ pelo certificado A1 do Windows (precisa do Conectar NF-e Lab.bat aberto)"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13v8"/><path d="m8 17 4 4 4-4"/><path d="M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24"/></svg>Baixar da SEFAZ</button>
+      
+      <button class="btn pchave" data-pchave title="Baixar o XML pela chave de acesso no portal oficial (NF-e, CT-e, MDF-e, NF3e, NFCom, BP-e e NFS-e) — sem instalar nada"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Baixar XML pela chave</button>
+      <button class="btn pasta" data-pasta title="Pasta automática"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><path d="m9 13 3 3 3-3"/><path d="M12 8v8"/></svg><span class="tx">Pasta automática</span></button>
       <a class="btn mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" title="Abrir o Meu Danfe para buscar XML ou DANFE pela chave de acesso"><svg viewBox="0 0 16 16" class="mdi"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4l3.6 3.6"/></svg>Meu Danfe ↗</a>
       <button class="btn" id="btnClear" title="Remover todos os documentos carregados"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Limpar</button>
       <span class="sp"></span>
@@ -904,7 +929,7 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
       <button class="btn pri" id="btnValidar">Validar chaves</button>
       <button class="btn" id="btnKeysFromXml">Usar chaves dos XMLs carregados</button>
       <button class="btn" id="btnKeysClear">Limpar</button>
-      <button class="btn sefaz" id="btnKeysSefaz" title="Baixar da SEFAZ o XML das chaves válidas que ainda não estão no app"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13v8"/><path d="m8 17 4 4 4-4"/><path d="M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24"/></svg>Baixar XMLs da SEFAZ</button>
+      <button class="btn pchave" id="btnKeysSefaz" title="Abrir o download pela chave das chaves válidas que ainda não estão no app"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Baixar XML pela chave</button>
       <span class="sp"></span>
       <div class="seg" id="kflt">
         <button data-f="all" class="on">Todas</button>
@@ -1659,9 +1684,9 @@ function refreshButtons(){
 function render(){
   refreshButtons();
   const D=S.docs;
-  $('#hero').classList.toggle('hidden',D.length>0);$('#work').classList.toggle('hidden',D.length===0);
+  $('#hero').classList.toggle('hidden',D.length>0||!!S.enter);$('#work').classList.toggle('hidden',D.length===0&&!S.enter);
   $('#loadErrs').innerHTML=S.erros.length?`<div class="errbox">${ICON.w}<div><b>${S.erros.length} arquivo(s) não importado(s)</b><br>${S.erros.map(esc).join('<br>')}</div></div>`:'';
-  if(!D.length)return;
+  if(!D.length){$('#stats').innerHTML='';$('#typebar').innerHTML='';$('#notas').innerHTML='<div class="empty">Nenhum documento carregado.</div>';const dt=$('#detail');if(dt)dt.innerHTML='<div class="empty" style="padding:48px 24px;line-height:1.7"><div class="empty-ic">'+LU.filedown+'</div><b style="font-size:16px">Área de trabalho pronta</b><br>Arraste os XMLs para a tela ou use <b>Adicionar XMLs</b> / <b>Colar XML</b>.<br>Para baixar da SEFAZ sem instalar nada: aba <b>Chaves de acesso</b> → cole a chave → <b>Portal SEFAZ</b>.<br>Ligue a <b>Pasta automática</b> para o XML baixado entrar sozinho.</div>';return}
   const sums=D.map(sumario);
   const ne=D.filter(d=>nivel(d)==='e').length,nw=D.filter(d=>nivel(d)==='w').length,nok=D.length-ne-nw;
   const st=(lb,v,cls,f,sub)=>`<button class="stat ${cls||''} ${f&&S.flt===f?'on':''}" ${f?`data-sf="${f}"`:'disabled'}><small>${lb}</small><b>${v}</b>${sub?`<em>${sub}</em>`:''}</button>`;
@@ -1697,7 +1722,7 @@ function render(){
 /* ================== render: detalhe ================== */
 function btnsTop(d){
   const k44=/^\d{6}[0-9A-Z]{12}\d{26}$/.test(d.chave||'');
-  return `<button class="btn sm mobonly" data-showlist title="Voltar para a lista de documentos">${LU.back}Lista</button>${d.tipo==='RES'&&d.chave?`<button class="btn sm sefaz" data-bxkey="${d.chave}" title="Baixar o XML completo da SEFAZ pelo Baixador XML">${LU.cloud}Baixar XML completo</button>`:''}<button class="btn sm desk" data-wide="${S.wide?0:1}" title="${S.wide?'Mostrar a lista de documentos':'Esconder a lista e usar a largura toda'}">${S.wide?LU.panel+'Mostrar lista':LU.max+'Ampliar'}</button>${d.chave?`<button class="btn sm" data-act="copykey" title="Copiar a chave de acesso">${LU.copy}Copiar chave</button>`:''}${k44?`<a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${d.chave}" title="Copia a chave e abre o Meu Danfe para baixar XML e PDF"><svg viewBox="0 0 16 16" class="mdi"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4l3.6 3.6"/></svg>Buscar no Meu Danfe ↗</a>`:''}`;
+  return `<button class="btn sm mobonly" data-showlist title="Voltar para a lista de documentos">${LU.back}Lista</button>${d.tipo==='RES'&&d.chave?`<button class="btn sm sfz" data-pckey="${d.chave}" title="Abrir o portal oficial para baixar o XML completo desta chave">${LU.dl}Baixar XML completo</button>`:''}<button class="btn sm desk" data-wide="${S.wide?0:1}" title="${S.wide?'Mostrar a lista de documentos':'Esconder a lista e usar a largura toda'}">${S.wide?LU.panel+'Mostrar lista':LU.max+'Ampliar'}</button>${d.chave?`<button class="btn sm" data-act="copykey" title="Copiar a chave de acesso">${LU.copy}Copiar chave</button>${d.xml&&d.tipo!=="RES"?`<button class="btn sm" data-act="xmldl" title="Baixar o arquivo XML deste documento">${LU.filedown}Baixar XML</button>`:""}${String(d.chave||"").replace(/\D/g,"").length===50?`<a class="btn sm sfz" href="https://www.nfse.gov.br/consultapublica" target="_blank" rel="noopener" data-copy="${String(d.chave).replace(/\D/g,"")}" data-portal="nfse" title="Copia a chave e abre a Consulta Pública da NFS-e para baixar o XML">${LU.dl}Portal NFS-e</a>`:""}`:''}${k44?`<a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${d.chave}" title="Copia a chave e abre o Meu Danfe para baixar XML e PDF"><svg viewBox="0 0 16 16" class="mdi"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4l3.6 3.6"/></svg>Buscar no Meu Danfe ↗</a>${portalURL(d.chave)?`<a class="btn sm sfz" href="${portalURL(d.chave)}" target="_blank" rel="noopener" data-copy="${d.chave}" data-portal="${portalTag(d.chave)}" title="Abre o download do XML no portal oficial (Portal Nacional da NF-e ou SVRS): resolva o captcha e baixe com o certificado da empresa">${LU.dl}Portal SEFAZ</a>`:''}`:''}`;
 }
 function cardsOf(d){
   const s=sumario(d),[sc,stt]=situacao(d);
@@ -1722,7 +1747,7 @@ function cardsOf(d){
 }
 function renderDetail(){
   const d=findDoc(S.sel),D=$('#detail');
-  if(!d){D.innerHTML='<div class="empty"><div class="empty-ic">☰</div>Selecione um documento na lista para ver os detalhes.</div>';return}
+  if(!d){D.innerHTML=S.docs.length?'<div class="empty"><div class="empty-ic">☰</div>Selecione um documento na lista para ver os detalhes.</div>':'<div class="empty"><div class="empty-ic">'+LU.filedown+'</div><b>Nenhum documento ainda</b><br>Use <b>Adicionar XMLs</b> (ou arraste os arquivos para a tela), ligue a <b>Pasta automática</b> ou consulte pela chave na aba <b>Chaves de acesso</b> → <b>Portal SEFAZ</b>.</div>';return}
   const s=sumario(d),[sc,stt]=situacao(d),isN=d.tipo==='NFE'||d.tipo==='NFCE';
   const kv=isN?kvNFe(d):kvGen(d);
   const nA=d.alertas||[];
@@ -2332,7 +2357,7 @@ function renderChaves(){
   const L=K.map((k,i)=>({...k,i:i+1,xml:xmlStatus(k.k)})).filter(k=>S.kflt==='all'||(S.kflt==='ok'&&k.ok)||(S.kflt==='bad'&&!k.ok)||(S.kflt==='noxml'&&k.ok&&k.xml!=='sim'));
   $('#keysOut').innerHTML=`<div class="tblw" style="border:0"><table class="t"><thead><tr><th>#</th><th>Chave de acesso</th><th>Situação</th><th>UF</th><th>Emissão</th><th>Emitente</th><th>Modelo</th><th class="n">Série</th><th class="n">Número</th><th>Emissão tipo</th><th>XML no app</th><th></th></tr></thead><tbody>`+
    L.map(k=>`<tr class="${k.ok?(k.dup?'hw':''):'he'}"><td>${k.i}</td><td class="mono">${fch(k.k)}</td><td>${k.ok?'<span class="bdg o">Válida</span>':`<span class="bdg e">Inválida</span> <span style="color:var(--err)">${esc(k.prob.join('; '))}</span>`}${k.dup?' <span class="bdg w">duplicada</span>':''}</td><td>${esc(k.uf)}</td><td class="mono">${k.aamm.slice(2)}/20${k.aamm.slice(0,2)}</td><td class="mono">${fdoc(k.doc)}</td><td>${({'55':'NFE','65':'NFCE','57':'CTE','67':'CTEOS','58':'MDFE','62':'NFCOM','66':'NF3E','63':'BPE'})[k.mod]?tpTag(({'55':'NFE','65':'NFCE','57':'CTE','67':'CTEOS','58':'MDFE','62':'NFCOM','66':'NF3E','63':'BPE'})[k.mod],MODS[k.mod]):esc(k.mod)}</td><td class="n">${k.serie}</td><td class="n">${k.nNF.toLocaleString('pt-BR')}</td><td>${esc(TPEMIS[k.tpEmis]||k.tpEmis)}</td><td>${k.xml==='sim'?'<span class="bdg o">sim</span>':k.xml==='resumo'?'<span class="bdg w">só resumo</span>':'<span class="bdg n">não</span>'}</td>
-   <td><div class="row" style="flex-wrap:nowrap"><button class="btn sm" data-copykey="${k.k}">Copiar</button><a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${k.k}" title="Copia a chave e abre o Meu Danfe"><svg viewBox="0 0 16 16" class="mdi"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4l3.6 3.6"/></svg>Meu Danfe ↗</a>${k.xml?`<button class="btn sm" data-goto="${k.k}">Ver</button>`:''}</div></td></tr>`).join('')+`</tbody></table></div>`+
+   <td><div class="row" style="flex-wrap:nowrap"><button class="btn sm" data-copykey="${k.k}">Copiar</button><a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${k.k}" title="Copia a chave e abre o Meu Danfe"><svg viewBox="0 0 16 16" class="mdi"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4l3.6 3.6"/></svg>Meu Danfe ↗</a>${portalURL(k.k)?`<a class="btn sm sfz" href="${portalURL(k.k)}" target="_blank" rel="noopener" data-copy="${k.k}" data-portal="${portalTag(k.k)}" title="Abre o download do XML no portal oficial (Portal Nacional da NF-e ou SVRS): resolva o captcha e baixe com o certificado da empresa">${LU.dl}Portal SEFAZ</a>`:''}${k.xml?`<button class="btn sm" data-goto="${k.k}">Ver</button>`:''}</div></td></tr>`).join('')+`</tbody></table></div>`+
    (S.keysLixo?`<p class="note" style="padding:0 12px 12px">${S.keysLixo} linha(s) com números foram ignoradas por não formarem uma chave de 44 posições.</p>`:'');
 }
 function csvKeys(){
@@ -2463,7 +2488,7 @@ const HELP_SEC=[
    <div><b>Tema claro, escuro ou do sistema</b><p>Botão no canto superior direito: cada clique alterna entre claro, escuro e seguir o Windows/celular. O documento impresso continua sempre branco.</p></div>
   </div>`],
  ['baixar','⤓','Baixar',`<h3>Baixar e exportar</h3>
-  <div class="hrow"><span class="htab">Baixar da SEFAZ</span><p>Baixa NF-e, CT-e e NFS-e nacional das empresas direto da SEFAZ e do ADN pelo certificado A1 do Windows. Precisa do <b>Conectar NF-e Lab.bat</b> (pasta BaixadorXML) aberto e funciona no arquivo NF-e_Lab.html. Notas que vierem só como resumo podem receber a Ciência da Operação ali mesmo.</p></div>
+  <div class="hrow"><span class="htab">Baixar XML pela chave</span><p>Cole uma ou várias chaves e clique em <b>Portal SEFAZ</b> (NF-e no Portal Nacional; CT-e, MDF-e, NF3e, NFCom e BP-e na SVRS) ou <b>Portal NFS-e</b> (Consulta Pública nacional). A chave vai copiada: cole, resolva o captcha e baixe com o certificado da empresa instalado no navegador. Sem instalar nada.</p></div>
   <div class="hrow"><span class="htab">⤓ Baixar PDF</span><p>Na aba do documento impresso: gera o PDF em A4 daquele documento.</p></div>
   <div class="hrow"><span class="htab">PDF de todos</span><p>No topo: um PDF único com todos os documentos carregados.</p></div>
   <div class="hrow"><span class="htab">Resumo (CSV)</span><p>Uma linha por documento, com valores, impostos e alertas. Abre direto no Excel.</p></div>
@@ -2489,7 +2514,7 @@ const HELP_SEC=[
 const HELP=`<div class="hhd"><div><h2>Como usar o NF-e Lab</h2><p class="mut">Conferência de documentos fiscais eletrônicos direto no navegador.</p></div><button class="btn sm" data-x>✕</button></div>
 <div class="hbody"><nav class="hnav">${HELP_SEC.map((x,i)=>`<button data-hs="${x[0]}" class="${i?'':'on'}"><span>${x[1]}</span>${x[2]}</button>`).join('')}</nav>
 <div class="hpanes">${HELP_SEC.map((x,i)=>`<section data-hp="${x[0]}" class="${i?'hidden':''}">${x[3]}</section>`).join('')}</div></div>
-<div class="hft"><span class="mut" id="hpos">1 de ${HELP_SEC.length}</span><span class="sp"></span><button class="btn" data-sample data-x>Testar com exemplo</button><button class="btn" data-hn="-1">‹ Anterior</button><button class="btn pri" data-hn="1">Próximo ›</button></div>`;
+<div class="hft"><span class="mut" id="hpos">1 de ${HELP_SEC.length}</span><span class="sp"></span><button class="btn" data-hn="-1">‹ Anterior</button><button class="btn pri" data-hn="1">Próximo ›</button></div>`;
 function openHelp(sec){const m=document.createElement('div');m.className='modal';m.innerHTML=`<div class="card helpcard">${HELP}</div>`;document.body.appendChild(m);
   const ids=HELP_SEC.map(x=>x[0]);let cur=0;
   const go=k=>{cur=Math.max(0,Math.min(ids.length-1,k));m.querySelectorAll('[data-hs]').forEach((b,i)=>b.classList.toggle('on',i===cur));m.querySelectorAll('[data-hp]').forEach((p,i)=>p.classList.toggle('hidden',i!==cur));m.querySelector('#hpos').textContent=`${cur+1} de ${ids.length}`;const nx=m.querySelector('[data-hn="1"]');nx.textContent=cur===ids.length-1?'Concluir ✓':'Próximo ›';m.querySelector('[data-hn="-1"]').disabled=cur===0;m.querySelector('.hpanes').scrollTop=0};
@@ -2577,7 +2602,7 @@ function vincData(d){
 function vincView(d,vk){
   const col=k=>({'57':1,'67':1,'58':2})[k.slice(20,22)]??0;
   const cols=[[],[],[]];vk.nodes.forEach(k=>cols[col(k)].push(k));
-  const card=k=>{const x=vk.byCh(k);if(!x)return `<div class="vc ghost" data-ch="${k}"><span class="tp" style="background:var(--tp-RES)">${esc(MODS[k.slice(20,22)]||'Doc')}</span> nº ${+k.slice(25,34)}<span class="vs">${fdoc(k.slice(6,20))}</span><span class="vs">não carregado no app</span><a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${k}">Meu Danfe ↗</a></div>`;
+  const card=k=>{const x=vk.byCh(k);if(!x)return `<div class="vc ghost" data-ch="${k}"><span class="tp" style="background:var(--tp-RES)">${esc(MODS[k.slice(20,22)]||'Doc')}</span> nº ${+k.slice(25,34)}<span class="vs">${fdoc(k.slice(6,20))}</span><span class="vs">não carregado no app</span><a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${k}">Meu Danfe ↗</a>${portalURL(k)?`<a class="btn sm sfz" href="${portalURL(k)}" target="_blank" rel="noopener" data-copy="${k}" data-portal="${portalTag(k)}" title="Abre o download do XML no portal oficial (Portal Nacional da NF-e ou SVRS): resolva o captcha e baixe com o certificado da empresa">${LU.dl}Portal SEFAZ</a>`:''}</div>`;
     const s=sumario(x),lv=isCanc(x)?'x':nivel(x);return `<div class="vc lv-${lv} ${x.key===d.key?'cur':''}" data-ch="${k}" ${x.key!==d.key?`data-goto="${esc(x.key)}"`:''}>${tpTag(x.tipo,s.tl)} nº ${esc(s.num)}${x.key===d.key?' <span class="mut">(este)</span>':''}<span class="vs">${esc(s.parte||s.emit)}</span><b>R$ ${f2(s.valor)}</b>${isCanc(x)?'<span class="bdg e">Cancelada</span>':''}</div>`};
   const hd=['Notas fiscais','Transporte (CT-e)','Manifesto (MDF-e)'];
   return `<p class="mut" style="margin:0 0 10px;font-size:12.5px">${vk.nodes.length} documento(s) ligados por chave de acesso · clique num cartão para abrir o documento.</p><div class="vmap" id="vmap"><svg id="vsvg"></svg><div class="vcols">${cols.map((c,i)=>c.length?`<div class="vcol"><h5>${hd[i]}</h5>${c.map(card).join('')}</div>`:'').join('')}</div></div>`;
@@ -2676,7 +2701,7 @@ $('#detail').onclick=e=>{
   if(a.dataset.act==='xmldl'){const x=limparXML(d.xml);const base=(d.chave?d.chave+'-'+(d.tipo==='RES'?'resumo':d.tipo.toLowerCase()):String(d.file||'documento').replace(/\.(xml|txt)$/i,'').replace(/[^\w.-]+/g,'_'))+'.xml';saveFile(base,new Blob([x],{type:'application/xml'}),x)}
 };
 document.addEventListener('click',e=>{
-  const a=e.target.closest('a[data-copy]');if(a){navigator.clipboard&&navigator.clipboard.writeText(a.dataset.copy).then(()=>toast('Chave copiada — cole no campo de consulta do Meu Danfe.'),()=>toast('Chave: '+a.dataset.copy))}
+  const a=e.target.closest('a[data-copy]');if(a){navigator.clipboard&&navigator.clipboard.writeText(a.dataset.copy).then(()=>toast(a.dataset.portal?(a.dataset.portal==='nfse'?'Chave copiada. Na Consulta Pública da NFS-e: cole a chave (Ctrl+V), resolva o captcha e baixe o XML.':a.dataset.portal==='55'?'Chave copiada. No Portal Nacional: resolva o captcha, clique em Continuar e depois em "Download do documento" (certificado da empresa).':'Chave copiada. No portal SVRS: cole a chave (Ctrl+V), marque "Não sou um robô" e baixe com o certificado da empresa.')+' Com a Pasta automática ligada o XML entra sozinho aqui.':'Chave copiada — cole no campo de consulta do Meu Danfe.'),()=>toast('Chave: '+a.dataset.copy))}
   const ck=e.target.closest('[data-copykey]');if(ck)copyText(ck.dataset.copykey,'Chave copiada.');
   const g=e.target.closest('[data-goto]');if(g){const d=findDoc(g.dataset.goto)||S.docs.find(x=>x.chave===g.dataset.goto);if(d){S.sel=d.key;document.querySelector('nav.tabs button[data-tab="xml"]').click();render()}}
 });
@@ -2692,223 +2717,120 @@ $('#btnCsvKeys').onclick=()=>{const c=csvKeys();saveFile('chaves_validadas.csv',
 render();
 (async()=>{try{if(window.claude&&claude.use){DL=await claude.use('downloads')}}catch(e){DL=null}refreshButtons()})();
 
-/* ===================== Baixar da SEFAZ (ponte com o Baixador XML no Windows) ===================== */
-const BX={url:'http://localhost:8765',tok:'',st:null,err:'',busy:false,log:[],res:{},sel:null,svc:{NFE:true,CTE:false,NFSE:true},m:null,ultimo:''};
-try{BX.tok=localStorage.getItem('nfelab-bx')||'';BX.auto=false}catch(e){}
-const inClaude=()=>{try{return /claude\.(ai|com)|claudeusercontent/.test(location.hostname)||window.parent!==window}catch(e){return true}};
-async function bxCall(path,body){
-  let r;try{r=await fetch(BX.url+path,{method:body?'POST':'GET',headers:Object.assign({'X-Token':BX.tok},body?{'Content-Type':'application/json'}:{}),body:body?JSON.stringify(body):undefined,cache:'no-store'})}
-  catch(e){throw Object.assign(new Error('sem-conexao'),{code:0})}
-  let j={};try{j=await r.json()}catch(e){}
-  if(!r.ok)throw Object.assign(new Error(j.erro||('Erro '+r.status)),{code:r.status});
-  return j;
-}
-const BX_UFS=['AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR','RJ','RN','RO','RR','RS','SC','SE','SP','TO'];
-function bxDV(b12){const t=b12.toUpperCase();const f=(x,p)=>{let s=0;for(let i=0;i<x.length;i++)s+=(x.charCodeAt(i)-48)*p[i];const r=s%11;return r<2?0:11-r};const d1=f(t,[5,4,3,2,9,8,7,6,5,4,3,2]);const d2=f(t+d1,[6,5,4,3,2,9,8,7,6,5,4,3,2]);return ''+d1+d2}
-function bxAddCnpj(){const a=BX.add;if(!a)return '';const o=(a.ordem||'').replace(/\D/g,'');if(!a.raiz||o.length!==4)return '';const b=a.raiz+o;return b+bxDV(b)}
-function bxCertHTML(busy){
-  if(!BX.st||!BX.st.cadastro)return '';
-  const C=BX.st.certificados||[];const dt=d=>(d||'').split('-').reverse().join('/');
-  const chips=C.length?C.map(c=>`<div class="bxchip"><span class="bxic sm">${LU.key||LU.check}</span><div class="sp"><b>${esc(c.nome||'Certificado')}</b><small class="mono">raiz ${c.raiz.replace(/^(\d{2})(\d{3})(\d{3})$/,'$1.$2.$3')} · ${c.filiais} empresa(s) cadastrada(s) · válido até ${dt(c.validade)}</small></div>${c.cadastrado?'':`<button class="btn sm" data-bxaddcert="${c.cnpj}" ${busy?'disabled':''} title="Cadastrar o CNPJ do próprio certificado (${bxCnpj(c.cnpj)})">${LU.plus}Adicionar ${bxCnpj(c.cnpj)}</button>`}<button class="btn sm" data-bxaddraiz="${c.raiz}" ${busy?'disabled':''}>${LU.plus}Filial</button></div>`).join('')
-    :`<div class="bxwarn">${LU.alert}<div><b>Nenhum certificado A1 encontrado neste Windows.</b> Instale o certificado (.pfx) da matriz com dois cliques no arquivo e reabra esta janela.</div></div>`;
-  const a=BX.add;let form='';
-  if(a){const cn=bxAddCnpj();form=`<div class="bxadd">
-    <div class="row"><b class="sp">Adicionar empresa</b><button class="btn sm ic" data-bx="addclose" title="Cancelar">${LU.x}</button></div>
-    <div class="bxgrid">
-      <label>Certificado (raiz)<select id="bxAddRaiz" class="sel bxin">${C.map(c=>`<option value="${c.raiz}" ${a.raiz===c.raiz?'selected':''}>${esc(c.nome)} · ${c.raiz.replace(/^(\d{2})(\d{3})(\d{3})$/,'$1.$2.$3')}</option>`).join('')}</select></label>
-      <label>Nº do estabelecimento<input id="bxAddOrd" class="bxin mono" maxlength="4" inputmode="numeric" placeholder="0001" value="${esc(a.ordem||'')}"></label>
-      <label>CNPJ completo<span class="bxin mono bxcn" id="bxAddCn">${cn?bxCnpj(cn):'—'}</span></label>
-      <label>&nbsp;<button class="btn" data-bx="consultar" ${busy||!cn?'disabled':''}>${a.consultando?'<span class="spin"></span>Consultando…':LU.search+'Consultar CNPJ'}</button></label>
-      <label class="w2">Nome<input id="bxAddNome" class="bxin" placeholder="Razão social ou apelido da filial" value="${esc(a.nome||'')}"></label>
-      <label>UF<select id="bxAddUf" class="sel bxin"><option value="">—</option>${BX_UFS.map(u=>`<option ${a.uf===u?'selected':''}>${u}</option>`).join('')}</select></label>
-      <label>&nbsp;<button class="btn pri" data-bx="salvar" ${busy||!cn?'disabled':''}>${LU.check}Salvar empresa</button></label>
-    </div>${a.msg?`<p class="note ${a.erro?'bxerr':''}">${esc(a.msg)}</p>`:'<p class="note">Digite o número do estabelecimento (os 4 dígitos depois da barra: 0001 é a matriz). O app completa o CNPJ e a consulta traz o nome e a UF.</p>'}</div>`}
-  return `<div class="bxcerts"><div class="row"><b class="sp">Certificados encontrados no Windows</b></div>${chips}${form}</div>`;
-}
-const bxHora=s=>{if(!s)return '';const d=new Date(s);return isNaN(d)?'':d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})};
-const bxCnpj=c=>String(c).replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,'$1.$2.$3/$4-$5');
-function bxLog(l){(Array.isArray(l)?l:[l]).forEach(x=>BX.log.push(String(x)));if(BX.log.length>400)BX.log=BX.log.slice(-400)}
-function bxDot(on){document.querySelectorAll('[data-sefaz]').forEach(b=>{b.classList.toggle('on',!!on);b.title=on?'Conectado ao Baixador XML: clique para baixar da SEFAZ':'Baixar XML da SEFAZ pelo certificado A1 do Windows (precisa do Baixador XML ligado)'})}
-async function bxConectar(){
-  BX.err='';
-  try{BX.st=await bxCall('/status');bxDot(true);if(BX.pendingStart){BX.pendingStart=false;setTimeout(bxChave,50)};if(!BX.sel)BX.sel=Object.fromEntries(BX.st.empresas.map(e=>[e.cnpj,e.cert]));try{localStorage.setItem('nfelab-bx',BX.tok)}catch(e){}}
-  catch(e){BX.st=null;bxDot(false);BX.err=e.code===0?(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':inClaude()?'claude':'off'):e.code===401?'token':e.message}
-  bxRender();
-}
-function openSefaz(){
-  if(BX.m&&document.body.contains(BX.m)){return}
-  const m=document.createElement('div');m.className='modal';m.innerHTML='<div class="card bxcard" role="dialog" aria-label="Baixar da SEFAZ"></div>';document.body.appendChild(m);BX.m=m;
-  m.addEventListener('click',bxClick);m.addEventListener('change',bxChange);
-  m.addEventListener('toggle',e=>{if(e.target.classList&&e.target.classList.contains('bxemp'))BX.empOpen=e.target.open},true);
-  m.addEventListener('input',e=>{if(e.target.id==='bxChs')BX.chsText=e.target.value});
-  m.addEventListener('input',e=>{const t=e.target;if(!BX.add)return;
-    if(t.id==='bxAddOrd'){t.value=t.value.replace(/\D/g,'').slice(0,4);BX.add.ordem=t.value;const cn=bxAddCnpj();const sp=BX.m.querySelector('#bxAddCn');if(sp)sp.textContent=cn?bxCnpj(cn):'—';BX.m.querySelectorAll('[data-bx="consultar"],[data-bx="salvar"]').forEach(x=>x.disabled=!cn||BX.busy)}
-    else if(t.id==='bxAddNome')BX.add.nome=t.value});
-  m.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='bxTok'){e.preventDefault();bxTokOk()}if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)&&e.target.id==='bxChs'){e.preventDefault();bxChave()}});
-  bxRender();if(BX.tok)bxConectar();
-}
-function bxClose(){if(BX.m){BX.m.remove();BX.m=null}}
-function bxTokOk(){const v=(BX.m.querySelector('#bxTok').value||'').trim().toUpperCase();if(!v){toast('Informe o código mostrado na janela do baixador.');return}BX.tok=v;BX.err='';bxRender('Conectando…');bxConectar()}
-function bxRender(wait){
-  const m=BX.m;if(!m)return;const c=m.querySelector('.bxcard');
-  const hd=`<div class="bxhd"><span class="bxic">${LU.cloud}</span><div class="sp"><b>Baixar da SEFAZ</b><small>NF-e e CT-e (Distribuição DF-e) e NFS-e nacional (ADN) pelo certificado A1 do Windows</small></div>${BX.st?`<span class="bdg o">● Conectado · ${BX.st.ambiente==2?'Homologação':'Produção'}</span>`:''}<button class="btn sm ic" data-bx="x" title="Fechar">${LU.x}</button></div>`;
-  if(!BX.st){
-    const msg=BX.err==='claude'?`<div class="bxwarn">${LU.alert}<div><b>Dentro do Claude o navegador não deixa a página falar com o seu computador.</b><br>Use o arquivo <b>NF-e_Lab.html</b> (aberto direto no Chrome ou Edge) para baixar da SEFAZ. Os demais recursos continuam funcionando aqui.</div></div>`
-      :BX.err==='mobile'?`<div class="bxwarn">${LU.alert}<div><b>No celular não dá para baixar da SEFAZ.</b><br>O certificado A1 fica no Windows. Baixe pelo computador e, no celular, abra os XMLs recebidos (WhatsApp, e-mail ou Drive) pelo botão de compartilhar ou por Adicionar XMLs.</div></div>`
-      :BX.err==='off'?`<div class="bxwarn">${LU.alert}<div><b>Não encontrei o baixador aberto neste computador.</b><br>Abra o <b>Conectar NF-e Lab.bat</b> e deixe a janela aberta. Depois clique em Conectar.</div></div>`
-      :BX.err==='token'?`<div class="bxwarn e">${LU.alert}<div><b>Código de conexão incorreto.</b> Confira o código de 8 letras mostrado na janela do baixador.</div></div>`
-      :BX.err?`<div class="bxwarn e">${LU.alert}<div>${esc(BX.err)}</div></div>`:'';
-    c.innerHTML=hd+`<div class="bxbody">${msg}
-      <ol class="bxsteps"><li><b>Abra o baixador em modo conexão</b><span>Na pasta <span class="mono">BaixadorXML</span>, dê dois cliques em <b>Conectar NF-e Lab.bat</b>. Deixe a janela aberta enquanto usar.</span></li>
-      <li><b>Informe o código de conexão</b><span>A janela mostra um código de 8 letras (já vai copiado). Ele é sempre o mesmo, então só precisa digitar uma vez.</span></li>
-      <li><b>Escolha as empresas e baixe</b><span>Os XMLs entram direto aqui no app e também ficam salvos na pasta <span class="mono">xml</span> do baixador.</span></li></ol>
-      <div class="row bxtok"><input id="bxTok" class="bxin mono" maxlength="12" placeholder="Código de conexão" value="${esc(BX.tok)}" autocomplete="off" spellcheck="false"><button class="btn pri" data-bx="tok">${wait?'<span class="spin"></span>'+wait:LU.link+'Conectar'}</button></div>
-      <p class="note">O certificado não sai do Windows: o app conversa só com o baixador do seu computador (<span class="mono">localhost</span>), e o baixador conversa só com a SEFAZ.</p></div>`;
-    const i=c.querySelector('#bxTok');if(i&&!wait)setTimeout(()=>i.focus(),30);return;
+/* ===================== Pasta automática: importa sozinho os XML novos que chegarem numa pasta (ex.: Downloads) ===================== */
+const PA={h:null,on:false,start:0,seen:new Set(),timer:null,name:''};
+function paDB(){return new Promise((res,rej)=>{try{const r=indexedDB.open('nfelab-pasta',1);r.onupgradeneeded=()=>r.result.createObjectStore('h');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)}catch(e){rej(e)}})}
+async function paSave(h){try{const db=await paDB();await new Promise((res,rej)=>{const tx=db.transaction('h','readwrite');h?tx.objectStore('h').put(h,'dir'):tx.objectStore('h').delete('dir');tx.oncomplete=res;tx.onerror=()=>rej(tx.error)})}catch(e){}}
+async function paLoad(){try{const db=await paDB();return await new Promise(res=>{const tx=db.transaction('h','readonly');const q=tx.objectStore('h').get('dir');q.onsuccess=()=>res(q.result||null);q.onerror=()=>res(null)})}catch(e){return null}}
+function paTrocaBtns(){document.querySelectorAll('[data-pasta]').forEach(b=>{let n=b.nextElementSibling;
+  if(!n||!n.hasAttribute('data-pastatroca')){n=document.createElement('button');n.className='btn pastatroca';n.setAttribute('data-pastatroca','');n.title='Escolher outra pasta para a Pasta automática';n.innerHTML=LU.folder+'<span class="tx">Trocar pasta</span>';b.after(n)}
+  n.style.display=PA.h?'':'none'})}
+async function paTrocar(){
+  if(!window.showDirectoryPicker){toast(inClaude()?'Dentro do Claude o navegador não permite vigiar pastas. Use o NF-e Lab pelo arquivo ou pelo link instalado.':'Este navegador não permite vigiar pastas. Use o Chrome ou o Edge no computador.');return}
+  try{
+    const h=await window.showDirectoryPicker({id:'nfelab-xml-'+Date.now()%1000,mode:'read',startIn:PA.h||'downloads'});
+    paStop();PA.h=h;PA.name=h.name;await paSave(h);const n=await paRun();
+    toast(`Pasta trocada para "${h.name}"`+(n?`: ${n} arquivo(s) lido(s).`:'. Todo XML que chegar nela entra sozinho aqui.'));
+  }catch(e){
+    if(e&&e.name==='AbortError')return;
+    if(e&&(e.name==='SecurityError'||/blocked|system files|bloque/i.test(e.message||'')))toast('O navegador não deixa vigiar essa pasta inteira. Crie uma pasta dentro dela (ex.: Downloads\\XML SEFAZ) e escolha essa.');
+    else toast('Não consegui abrir a pasta: '+(e&&e.message||e));
   }
-  const E=BX.st.empresas,busy=BX.busy;
-  const prox=x=>x&&x.proxima?`<span class="bdg w" title="Regra da SEFAZ: 1 hora de espera depois de 'nenhum documento novo'">após ${bxHora(x.proxima)}</span>`:'<span class="bdg o">liberado</span>';
-  const rows=E.map(e=>`<tr class="${e.cert?'':'off'}"><td><input type="checkbox" data-bxe="${e.cnpj}" ${BX.sel[e.cnpj]&&e.cert?'checked':''} ${e.cert&&!busy?'':'disabled'}></td><td class="wrap"><b>${esc(e.nome||'—')}</b><div class="mut mono" style="font-size:11px">${bxCnpj(e.cnpj)} · ${e.uf}</div></td><td>${e.cert?`<span class="bdg o">${LU.check}A1 até ${e.validade.split('-').reverse().join('/')}</span>`:'<span class="bdg e">sem certificado</span>'}</td><td>${prox(e.nfe)}</td><td>${prox(e.cte)}</td><td>${e.nfse?prox(e.nfse):'<span class="bdg n" title="Atualize o BaixadorXML para a versão com NFS-e">—</span>'}</td>${BX.st.cadastro?`<td class="bxact">${BX.del===e.cnpj?`<button class="btn sm danger" data-bxdel="${e.cnpj}" ${busy?'disabled':''}>Remover?</button>`:`<button class="btn sm ic" data-bxdel="${e.cnpj}" title="Remover esta empresa do empresas.csv" ${busy?'disabled':''}>${LU.trash}</button>`}</td>`:''}</tr>`).join('');
-  const nres=Object.values(BX.res).reduce((a,l)=>a+l.length,0);
-  const resBox=nres?`<div class="bxres"><div class="row"><span class="bxic sm w">${LU.alert}</span><div class="sp"><b>${nres} NF-e vieram só como resumo</b><small>Para liberar o XML completo, a SEFAZ exige a <b>Ciência da Operação</b> (evento 210210) em nome da empresa destinatária.</small></div></div>
-      <div class="bxrl">${Object.entries(BX.res).filter(([k,l])=>l.length).map(([k,l])=>{const e=E.find(x=>x.cnpj===k)||{};return `<div><b>${esc(e.nome||bxCnpj(k))}</b> · ${l.length} nota(s)</div>`}).join('')}</div>
-      <label class="bxconf"><input type="checkbox" id="bxConf" ${busy?'disabled':''}> Confirmo o envio da Ciência da Operação para essas notas. Ela fica registrada na SEFAZ como evento oficial da empresa.</label>
-      <div class="row" style="justify-content:flex-end"><button class="btn" data-bx="limpres" ${busy?'disabled':''}>Agora não</button><button class="btn pri" data-bx="ciencia" ${busy?'disabled':''}>${LU.check}Dar ciência e baixar completos</button></div></div>`:'';
-  const nSel=E.filter(e=>e.cert&&BX.sel[e.cnpj]).length;
-  c.innerHTML=hd+`<div class="bxbody">
-    <div class="bxsec bxkey"><div class="row"><b class="sp">Consultar por chave de acesso</b><span class="mut" style="font-size:12px">NF-e (44 dígitos) ou NFS-e nacional (50)</span></div>
-      <textarea id="bxChs" class="bxin mono" rows="3" placeholder="Cole uma ou várias chaves (uma por linha, com ou sem espaços)" ${busy?'disabled':''}>${esc(BX.chsText||'')}</textarea>
-      <div class="row" style="margin-top:8px"><select id="bxChE" class="sel bxin" ${busy?'disabled':''}><option value="">Empresa: automático (descobre a destinatária)</option>${E.filter(e=>e.cert).map(e=>`<option value="${e.cnpj}" ${BX.chE===e.cnpj?'selected':''}>${esc(e.nome||bxCnpj(e.cnpj))}</option>`).join('')}</select><span class="sp"></span><button class="btn pri" data-bx="chave" ${busy?'disabled':''}>${busy&&BX.kbusy?'<span class="spin"></span>Consultando…':LU.cloud+'Baixar XML'}</button></div>
-      ${bxKresHTML()}
-      <p class="note">CT-e e MDF-e não têm consulta por chave na SEFAZ: eles chegam pelo "baixar tudo" em Empresas. NF-e que vier só como resumo pede a Ciência da Operação abaixo.</p></div>
-    ${resBox}
-    <details class="bxsec bxemp" ${BX.empOpen?"open":""}><summary><b>Empresas e certificados</b><span class="mut"> · ${E.length} empresa(s) · baixar tudo o que chegou por NSU</span></summary><div class="row" style="margin-top:10px"><b class="sp">Tipos para "baixar tudo"</b><label class="bxsv"><input type="checkbox" data-bxs="NFE" ${BX.svc.NFE?'checked':''} ${busy?'disabled':''}> NF-e</label><label class="bxsv"><input type="checkbox" data-bxs="CTE" ${BX.svc.CTE?'checked':''} ${busy?'disabled':''}> CT-e</label><label class="bxsv" title="NFS-e padrão nacional (Ambiente de Dados Nacional). Já vem completa, sem Ciência."><input type="checkbox" data-bxs="NFSE" ${BX.svc.NFSE?'checked':''} ${busy?'disabled':''}> NFS-e</label></div>
-    <div class="tblw"><table class="t bxt"><thead><tr><th style="width:28px"><input type="checkbox" data-bxall ${busy?'disabled':''} ${nSel&&nSel===E.filter(e=>e.cert).length?'checked':''}></th><th>Empresa</th><th>Certificado</th><th>NF-e</th><th>CT-e</th><th>NFS-e</th>${BX.st.cadastro?'<th></th>':''}</tr></thead><tbody>${rows}</tbody></table></div>
-    ${bxCertHTML(busy)}
-    
-    <div class="row" style="margin-top:10px"><span class="note sp" style="margin:0">Busca tudo o que chegou desde a última consulta (por NSU). Sem documentos novos, a próxima consulta fica liberada em 1 hora. A NFS-e nacional traz só as notas que passaram pelo sistema nacional.</span><button class="btn pri" data-bx="baixar" ${busy||!nSel||(!BX.svc.NFE&&!BX.svc.CTE&&!BX.svc.NFSE)?'disabled':''}>${busy?'<span class="spin"></span>Baixando…':LU.cloud+`Baixar tudo o que chegou${nSel?` (${nSel})`:''}`}</button></div></details>
-    <div class="bxsec"><div class="row"><b class="sp">Andamento</b>${BX.log.length?'<button class="btn sm" data-bx="limplog">Limpar</button>':''}<button class="btn sm" data-bx="tokreset" title="Informar outro código de conexão">Trocar código</button></div><div class="bxlog" id="bxLog">${BX.log.length?BX.log.map(l=>`<div class="${/erro|bloque|inválid|Sem certificado/i.test(l)?'e':/espera|aguarde|\d{3} - /i.test(l)?'w':/\+\d|ok|registrada|entraram/i.test(l)?'o':''}">${esc(l)}</div>`).join(''):'<span class="mut">Nada por enquanto.</span>'}</div></div>
-  </div>`;
-  const lg=c.querySelector('#bxLog');if(lg)lg.scrollTop=lg.scrollHeight;
 }
-async function bxIngest(docs){
-  if(!docs||!docs.length)return 0;const n0=S.docs.length;S.erros=[];
-  for(const d of docs)await ingest(d.xml,d.nome);
-  const ev=docs.filter(d=>/^NFSe-/.test(d.tipo||'')).map(d=>d.nome);if(ev.length){S.erros=S.erros.filter(x=>!ev.some(n=>x.startsWith(n+':')));bxLog(`  ${ev.length} evento(s) de NFS-e salvo(s) na pasta do baixador`)}
-  reaudit();if(!findDoc(S.sel)&&S.docs.length)S.sel=S.docs[S.docs.length-1].key;render();
-  return S.docs.length-n0;
-}
-async function bxBaixar(){
-  const E=BX.st.empresas.filter(e=>e.cert&&BX.sel[e.cnpj]);const sv=Object.keys(BX.svc).filter(k=>BX.svc[k]);
-  if(!E.length||!sv.length)return;BX.busy=true;bxRender();let tot=0,novos=0;
-  for(const e of E){
-    bxLog(`▸ ${e.nome||bxCnpj(e.cnpj)}`);bxRender();
-    try{const r=await bxCall('/baixar',{cnpj:e.cnpj,servicos:sv});bxLog(r.log||[]);e.nfe=r.nfe;e.cte=r.cte;if(r.nfse)e.nfse=r.nfse;
-      const n=await bxIngest(r.docs);tot+=(r.docs||[]).length;novos+=n;
-      const rs=(r.resumos||[]).filter(ch=>!S.docs.some(d=>d.chave===ch&&d.tipo!=='RES'));if(rs.length)BX.res[e.cnpj]=[...new Set([...(BX.res[e.cnpj]||[]),...rs])];
-      bxLog(`  ${(r.docs||[]).length} arquivo(s) recebido(s) · ${n} documento(s) entraram no app`);
-    }catch(err){bxLog(`  erro: ${err.code===0?'conexão com o baixador perdida (a janela foi fechada?)':err.message}`);if(err.code===0||err.code===401){BX.busy=false;BX.st=null;BX.err=err.code===0?'off':'token';bxRender();return}}
-    bxRender();
+document.addEventListener('click',e=>{if(e.target.closest('[data-pastatroca]')){e.preventDefault();paTrocar()}});
+function paBtn(){paTrocaBtns();document.querySelectorAll('[data-pasta]').forEach(b=>{b.classList.toggle('on',PA.on);b.innerHTML=LU.folder+(PA.on?`<span class="tx">Pasta: ${esc(PA.name)}</span>`:(PA.h?'<span class="tx">Retomar pasta automática</span>':'<span class="tx">Pasta automática</span>'));b.title=PA.on?`Vigiando a pasta "${PA.name}": todo XML/ZIP novo que chegar nela entra sozinho no app. Clique para parar.`:(PA.h?`Clique para voltar a vigiar a pasta "${PA.name}" (o navegador pede para confirmar).`:'Escolha a pasta onde o navegador salva os downloads (ex.: Downloads). Os XMLs novos que chegarem nela entram sozinhos no app.')})}
+async function paListar(dir,pre,prof,out){
+  for await (const [nome,ent] of dir.entries()){
+    if(ent.kind==='directory'){if(prof<2&&!/^\./.test(nome))try{await paListar(ent,pre+nome+'/',prof+1,out)}catch(e){}continue}
+    if(!/\.(xml|zip|txt)$/i.test(nome))continue;
+    out.push([pre+nome,ent]);
   }
-  BX.busy=false;bxRender();const nres=Object.values(BX.res).reduce((a,l)=>a+l.length,0);
-  toast((tot?`SEFAZ: ${tot} arquivo(s) · ${novos} documento(s) novo(s) no app`:'SEFAZ: nenhum documento novo.')+(nres&&!BX.m?` · ${nres} nota(s) só com resumo: abra Baixar da SEFAZ para dar ciência.`:''));
-  bxDot(!!BX.st);const b=document.querySelector('.cbar [data-sefaz]');if(b)b.dataset.n=nres||'';
+  return out;
 }
-function bxExtraiChaves(t){const out=[];for(const ln of String(t||'').split(/\n/)){const d=ln.replace(/\D/g,'');if(d.length===44||d.length===50){out.push(d);continue}const m=d.match(/\d{50}|\d{44}/g);if(m)out.push(...m)}return [...new Set(out)]}
-function bxKresHTML(){const R=BX.kres||[];if(!R.length)return '';const ic={ok:'o',res:'w',err:'e',wait:'n'},tx={ok:'baixado',res:'só resumo',err:'não baixou',wait:'na fila'};
-  return `<div class="bxkres">${R.map(r=>`<div class="bxkr"><span class="bdg ${ic[r.st]}">${r.st==='wait'&&BX.kcur===r.ch?'<span class="spin"></span>':''}${tx[r.st]}</span><span class="mono">${r.ch.replace(/(.{4})/g,'$1 ').trim()}</span><span class="mut">${esc(r.msg||'')}</span></div>`).join('')}</div>`}
-async function bxChave(){
-  const ta=BX.m&&BX.m.querySelector('#bxChs');if(ta)BX.chsText=ta.value;const se=BX.m&&BX.m.querySelector('#bxChE');BX.chE=se?se.value:'';
-  const ks=bxExtraiChaves(BX.chsText);if(!ks.length){toast('Cole pelo menos uma chave de 44 (NF-e) ou 50 dígitos (NFS-e).');return}
-  const bad=ks.filter(k=>k.length===44&&typeof dvChave==='function'&&dvChave(k.slice(0,43))!==+k[43]);
-  BX.kres=ks.map(k=>({ch:k,st:bad.includes(k)?'err':'wait',msg:bad.includes(k)?'dígito verificador não confere':''}));
-  BX.busy=true;BX.kbusy=true;bxRender();let nOk=0,nRes=0;
-  for(const r of BX.kres){if(r.st!=='wait')continue;BX.kcur=r.ch;bxRender();
-    try{const had=S.docs.some(d=>d.chave===r.ch&&d.tipo!=='RES');const q=await bxCall('/chave',{cnpj:BX.chE||'',chave:r.ch});bxLog([`▸ Chave ${r.ch}`,...(q.log||[])]);const n=await bxIngest(q.docs);
-      if(q.ok){const rs=(q.resumos||[]).filter(c=>!S.docs.some(d=>d.chave===c&&d.tipo!=='RES'));
-        if(rs.length&&q.empresa){BX.res[q.empresa]=[...new Set([...(BX.res[q.empresa]||[]),...rs])];r.st='res';r.msg=`${q.empresaNome||''}: veio só o resumo. Dê a ciência abaixo para liberar o XML completo.`;nRes++}
-        else{r.st='ok';r.msg=`${q.empresaNome||''}${had?' · já estava no app':' · aberto no app'}`;nOk++}}
-      else{r.st='err';r.msg=`${q.cStat?q.cStat+' · ':''}${q.xMotivo||'não localizada'}`;if(q.cStat==='656'){BX.kres.filter(x=>x.st==='wait').forEach(x=>{x.st='err';x.msg='não consultada: SEFAZ pediu 1 hora de espera'});break}}
-    }catch(err){r.st='err';r.msg=err.code===0?'conexão com o baixador perdida':err.message;if(err.code===0||err.code===401)break}
-    bxRender()}
-  BX.kcur=null;BX.busy=false;BX.kbusy=false;if(nOk&&!nRes)BX.chsText='';bxRender();
-  toast(`${nOk} XML(s) baixado(s)${nRes?` · ${nRes} só com resumo (dê a ciência)`:''}${BX.kres.some(x=>x.st==='err')?' · veja os que não baixaram':''}.`);
+async function paTick(){
+  if(!PA.on||!PA.h||PA.busy)return;PA.busy=true;
+  try{
+    const novos=[];
+    for(const [nome,ent] of await paListar(PA.h,'',0,[])){
+      const f=await ent.getFile();const id=nome+'|'+f.size+'|'+f.lastModified;
+      if(PA.seen.has(id))continue;PA.seen.add(id);
+      if(!f.size)continue;
+      novos.push(f);
+    }
+    if(novos.length){
+      await handleFiles(novos);
+      toast(`${novos.length} arquivo(s) da pasta "${PA.name}" entraram no app: ${novos.slice(0,2).map(f=>f.name).join(', ')}${novos.length>2?'…':''}`);
+    }
+    PA.erro=0;
+  }catch(e){if(++PA.erro>=3){paStop();toast('Perdi o acesso à pasta automática. Clique em "Retomar pasta automática".')}}
+  finally{PA.busy=false}
 }
-function bxOpenWithKeys(keys,start){BX.chsText=keys.join('\n');BX.kres=[];BX.pendingStart=!!start;if(BX.m&&document.body.contains(BX.m)){bxRender();if(start&&BX.st)bxChave();return}openSefaz()}
-async function bxCiencia(){
-  if(!BX.m.querySelector('#bxConf').checked){toast('Marque a confirmação para enviar a Ciência da Operação.');return}
-  BX.busy=true;bxRender();
-  for(const [cnpj,chs] of Object.entries(BX.res)){
-    if(!chs.length)continue;
-    try{const r=await bxCall('/ciencia',{cnpj,chaves:chs,confirmo:true});bxLog(r.log||[]);
-      const okc=(r.resultado||[]).filter(x=>x.ok).map(x=>x.chave);BX.res[cnpj]=chs.filter(c=>!okc.includes(c));bxRender();
-      let full=0;for(const ch of okc){try{const q=await bxCall('/chave',{cnpj,chave:ch});const n=await bxIngest(q.docs);if((q.docs||[]).some(d=>/^proc/i.test(d.tipo)))full++;else BX.res[cnpj].push(ch)}catch(e){BX.res[cnpj].push(ch)}bxRender()}
-      bxLog(`  ${full} de ${okc.length} XML(s) completo(s) já liberado(s)${full<okc.length?'; os demais costumam liberar em alguns minutos: tente "Baixar" pela chave depois':''}`);
-    }catch(err){bxLog(`  erro: ${err.message}`)}
+async function paRun(){PA.on=true;PA.seen=new Set();PA.erro=0;clearInterval(PA.timer);paBtn();
+  let n=0;try{n=(await paListar(PA.h,'',0,[])).length}catch(e){}
+  await paTick();PA.timer=setInterval(paTick,2000);return n}
+async function paImportarExistentes(){if(!PA.h)return;PA.seen=new Set();await paTick()}
+function paStop(){PA.on=false;clearInterval(PA.timer);paBtn()}
+async function paLigar(){
+  if(PA.on){paStop();toast('Pasta automática desligada.');return}
+  if(!window.showDirectoryPicker){toast(inClaude()?'Dentro do Claude o navegador não permite vigiar pastas. Use o NF-e Lab pelo arquivo ou pelo link instalado.':'Este navegador não permite vigiar pastas. Use o Chrome ou o Edge no computador.');return}
+  try{
+    if(PA.h){const p=await PA.h.requestPermission({mode:'read'});if(p==='granted'){const n=await paRun();toast(`Vigiando a pasta "${PA.name}": ${n} arquivo(s) lido(s); os novos entram sozinhos.`);return}}
+    const h=await window.showDirectoryPicker({id:'nfelab-xml',mode:'read',startIn:'downloads'});
+    PA.h=h;PA.name=h.name;await paSave(h);const n=await paRun();
+    if(!n)toast(`Pronto! Vigiando a pasta "${h.name}" (ainda sem XML). Todo XML que chegar nela entra sozinho aqui.`);
+  }catch(e){
+    if(e&&e.name==='AbortError')return;
+    if(e&&(e.name==='SecurityError'||/blocked|system files|bloque/i.test(e.message||'')))toast('O navegador não deixa vigiar essa pasta inteira. Crie uma pasta dentro dela (ex.: Downloads\\XML SEFAZ), escolha essa pasta aqui e configure o navegador para salvar os downloads nela.');
+    else toast('Não consegui abrir a pasta: '+(e&&e.message||e));
   }
-  BX.busy=false;bxRender();
 }
-function bxClick(e){
-  if(e.target===BX.m){bxClose();return}
-  const ar=e.target.closest('[data-bxaddraiz]');if(ar){BX.add={raiz:ar.dataset.bxaddraiz,ordem:'',nome:'',uf:''};bxRender();setTimeout(()=>{const i=BX.m&&BX.m.querySelector('#bxAddOrd');if(i)i.focus()},30);return}
-  const ac=e.target.closest('[data-bxaddcert]');if(ac){const c=ac.dataset.bxaddcert;BX.add={raiz:c.slice(0,8),ordem:c.slice(8,12),nome:'',uf:''};bxRender();bxConsultar(true);return}
-  const dl=e.target.closest('[data-bxdel]');if(dl){const c=dl.dataset.bxdel;if(BX.del===c){bxRemoverEmp(c)}else{BX.del=c;bxRender();clearTimeout(BX._dt);BX._dt=setTimeout(()=>{BX.del=null;bxRender()},4000)}return}
-  const b=e.target.closest('[data-bx]');if(!b)return;const a=b.dataset.bx;
-  if(a==='x')bxClose();else if(a==='tok')bxTokOk();else if(a==='baixar')bxBaixar();else if(a==='chave')bxChave();else if(a==='ciencia')bxCiencia();
-  else if(a==='limpres'){BX.res={};bxRender()}else if(a==='limplog'){BX.log=[];bxRender()}
-  else if(a==='tokreset'){BX.st=null;BX.err='';bxRender()}
-  else if(a==='addclose'){BX.add=null;bxRender()}
-  else if(a==='consultar')bxConsultar();
-  else if(a==='salvar')bxSalvarEmp();
+document.addEventListener('click',e=>{if(e.target.closest('[data-pasta]')){e.preventDefault();paLigar()}});
+(async function(){
+  const h=await paLoad();if(!h){paBtn();return}
+  PA.h=h;PA.name=h.name;
+  try{if((await h.queryPermission({mode:'read'}))==='granted'){paRun();return}}catch(e){}
+  paBtn();
+})();
+/* entrar no app sem documentos (área de trabalho vazia) */
+document.addEventListener('click',e=>{if(e.target.closest('[data-enter]')){S.enter=true;try{localStorage.setItem('nfelab-enter','1')}catch(x){}render()}});
+try{if(localStorage.getItem('nfelab-enter')==='1'){S.enter=true;render()}}catch(e){}
+/* ===================== Baixar XML pela chave (sem instalar nada): Portal Nacional NF-e, SVRS e NFS-e nacional ===================== */
+const PC={m:null,txt:''};
+const PC_MOD={'55':'NF-e','65':'NFC-e','57':'CT-e','67':'CT-e OS','58':'MDF-e','62':'NFCom','66':'NF3e','63':'BP-e'};
+function pcDV44(c){let s=0,w=2;for(let i=42;i>=0;i--){s+=(+c[i])*w;w=w===9?2:w+1}const r=s%11;return (r<2?0:11-r)===+c[43]}
+function pcChaves(t){const out=[],vis=new Set();const re=/\d[\d .\-\/]{42,70}\d/g;let m;
+  for(const blk of String(t||'').match(re)||[]){const d=blk.replace(/\D/g,'');
+    const cands=d.length===44||d.length===50?[d]:(d.length%44===0?d.match(/\d{44}/g):d.length%50===0?d.match(/\d{50}/g):[]);
+    for(const c of cands||[])if(!vis.has(c)){vis.add(c);out.push(c)}}
+  return out}
+function pcLinha(c,i){
+  const n50=c.length===50,mod=n50?'':c.substr(20,2),url=portalURL(c);
+  const ok=n50?true:pcDV44(c);
+  const tipo=n50?'NFS-e nacional':(PC_MOD[mod]||('modelo '+mod));
+  const doc=n50?c.substr(9,14):c.substr(6,14);
+  const tem=S.docs.some(x=>String(x.chave||'').replace(/\D/g,'')===c&&x.tipo!=='RES');
+  const btn=url&&ok?`<a class="btn sm sfz" href="${url}" target="_blank" rel="noopener" data-copy="${c}" data-portal="${portalTag(c)}" title="Copia a chave e abre o portal oficial para baixar o XML">${LU.dl}${n50?'Portal NFS-e':'Portal SEFAZ'}</a>`:'';
+  const mdb=!n50&&ok?`<a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${c}" title="Copia a chave e abre o Meu Danfe">${LU.search}Meu Danfe</a>`:'';
+  return `<div class="pcl ${ok?'':'pcbad'}"><span class="pcn">${i+1}</span><div class="pci"><b>${esc(tipo)}</b>${tem?' <span class="bdg o">já está no app</span>':''}${ok?'':' <span class="bdg e">chave inválida (DV)</span>'}${ok&&!url&&!n50?' <span class="bdg w">modelo sem portal de download</span>':''}<div class="mono pck">${c.replace(/(\d{4})(?=\d)/g,'$1 ')}</div><small class="mut">${n50?'Inscrição do prestador':'CNPJ/CPF do emitente'}: ${esc(doc.length===14&&/^0{3}/.test(doc)?doc.slice(3):doc)}</small></div><div class="pcb">${btn}${mdb}</div></div>`}
+function pcRender(){if(!PC.m)return;const L=pcChaves(PC.txt);
+  PC.m.querySelector('#pcRes').innerHTML=L.length?L.map(pcLinha).join(''):'<div class="mut" style="padding:10px 2px">Cole uma ou várias chaves (44 dígitos para NF-e, CT-e, MDF-e, NF3e, NFCom e BP-e; 50 dígitos para NFS-e nacional).</div>'}
+function openPortalChave(pre){
+  if(PC.m){PC.m.remove();PC.m=null}
+  const m=document.createElement('div');m.className='modal';
+  m.innerHTML=`<div class="card pccard" role="dialog" aria-label="Baixar XML pela chave"><div class="pchd"><div><h2>Baixar XML pela chave</h2><p class="mut">Sem instalar nada: abre o portal oficial com o certificado digital da empresa instalado no navegador.</p></div><button class="btn sm" data-pcx>✕</button></div>
+  <textarea id="pcTxt" rows="3" placeholder="Cole aqui a chave de acesso (pode colar várias, uma por linha)"></textarea>
+  <div id="pcRes"></div>
+  <div class="pcnote"><b>Como funciona:</b> clique em <b>Portal SEFAZ</b> / <b>Portal NFS-e</b> → a chave já vai copiada → cole (Ctrl+V), resolva o captcha e baixe o XML.<br>NF-e: Portal Nacional · CT-e, MDF-e, NF3e, NFCom, BP-e: portal SVRS · NFS-e: Consulta Pública do Portal Nacional da NFS-e.<br>Com a <b>Pasta automática</b> ligada, o XML baixado entra sozinho no app.</div></div>`;
+  document.body.appendChild(m);PC.m=m;
+  const ta=m.querySelector('#pcTxt');if(pre)PC.txt=pre;ta.value=PC.txt;
+  ta.addEventListener('input',()=>{PC.txt=ta.value;pcRender()});
+  m.addEventListener('click',e=>{if(e.target===m||e.target.closest('[data-pcx]')){m.remove();PC.m=null}});
+  document.addEventListener('keydown',function k(e){if(e.key==='Escape'&&PC.m){PC.m.remove();PC.m=null;document.removeEventListener('keydown',k)}});
+  pcRender();setTimeout(()=>ta.focus(),30);
 }
-function bxChange(e){
-  const t=e.target;
-  if(t.id==='bxChE'){BX.chE=t.value;return}
-  if(t.id==='bxAddRaiz'&&BX.add){BX.add.raiz=t.value;bxRender();return}
-  if(t.id==='bxAddUf'&&BX.add){BX.add.uf=t.value;return}
-  if(t.id==='bxAuto'){BX.auto=t.checked;try{localStorage.setItem('nfelab-bxauto',t.checked?'1':'0');localStorage.setItem('nfelab-bxcfg',JSON.stringify({sel:BX.sel,svc:BX.svc}))}catch(x){}toast(t.checked?'Download automático ligado.':'Download automático desligado.');return}
-  if(t.dataset.bxe){BX.sel[t.dataset.bxe]=t.checked;bxSaveCfg();bxRender()}
-  else if(t.dataset.bxs){BX.svc[t.dataset.bxs]=t.checked;bxSaveCfg();bxRender()}
-  else if(t.hasAttribute('data-bxall')){BX.st.empresas.forEach(x=>{if(x.cert)BX.sel[x.cnpj]=t.checked});bxSaveCfg();bxRender()}
-}
-document.addEventListener('click',e=>{if(e.target.closest('[data-sefaz]'))openSefaz()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&BX.m&&!BX.busy)bxClose()});
-
-function bxSaveCfg(){try{localStorage.setItem('nfelab-bxcfg',JSON.stringify({sel:BX.sel,svc:BX.svc}))}catch(e){}}
-try{const c=JSON.parse(localStorage.getItem('nfelab-bxcfg')||'null');if(c){if(c.sel)BX.sel=c.sel;if(c.svc)BX.svc=Object.assign(BX.svc,c.svc)}}catch(e){}
-/* conecta sozinho ao abrir e, se ligado, baixa sozinho (respeitando a espera de 1 hora do próprio baixador) */
-async function bxAutoStart(){
-  if(!BX.tok||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||inClaude())return;
-  try{BX.st=await bxCall('/status');if(!BX.sel)BX.sel=Object.fromEntries(BX.st.empresas.map(e=>[e.cnpj,e.cert]));bxDot(true)}catch(e){bxDot(false);return}
-}
-setTimeout(bxAutoStart,1200);
-
-async function bxConsultar(auto){
-  const a=BX.add;if(!a)return;const cn=bxAddCnpj();if(!cn)return;a.consultando=true;a.msg='';a.erro=false;bxRender();
-  try{const r=await bxCall('/cnpj/consultar',{cnpj:cn});a.consultando=false;
-    if(r.ok){a.nome=a.nome||r.nome||'';if(r.uf)a.uf=r.uf;a.msg=`${r.nome||''}${r.fantasia?' ('+r.fantasia+')':''} · ${r.municipio||''}/${r.uf||''} · ${r.matriz?'matriz':'filial'} · situação ${r.situacao||'—'}`;a.erro=!!(r.situacao&&!/ATIVA/i.test(r.situacao));if(a.erro)a.msg+=' · atenção: CNPJ não está ativo na Receita.'}
-    else{a.msg=r.erro||'Não encontrado.';a.erro=true}
-  }catch(err){a.consultando=false;a.msg=err.message;a.erro=true}
-  bxRender();
-}
-async function bxSalvarEmp(){
-  const a=BX.add;if(!a)return;const cn=bxAddCnpj();if(!cn)return;
-  a.nome=(BX.m.querySelector('#bxAddNome')||{}).value||a.nome;a.uf=(BX.m.querySelector('#bxAddUf')||{}).value||a.uf;
-  if(!a.uf){a.msg='Escolha a UF da empresa (ou clique em Consultar CNPJ).';a.erro=true;bxRender();return}
-  BX.busy=true;bxRender();
-  try{const r=await bxCall('/empresa/salvar',{cnpj:cn,uf:a.uf,nome:a.nome});bxLog(`  Empresa ${r.novo?'adicionada':'atualizada'}: ${bxCnpj(cn)} · ${a.uf} · ${a.nome||''}`);BX.sel=BX.sel||{};BX.sel[cn]=true;bxSaveCfg();BX.add=null;toast(`Empresa ${bxCnpj(cn)} ${r.novo?'adicionada':'atualizada'}.`)}
-  catch(err){a.msg=err.message;a.erro=true}
-  BX.busy=false;await bxConectar();
-}
-async function bxRemoverEmp(cn){
-  BX.busy=true;BX.del=null;bxRender();
-  try{await bxCall('/empresa/remover',{cnpj:cn});bxLog(`  Empresa removida: ${bxCnpj(cn)}`);if(BX.sel)delete BX.sel[cn];bxSaveCfg();toast(`Empresa ${bxCnpj(cn)} removida da lista (os XMLs já baixados continuam na pasta).`)}
-  catch(err){bxLog('  erro: '+err.message)}
-  BX.busy=false;await bxConectar();
-}
-
-document.addEventListener('click',e=>{const b=e.target.closest('[data-bxkey]');if(b){e.preventDefault();bxOpenWithKeys([b.dataset.bxkey],true)}});
-(function(){const b=document.getElementById('btnKeysSefaz');if(b)b.onclick=()=>{const ks=(S.keys||[]).filter(k=>k.ok&&xmlStatus(k.k)!=='sim').map(k=>k.k);if(!ks.length){toast('Nenhuma chave válida sem XML no app. Valide as chaves primeiro.');return}bxOpenWithKeys(ks,true)}})();
+document.addEventListener('click',e=>{const k=e.target.closest('[data-pckey]');if(k){e.preventDefault();openPortalChave(k.dataset.pckey)}});
+(function(){const b=document.getElementById('btnKeysSefaz');if(b)b.onclick=()=>{const ks=(S.keys||[]).filter(k=>k.ok&&xmlStatus(k.k)!=='sim').map(k=>k.k);if(!ks.length){toast('Nenhuma chave válida sem XML no app. Valide as chaves primeiro.');return}openPortalChave(ks.join('\n'))}})();
+document.addEventListener('click',e=>{if(e.target.closest('[data-pchave]')){e.preventDefault();openPortalChave()}});
 /* ===================== NF-e Lab instalável (PWA) ===================== */
 (function(){
   const podeSW='serviceWorker' in navigator&&/^https?:$/.test(location.protocol)&&window.parent===window;
@@ -2937,6 +2859,26 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-bxkey]');i
   if('launchQueue' in window&&window.launchQueue){
     window.launchQueue.setConsumer(async p=>{if(!p||!p.files||!p.files.length)return;const fs=await Promise.all(p.files.map(h=>h.getFile()));handleFiles(fs)});
   }
+})();
+
+/* ===================== Versão e aviso de atualização (versao.json ao lado do index.html) ===================== */
+window.NFELAB_BUILD='2026-11-06.10';
+(function(){
+  const b=document.querySelector('.brand');if(b)b.title='NF-e Lab · versão '+NFELAB_BUILD;
+  function check(){
+    if(!/^https?:$/.test(location.protocol)||!window.fetch)return;
+    const u=location.href.split('#')[0].split('?')[0].replace(/[^\/]*$/,'')+'versao.json?t='+Date.now();
+    fetch(u,{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{
+      const rb=j&&j.build?String(j.build):'';let bar=document.getElementById('updbar');
+      if(rb&&rb>NFELAB_BUILD){
+        if(!bar){bar=document.createElement('div');bar.id='updbar';bar.setAttribute('role','status');document.body.appendChild(bar)}
+        bar.innerHTML='<span><b>Nova versão do NF-e Lab ('+esc(rb)+')</b>'+(j.nota?' · '+esc(String(j.nota).replace(/\.$/,''))+'.':'')+'</span><button class="btn sm pri" id="updGo">Atualizar agora</button><button class="btn sm ic" id="updX" title="Depois">'+LU.x+'</button>';
+        bar.querySelector('#updGo').onclick=async()=>{try{const rs=await navigator.serviceWorker?.getRegistrations?.();for(const r of rs||[])await r.update()}catch(e){}location.reload()};
+        bar.querySelector('#updX').onclick=()=>bar.remove();
+      }else if(bar)bar.remove();
+    }).catch(()=>{});
+  }
+  setTimeout(()=>{check();setInterval(check,10*60*1000)},3000);
 })();
 </script>
 </body>
