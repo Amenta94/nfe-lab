@@ -1,5 +1,5 @@
 /* NF-e Lab — service worker: funciona sem internet e recebe arquivos do "Compartilhar" */
-const V = 'nfelab-9c97de17';
+const V = 'nfelab-e6cb1d1e';
 const SHARE = 'nfelab-share';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './maskable-512.png', './apple-touch-icon.png', './favicon-32.png'];
 const CDN = [

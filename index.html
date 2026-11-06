@@ -807,6 +807,15 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
 .btn.danger{background:var(--err);border-color:var(--err);color:#fff}
 .bxact{width:40px;text-align:right}
 @media (max-width:700px){.bxgrid{grid-template-columns:1fr 1fr}.bxgrid .w2{grid-column:span 2}.bxchip{flex-wrap:wrap}}
+
+.bxkey textarea{width:100%;height:auto;min-height:64px;padding:9px 11px;resize:vertical;font-size:12.5px;margin-top:8px;line-height:1.5}
+#bxChE{max-width:340px}
+.bxkres{display:flex;flex-direction:column;gap:4px;margin-top:10px;max-height:220px;overflow:auto}
+.bxkr{display:grid;grid-template-columns:96px 410px 1fr;gap:10px;align-items:center;font-size:12px;padding:6px 8px;border-radius:8px;background:var(--panel2)}
+.bxkr .bdg{display:inline-flex;align-items:center;gap:4px;justify-content:center}.bxkr .spin{width:9px;height:9px}
+.bxemp>summary{cursor:pointer;list-style:none;font-size:13.5px}.bxemp>summary::-webkit-details-marker{display:none}
+.bxemp>summary:before{content:'▸ ';color:var(--acc)}.bxemp[open]>summary:before{content:'▾ '}
+@media (max-width:700px){.bxkr{grid-template-columns:1fr}}
 </style>
 <script>window.LU={"plus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>", "minus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/></svg>", "paste": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/></svg>", "spark": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z\"/><path d=\"M19 17v4M17 19h4\"/></svg>", "trash": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6h18\"/><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6\"/><path d=\"M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/></svg>", "sheet": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M3 15h18M9 3v18\"/></svg>", "filedown": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z\"/><path d=\"M14 2v5h6\"/><path d=\"M12 18v-6\"/><path d=\"m9 15 3 3 3-3\"/></svg>", "dl": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/><path d=\"M12 15V3\"/></svg>", "cols": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 3v18\"/></svg>", "max": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 3h6v6\"/><path d=\"M9 21H3v-6\"/><path d=\"M21 3l-7 7\"/><path d=\"M3 21l7-7\"/></svg>", "min": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 14h6v6\"/><path d=\"M20 10h-6V4\"/><path d=\"m14 10 7-7\"/><path d=\"m3 21 7-7\"/></svg>", "copy": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>", "search": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/></svg>", "help": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><path d=\"M12 17h.01\"/></svg>", "sun": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></svg>", "moon": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg>", "monitor": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg>", "fit": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m18 8 4 4-4 4\"/><path d=\"M2 12h20\"/><path d=\"m6 8-4 4 4 4\"/></svg>", "x": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>", "panel": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M9 3v18\"/></svg>", "list": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01\"/></svg>", "chev": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>", "back": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"/></svg>", "cloud": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 13v8\"/><path d=\"m8 17 4 4 4-4\"/><path d=\"M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24\"/></svg>", "alert": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4M12 17h.01\"/></svg>", "link": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"/></svg>", "check": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>", "key": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"7.5\" cy=\"15.5\" r=\"5.5\"/><path d=\"m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3\"/></svg>"};
 (function(){var t='system';try{t=localStorage.getItem('nfelab-theme')||'system'}catch(e){}if(['light','dark','system'].indexOf(t)<0)t='system';window.__thm=t;var r=t==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.dataset.theme=r;document.documentElement.dataset.pref=t})();</script>
@@ -895,6 +904,7 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
       <button class="btn pri" id="btnValidar">Validar chaves</button>
       <button class="btn" id="btnKeysFromXml">Usar chaves dos XMLs carregados</button>
       <button class="btn" id="btnKeysClear">Limpar</button>
+      <button class="btn sefaz" id="btnKeysSefaz" title="Baixar da SEFAZ o XML das chaves válidas que ainda não estão no app"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13v8"/><path d="m8 17 4 4 4-4"/><path d="M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24"/></svg>Baixar XMLs da SEFAZ</button>
       <span class="sp"></span>
       <div class="seg" id="kflt">
         <button data-f="all" class="on">Todas</button>
@@ -1687,7 +1697,7 @@ function render(){
 /* ================== render: detalhe ================== */
 function btnsTop(d){
   const k44=/^\d{6}[0-9A-Z]{12}\d{26}$/.test(d.chave||'');
-  return `<button class="btn sm mobonly" data-showlist title="Voltar para a lista de documentos">${LU.back}Lista</button><button class="btn sm desk" data-wide="${S.wide?0:1}" title="${S.wide?'Mostrar a lista de documentos':'Esconder a lista e usar a largura toda'}">${S.wide?LU.panel+'Mostrar lista':LU.max+'Ampliar'}</button>${d.chave?`<button class="btn sm" data-act="copykey" title="Copiar a chave de acesso">${LU.copy}Copiar chave</button>`:''}${k44?`<a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${d.chave}" title="Copia a chave e abre o Meu Danfe para baixar XML e PDF"><svg viewBox="0 0 16 16" class="mdi"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4l3.6 3.6"/></svg>Buscar no Meu Danfe ↗</a>`:''}`;
+  return `<button class="btn sm mobonly" data-showlist title="Voltar para a lista de documentos">${LU.back}Lista</button>${d.tipo==='RES'&&d.chave?`<button class="btn sm sefaz" data-bxkey="${d.chave}" title="Baixar o XML completo da SEFAZ pelo Baixador XML">${LU.cloud}Baixar XML completo</button>`:''}<button class="btn sm desk" data-wide="${S.wide?0:1}" title="${S.wide?'Mostrar a lista de documentos':'Esconder a lista e usar a largura toda'}">${S.wide?LU.panel+'Mostrar lista':LU.max+'Ampliar'}</button>${d.chave?`<button class="btn sm" data-act="copykey" title="Copiar a chave de acesso">${LU.copy}Copiar chave</button>`:''}${k44?`<a class="btn sm mdb" href="https://meudanfe.com.br/" target="_blank" rel="noopener" data-copy="${d.chave}" title="Copia a chave e abre o Meu Danfe para baixar XML e PDF"><svg viewBox="0 0 16 16" class="mdi"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4l3.6 3.6"/></svg>Buscar no Meu Danfe ↗</a>`:''}`;
 }
 function cardsOf(d){
   const s=sumario(d),[sc,stt]=situacao(d);
@@ -1740,7 +1750,7 @@ function renderDetail(){
   else if(S.sub==='xml'){P.innerHTML=xmlView(d);if(S.xq)setTimeout(()=>xmlSearch(S.xq),0)}
   else if(S.sub==='vinc'){P.innerHTML=vincView(d,vk);setTimeout(drawVinc,30)}
   else{
-    P.innerHTML=`<div class="vwrap ${S.fs?'fs':''}" id="vwrap"><div class="vtool"><span class="zgrp"><button class="btn sm ic" data-z="-" title="Diminuir zoom">${LU.minus}</button><span id="zv" class="mono">100%</span><button class="btn sm ic" data-z="+" title="Aumentar zoom">${LU.plus}</button></span><button class="btn sm" data-z="fit" title="Ajustar à largura">${LU.fit}<span class="tx">Ajustar à largura</span></button><button class="btn sm" data-z="full" id="btnFull" title="${S.fs?'Sair da tela cheia (Esc)':'Tela cheia'}">${S.fs?LU.min+'<span class="tx">Sair (Esc)</span>':LU.max+'<span class="tx">Tela cheia</span>'}</button>${S.fs?navHTML(d):''}<span class="vsearch">${LU.search}<input id="dsq" placeholder="Buscar no documento…" value="${esc(S.dsq||'')}"><span id="dsc" class="mono"></span><button class="btn sm" data-ds="-1" title="Anterior (Shift+Enter)">‹</button><button class="btn sm" data-ds="1" title="Próximo (Enter)">›</button></span><span class="sp"></span><span class="mut vnote">${isN?'DANFE retrato gerado a partir do XML':d.tipo==='NFSE'||d.tipo==='CTE'||d.tipo==='CTEOS'||d.tipo==='MDFE'?'Layout retrato do manual, gerado a partir do XML':'Layout simplificado gerado a partir do XML'}</span><button class="btn sm pri" data-act="pdf" title="Baixar PDF">${LU.dl}<span class="tx">Baixar PDF</span></button></div><div class="viewer" id="viewer"><div class="page" id="vpage">${docHTML(d)}</div></div></div>`;
+    P.innerHTML=`<div class="vwrap ${S.fs?'fs':''}" id="vwrap"><div class="vtool"><span class="zgrp"><button class="btn sm ic" data-z="-" title="Diminuir zoom">${LU.minus}</button><span id="zv" class="mono">100%</span><button class="btn sm ic" data-z="+" title="Aumentar zoom">${LU.plus}</button></span><button class="btn sm" data-z="fit" title="Ajustar à largura">${LU.fit}<span class="tx">Ajustar à largura</span></button><button class="btn sm" data-z="full" id="btnFull" title="${S.fs?'Sair da tela cheia (Esc)':'Tela cheia'}">${S.fs?LU.min+'<span class="tx">Sair (Esc)</span>':LU.max+'<span class="tx">Tela cheia</span>'}</button>${S.fs?navHTML(d):''}<span class="vsearch">${LU.search}<input id="dsq" placeholder="Buscar no documento…" value="${esc(S.dsq||'')}"><span id="dsc" class="mono"></span><button class="btn sm" data-ds="-1" title="Anterior (Shift+Enter)">‹</button><button class="btn sm" data-ds="1" title="Próximo (Enter)">›</button></span><span class="sp"></span><span class="mut vnote">${isN?'DANFE retrato gerado a partir do XML':d.tipo==='NFSE'||d.tipo==='CTE'||d.tipo==='CTEOS'||d.tipo==='MDFE'?'Layout retrato do manual, gerado a partir do XML':'Layout simplificado gerado a partir do XML'}</span><button class="btn sm" data-act="xmldl" title="Baixar o arquivo XML deste documento">${LU.filedown}<span class="tx">Baixar XML</span></button><button class="btn sm pri" data-act="pdf" title="Baixar PDF">${LU.dl}<span class="tx">Baixar PDF</span></button></div><div class="viewer" id="viewer"><div class="page" id="vpage">${docHTML(d)}</div></div></div>`;
     applyZoom();if((S.dsq||'').trim().length>=2)docSearch(S.dsq,false);
   }
 }
@@ -2516,7 +2526,7 @@ function xnode(el,depth){
 }
 function xmlView(d){
   let doc=null;try{doc=new DOMParser().parseFromString(limparXML(d.xml),'application/xml')}catch(e){}
-  const tools=`<div class="row" style="margin-bottom:10px"><input id="xq" class="xq" placeholder="Buscar tag ou valor no XML (ex.: vICMS, CFOP, 5405)…" value="${esc(S.xq||'')}"><span id="xc" class="mut mono" style="font-size:12px"></span><button class="btn sm" data-xs="-1">‹</button><button class="btn sm" data-xs="1">›</button><span class="sp"></span><button class="btn sm" data-xo="1">Expandir tudo</button><button class="btn sm" data-xo="0">Recolher</button><button class="btn sm" data-act="copyxml">Copiar XML</button></div>`;
+  const tools=`<div class="row" style="margin-bottom:10px"><input id="xq" class="xq" placeholder="Buscar tag ou valor no XML (ex.: vICMS, CFOP, 5405)…" value="${esc(S.xq||'')}"><span id="xc" class="mut mono" style="font-size:12px"></span><button class="btn sm" data-xs="-1">‹</button><button class="btn sm" data-xs="1">›</button><span class="sp"></span><button class="btn sm" data-xo="1">Expandir tudo</button><button class="btn sm" data-xo="0">Recolher</button><button class="btn sm" data-act="copyxml">Copiar XML</button><button class="btn sm" data-act="xmldl" title="Baixar o arquivo XML">${LU.filedown}Baixar XML</button></div>`;
   if(!doc||doc.getElementsByTagName('parsererror').length)return tools+`<pre class="xraw">${esc(d.xml)}</pre>`;
   return tools+`<div class="xtree" id="xtree">${xnode(doc.documentElement,0)}</div>`;
 }
@@ -2663,6 +2673,7 @@ $('#detail').onclick=e=>{
   if(a.dataset.act==='copykey')copyText(d.chave,'Chave copiada.');
   if(a.dataset.act==='copyxml')copyText(limparXML(d.xml),'XML copiado.');
   if(a.dataset.act==='pdf')gerarPDF([d]);
+  if(a.dataset.act==='xmldl'){const x=limparXML(d.xml);const base=(d.chave?d.chave+'-'+(d.tipo==='RES'?'resumo':d.tipo.toLowerCase()):String(d.file||'documento').replace(/\.(xml|txt)$/i,'').replace(/[^\w.-]+/g,'_'))+'.xml';saveFile(base,new Blob([x],{type:'application/xml'}),x)}
 };
 document.addEventListener('click',e=>{
   const a=e.target.closest('a[data-copy]');if(a){navigator.clipboard&&navigator.clipboard.writeText(a.dataset.copy).then(()=>toast('Chave copiada — cole no campo de consulta do Meu Danfe.'),()=>toast('Chave: '+a.dataset.copy))}
@@ -2683,7 +2694,7 @@ render();
 
 /* ===================== Baixar da SEFAZ (ponte com o Baixador XML no Windows) ===================== */
 const BX={url:'http://localhost:8765',tok:'',st:null,err:'',busy:false,log:[],res:{},sel:null,svc:{NFE:true,CTE:false,NFSE:true},m:null,ultimo:''};
-try{BX.tok=localStorage.getItem('nfelab-bx')||'';BX.auto=localStorage.getItem('nfelab-bxauto')==='1'}catch(e){}
+try{BX.tok=localStorage.getItem('nfelab-bx')||'';BX.auto=false}catch(e){}
 const inClaude=()=>{try{return /claude\.(ai|com)|claudeusercontent/.test(location.hostname)||window.parent!==window}catch(e){return true}};
 async function bxCall(path,body){
   let r;try{r=await fetch(BX.url+path,{method:body?'POST':'GET',headers:Object.assign({'X-Token':BX.tok},body?{'Content-Type':'application/json'}:{}),body:body?JSON.stringify(body):undefined,cache:'no-store'})}
@@ -2720,7 +2731,7 @@ function bxLog(l){(Array.isArray(l)?l:[l]).forEach(x=>BX.log.push(String(x)));if
 function bxDot(on){document.querySelectorAll('[data-sefaz]').forEach(b=>{b.classList.toggle('on',!!on);b.title=on?'Conectado ao Baixador XML: clique para baixar da SEFAZ':'Baixar XML da SEFAZ pelo certificado A1 do Windows (precisa do Baixador XML ligado)'})}
 async function bxConectar(){
   BX.err='';
-  try{BX.st=await bxCall('/status');bxDot(true);if(!BX.sel)BX.sel=Object.fromEntries(BX.st.empresas.map(e=>[e.cnpj,e.cert]));try{localStorage.setItem('nfelab-bx',BX.tok)}catch(e){}}
+  try{BX.st=await bxCall('/status');bxDot(true);if(BX.pendingStart){BX.pendingStart=false;setTimeout(bxChave,50)};if(!BX.sel)BX.sel=Object.fromEntries(BX.st.empresas.map(e=>[e.cnpj,e.cert]));try{localStorage.setItem('nfelab-bx',BX.tok)}catch(e){}}
   catch(e){BX.st=null;bxDot(false);BX.err=e.code===0?(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':inClaude()?'claude':'off'):e.code===401?'token':e.message}
   bxRender();
 }
@@ -2728,10 +2739,12 @@ function openSefaz(){
   if(BX.m&&document.body.contains(BX.m)){return}
   const m=document.createElement('div');m.className='modal';m.innerHTML='<div class="card bxcard" role="dialog" aria-label="Baixar da SEFAZ"></div>';document.body.appendChild(m);BX.m=m;
   m.addEventListener('click',bxClick);m.addEventListener('change',bxChange);
+  m.addEventListener('toggle',e=>{if(e.target.classList&&e.target.classList.contains('bxemp'))BX.empOpen=e.target.open},true);
+  m.addEventListener('input',e=>{if(e.target.id==='bxChs')BX.chsText=e.target.value});
   m.addEventListener('input',e=>{const t=e.target;if(!BX.add)return;
     if(t.id==='bxAddOrd'){t.value=t.value.replace(/\D/g,'').slice(0,4);BX.add.ordem=t.value;const cn=bxAddCnpj();const sp=BX.m.querySelector('#bxAddCn');if(sp)sp.textContent=cn?bxCnpj(cn):'—';BX.m.querySelectorAll('[data-bx="consultar"],[data-bx="salvar"]').forEach(x=>x.disabled=!cn||BX.busy)}
     else if(t.id==='bxAddNome')BX.add.nome=t.value});
-  m.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='bxTok'){e.preventDefault();bxTokOk()}if(e.key==='Enter'&&e.target.id==='bxCh'){e.preventDefault();bxChave()}});
+  m.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='bxTok'){e.preventDefault();bxTokOk()}if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)&&e.target.id==='bxChs'){e.preventDefault();bxChave()}});
   bxRender();if(BX.tok)bxConectar();
 }
 function bxClose(){if(BX.m){BX.m.remove();BX.m=null}}
@@ -2763,13 +2776,17 @@ function bxRender(wait){
       <div class="row" style="justify-content:flex-end"><button class="btn" data-bx="limpres" ${busy?'disabled':''}>Agora não</button><button class="btn pri" data-bx="ciencia" ${busy?'disabled':''}>${LU.check}Dar ciência e baixar completos</button></div></div>`:'';
   const nSel=E.filter(e=>e.cert&&BX.sel[e.cnpj]).length;
   c.innerHTML=hd+`<div class="bxbody">
-    <div class="bxsec"><div class="row"><b class="sp">Empresas</b><label class="bxsv"><input type="checkbox" data-bxs="NFE" ${BX.svc.NFE?'checked':''} ${busy?'disabled':''}> NF-e</label><label class="bxsv"><input type="checkbox" data-bxs="CTE" ${BX.svc.CTE?'checked':''} ${busy?'disabled':''}> CT-e</label><label class="bxsv" title="NFS-e padrão nacional (Ambiente de Dados Nacional). Já vem completa, sem Ciência."><input type="checkbox" data-bxs="NFSE" ${BX.svc.NFSE?'checked':''} ${busy?'disabled':''}> NFS-e</label></div>
+    <div class="bxsec bxkey"><div class="row"><b class="sp">Consultar por chave de acesso</b><span class="mut" style="font-size:12px">NF-e (44 dígitos) ou NFS-e nacional (50)</span></div>
+      <textarea id="bxChs" class="bxin mono" rows="3" placeholder="Cole uma ou várias chaves (uma por linha, com ou sem espaços)" ${busy?'disabled':''}>${esc(BX.chsText||'')}</textarea>
+      <div class="row" style="margin-top:8px"><select id="bxChE" class="sel bxin" ${busy?'disabled':''}><option value="">Empresa: automático (descobre a destinatária)</option>${E.filter(e=>e.cert).map(e=>`<option value="${e.cnpj}" ${BX.chE===e.cnpj?'selected':''}>${esc(e.nome||bxCnpj(e.cnpj))}</option>`).join('')}</select><span class="sp"></span><button class="btn pri" data-bx="chave" ${busy?'disabled':''}>${busy&&BX.kbusy?'<span class="spin"></span>Consultando…':LU.cloud+'Baixar XML'}</button></div>
+      ${bxKresHTML()}
+      <p class="note">CT-e e MDF-e não têm consulta por chave na SEFAZ: eles chegam pelo "baixar tudo" em Empresas. NF-e que vier só como resumo pede a Ciência da Operação abaixo.</p></div>
+    ${resBox}
+    <details class="bxsec bxemp" ${BX.empOpen?"open":""}><summary><b>Empresas e certificados</b><span class="mut"> · ${E.length} empresa(s) · baixar tudo o que chegou por NSU</span></summary><div class="row" style="margin-top:10px"><b class="sp">Tipos para "baixar tudo"</b><label class="bxsv"><input type="checkbox" data-bxs="NFE" ${BX.svc.NFE?'checked':''} ${busy?'disabled':''}> NF-e</label><label class="bxsv"><input type="checkbox" data-bxs="CTE" ${BX.svc.CTE?'checked':''} ${busy?'disabled':''}> CT-e</label><label class="bxsv" title="NFS-e padrão nacional (Ambiente de Dados Nacional). Já vem completa, sem Ciência."><input type="checkbox" data-bxs="NFSE" ${BX.svc.NFSE?'checked':''} ${busy?'disabled':''}> NFS-e</label></div>
     <div class="tblw"><table class="t bxt"><thead><tr><th style="width:28px"><input type="checkbox" data-bxall ${busy?'disabled':''} ${nSel&&nSel===E.filter(e=>e.cert).length?'checked':''}></th><th>Empresa</th><th>Certificado</th><th>NF-e</th><th>CT-e</th><th>NFS-e</th>${BX.st.cadastro?'<th></th>':''}</tr></thead><tbody>${rows}</tbody></table></div>
     ${bxCertHTML(busy)}
-    <label class="bxauto"><input type="checkbox" id="bxAuto" ${BX.auto?'checked':''}> <b>Baixar automaticamente</b> ao abrir o NF-e Lab e de hora em hora enquanto ele estiver aberto (empresas e tipos marcados acima)</label>
-    <div class="row" style="margin-top:10px"><span class="note sp" style="margin:0">Busca tudo o que chegou desde a última consulta (por NSU). Sem documentos novos, a próxima consulta fica liberada em 1 hora. A NFS-e nacional traz só as notas que passaram pelo sistema nacional.</span><button class="btn pri" data-bx="baixar" ${busy||!nSel||(!BX.svc.NFE&&!BX.svc.CTE&&!BX.svc.NFSE)?'disabled':''}>${busy?'<span class="spin"></span>Baixando…':LU.cloud+`Baixar documentos novos${nSel?` (${nSel})`:''}`}</button></div></div>
-    ${resBox}
-    <div class="bxsec"><b>Por chave de acesso (NF-e)</b><div class="row" style="margin-top:8px"><input id="bxCh" class="bxin mono sp" placeholder="Chave de 44 dígitos" value="${esc(BX.ultimo)}" ${busy?'disabled':''}><select id="bxChE" class="sel bxin" ${busy?'disabled':''}>${E.filter(e=>e.cert).map(e=>`<option value="${e.cnpj}">${esc(e.nome||bxCnpj(e.cnpj))}</option>`).join('')}</select><button class="btn" data-bx="chave" ${busy?'disabled':''}>${LU.dl}Baixar</button></div><p class="note">Escolha a empresa destinatária (ou transportadora) da nota.</p></div>
+    
+    <div class="row" style="margin-top:10px"><span class="note sp" style="margin:0">Busca tudo o que chegou desde a última consulta (por NSU). Sem documentos novos, a próxima consulta fica liberada em 1 hora. A NFS-e nacional traz só as notas que passaram pelo sistema nacional.</span><button class="btn pri" data-bx="baixar" ${busy||!nSel||(!BX.svc.NFE&&!BX.svc.CTE&&!BX.svc.NFSE)?'disabled':''}>${busy?'<span class="spin"></span>Baixando…':LU.cloud+`Baixar tudo o que chegou${nSel?` (${nSel})`:''}`}</button></div></details>
     <div class="bxsec"><div class="row"><b class="sp">Andamento</b>${BX.log.length?'<button class="btn sm" data-bx="limplog">Limpar</button>':''}<button class="btn sm" data-bx="tokreset" title="Informar outro código de conexão">Trocar código</button></div><div class="bxlog" id="bxLog">${BX.log.length?BX.log.map(l=>`<div class="${/erro|bloque|inválid|Sem certificado/i.test(l)?'e':/espera|aguarde|\d{3} - /i.test(l)?'w':/\+\d|ok|registrada|entraram/i.test(l)?'o':''}">${esc(l)}</div>`).join(''):'<span class="mut">Nada por enquanto.</span>'}</div></div>
   </div>`;
   const lg=c.querySelector('#bxLog');if(lg)lg.scrollTop=lg.scrollHeight;
@@ -2797,17 +2814,27 @@ async function bxBaixar(){
   toast((tot?`SEFAZ: ${tot} arquivo(s) · ${novos} documento(s) novo(s) no app`:'SEFAZ: nenhum documento novo.')+(nres&&!BX.m?` · ${nres} nota(s) só com resumo: abra Baixar da SEFAZ para dar ciência.`:''));
   bxDot(!!BX.st);const b=document.querySelector('.cbar [data-sefaz]');if(b)b.dataset.n=nres||'';
 }
+function bxExtraiChaves(t){const out=[];for(const ln of String(t||'').split(/\n/)){const d=ln.replace(/\D/g,'');if(d.length===44||d.length===50){out.push(d);continue}const m=d.match(/\d{50}|\d{44}/g);if(m)out.push(...m)}return [...new Set(out)]}
+function bxKresHTML(){const R=BX.kres||[];if(!R.length)return '';const ic={ok:'o',res:'w',err:'e',wait:'n'},tx={ok:'baixado',res:'só resumo',err:'não baixou',wait:'na fila'};
+  return `<div class="bxkres">${R.map(r=>`<div class="bxkr"><span class="bdg ${ic[r.st]}">${r.st==='wait'&&BX.kcur===r.ch?'<span class="spin"></span>':''}${tx[r.st]}</span><span class="mono">${r.ch.replace(/(.{4})/g,'$1 ').trim()}</span><span class="mut">${esc(r.msg||'')}</span></div>`).join('')}</div>`}
 async function bxChave(){
-  const i=BX.m.querySelector('#bxCh'),ch=(i.value||'').replace(/\D/g,'');BX.ultimo=i.value;
-  if(ch.length!==44){toast('A chave precisa ter 44 dígitos.');return}
-  if(typeof dvChave==='function'&&dvChave(ch.slice(0,43))!==+ch[43]){toast('Dígito verificador da chave não confere. Confira a chave.');return}
-  const cnpj=BX.m.querySelector('#bxChE').value;BX.busy=true;bxLog(`▸ Chave ${ch}`);bxRender();
-  try{const r=await bxCall('/chave',{cnpj,chave:ch});bxLog(r.log||[]);const n=await bxIngest(r.docs);
-    if(r.ok){const rs=(r.resumos||[]).filter(c=>!S.docs.some(d=>d.chave===c&&d.tipo!=='RES'));if(rs.length)BX.res[cnpj]=[...new Set([...(BX.res[cnpj]||[]),...rs])];bxLog(`  ${n?n+" documento(s) novo(s) no app":"documento já estava no app"}${rs.length?' (só resumo: veja a Ciência acima)':''}`);BX.ultimo=''}
-    else bxLog(`  SEFAZ: ${r.cStat||''} ${r.xMotivo||''}`.trim());
-  }catch(err){bxLog(`  erro: ${err.code===0?'conexão com o baixador perdida':err.message}`)}
-  BX.busy=false;bxRender();
+  const ta=BX.m&&BX.m.querySelector('#bxChs');if(ta)BX.chsText=ta.value;const se=BX.m&&BX.m.querySelector('#bxChE');BX.chE=se?se.value:'';
+  const ks=bxExtraiChaves(BX.chsText);if(!ks.length){toast('Cole pelo menos uma chave de 44 (NF-e) ou 50 dígitos (NFS-e).');return}
+  const bad=ks.filter(k=>k.length===44&&typeof dvChave==='function'&&dvChave(k.slice(0,43))!==+k[43]);
+  BX.kres=ks.map(k=>({ch:k,st:bad.includes(k)?'err':'wait',msg:bad.includes(k)?'dígito verificador não confere':''}));
+  BX.busy=true;BX.kbusy=true;bxRender();let nOk=0,nRes=0;
+  for(const r of BX.kres){if(r.st!=='wait')continue;BX.kcur=r.ch;bxRender();
+    try{const had=S.docs.some(d=>d.chave===r.ch&&d.tipo!=='RES');const q=await bxCall('/chave',{cnpj:BX.chE||'',chave:r.ch});bxLog([`▸ Chave ${r.ch}`,...(q.log||[])]);const n=await bxIngest(q.docs);
+      if(q.ok){const rs=(q.resumos||[]).filter(c=>!S.docs.some(d=>d.chave===c&&d.tipo!=='RES'));
+        if(rs.length&&q.empresa){BX.res[q.empresa]=[...new Set([...(BX.res[q.empresa]||[]),...rs])];r.st='res';r.msg=`${q.empresaNome||''}: veio só o resumo. Dê a ciência abaixo para liberar o XML completo.`;nRes++}
+        else{r.st='ok';r.msg=`${q.empresaNome||''}${had?' · já estava no app':' · aberto no app'}`;nOk++}}
+      else{r.st='err';r.msg=`${q.cStat?q.cStat+' · ':''}${q.xMotivo||'não localizada'}`;if(q.cStat==='656'){BX.kres.filter(x=>x.st==='wait').forEach(x=>{x.st='err';x.msg='não consultada: SEFAZ pediu 1 hora de espera'});break}}
+    }catch(err){r.st='err';r.msg=err.code===0?'conexão com o baixador perdida':err.message;if(err.code===0||err.code===401)break}
+    bxRender()}
+  BX.kcur=null;BX.busy=false;BX.kbusy=false;if(nOk&&!nRes)BX.chsText='';bxRender();
+  toast(`${nOk} XML(s) baixado(s)${nRes?` · ${nRes} só com resumo (dê a ciência)`:''}${BX.kres.some(x=>x.st==='err')?' · veja os que não baixaram':''}.`);
 }
+function bxOpenWithKeys(keys,start){BX.chsText=keys.join('\n');BX.kres=[];BX.pendingStart=!!start;if(BX.m&&document.body.contains(BX.m)){bxRender();if(start&&BX.st)bxChave();return}openSefaz()}
 async function bxCiencia(){
   if(!BX.m.querySelector('#bxConf').checked){toast('Marque a confirmação para enviar a Ciência da Operação.');return}
   BX.busy=true;bxRender();
@@ -2836,6 +2863,7 @@ function bxClick(e){
 }
 function bxChange(e){
   const t=e.target;
+  if(t.id==='bxChE'){BX.chE=t.value;return}
   if(t.id==='bxAddRaiz'&&BX.add){BX.add.raiz=t.value;bxRender();return}
   if(t.id==='bxAddUf'&&BX.add){BX.add.uf=t.value;return}
   if(t.id==='bxAuto'){BX.auto=t.checked;try{localStorage.setItem('nfelab-bxauto',t.checked?'1':'0');localStorage.setItem('nfelab-bxcfg',JSON.stringify({sel:BX.sel,svc:BX.svc}))}catch(x){}toast(t.checked?'Download automático ligado.':'Download automático desligado.');return}
@@ -2852,10 +2880,8 @@ try{const c=JSON.parse(localStorage.getItem('nfelab-bxcfg')||'null');if(c){if(c.
 async function bxAutoStart(){
   if(!BX.tok||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||inClaude())return;
   try{BX.st=await bxCall('/status');if(!BX.sel)BX.sel=Object.fromEntries(BX.st.empresas.map(e=>[e.cnpj,e.cert]));bxDot(true)}catch(e){bxDot(false);return}
-  if(BX.auto&&!BX.busy){await bxBaixar()}
 }
 setTimeout(bxAutoStart,1200);
-setInterval(()=>{if(BX.auto&&!BX.busy&&BX.tok)bxAutoStart()},61*60*1000);
 
 async function bxConsultar(auto){
   const a=BX.add;if(!a)return;const cn=bxAddCnpj();if(!cn)return;a.consultando=true;a.msg='';a.erro=false;bxRender();
@@ -2880,6 +2906,9 @@ async function bxRemoverEmp(cn){
   catch(err){bxLog('  erro: '+err.message)}
   BX.busy=false;await bxConectar();
 }
+
+document.addEventListener('click',e=>{const b=e.target.closest('[data-bxkey]');if(b){e.preventDefault();bxOpenWithKeys([b.dataset.bxkey],true)}});
+(function(){const b=document.getElementById('btnKeysSefaz');if(b)b.onclick=()=>{const ks=(S.keys||[]).filter(k=>k.ok&&xmlStatus(k.k)!=='sim').map(k=>k.k);if(!ks.length){toast('Nenhuma chave válida sem XML no app. Valide as chaves primeiro.');return}bxOpenWithKeys(ks,true)}})();
 /* ===================== NF-e Lab instalável (PWA) ===================== */
 (function(){
   const podeSW='serviceWorker' in navigator&&/^https?:$/.test(location.protocol)&&window.parent===window;
