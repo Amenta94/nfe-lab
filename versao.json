@@ -1,4 +1,4 @@
 {
- "build": "2026-11-11.3",
- "nota": "Correção: carga do ICMS nas regras de benefício SP calculada pela alíquota × (1 − redução de BC), considerando desconto, frete e outras despesas."
+ "build": "2026-11-12.5",
+ "nota": "Relatório por tag: modelo \"Teste DIFAL\" agora vem pronto na lista, para toda a equipe, sem precisar importar."
 }

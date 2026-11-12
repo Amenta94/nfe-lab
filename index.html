@@ -1043,6 +1043,41 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
 .vc .vch:hover{color:var(--brand,#0b7a55);text-decoration:underline}
 .al2 .albase{font-size:11px;color:var(--mut,#6b7280);margin-top:3px}
 .al2 .albase::before{content:'§ ';font-weight:700}
+/* ===== Relatório por tag ===== */
+.rlo .rlcard{width:min(1600px,98vw);height:94vh;max-height:94vh;padding:0;display:flex;flex-direction:column;overflow:hidden}
+.rlhd{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:16px 20px 8px}
+.rlhd h2{margin:0;font-size:19px}.rlhd p{margin:3px 0 0;font-size:12.5px}
+.rltb,.rlsb{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:6px 20px}
+.rlsp{flex:1}
+.rlmod,.rlsb label{font-size:13px;display:flex;align-items:center;gap:6px}
+.rlmod select,.rlsb select,.rlsb input,.rled input,.rled select{padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:var(--panel2,var(--panel));color:var(--ink);font:inherit;font-size:13px}
+.rltw{flex:1;overflow:auto;margin:6px 20px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.rlt0{border-collapse:collapse;font-size:12.5px;min-width:100%}
+.rlt0 th,.rlt0 td{padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left}
+.rlt0 th{position:sticky;top:0;background:var(--panel2,#f3f5f4);cursor:pointer;font-size:12px;user-select:none;z-index:1}
+.rlt0 tr.rlg th{background:var(--brand,#0b7a55);color:#fff;text-align:center;cursor:default;font-size:11.5px;letter-spacing:.3px;border-left:1px solid rgba(255,255,255,.35)}
+.rlt0 tr.rlg+tr th{top:30px}
+.rlt0 td.n,.rlt0 th.n{text-align:right;font-variant-numeric:tabular-nums}
+.rlt0 td.mono{font-family:ui-monospace,Consolas,monospace;font-size:11.5px}
+.rlt0 tbody tr{cursor:pointer}.rlt0 tbody tr:hover{background:rgba(11,122,85,.07)}
+.rlt0 tfoot td{position:sticky;bottom:0;background:var(--panel2,#f3f5f4);font-weight:700;border-top:2px solid var(--line)}
+.rlft{display:flex;align-items:center;gap:10px;padding:10px 20px 14px;font-size:13px}
+.rled{flex:1;display:grid;grid-template-columns:minmax(300px,2fr) 5fr;gap:12px;padding:6px 20px 16px;min-height:0}
+.rled section{display:flex;flex-direction:column;min-height:0;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--panel)}
+.rled h3{margin:0 0 8px;font-size:14px}.rled section>input{width:100%;box-sizing:border-box;margin-bottom:8px}
+.rlcat,.rlcl{flex:1;overflow:auto;min-height:0}
+.rlt1{display:flex;gap:8px;align-items:center;padding:5px 8px;border-bottom:1px solid var(--line);cursor:pointer;font-size:12px}
+.rlt1:hover{background:rgba(11,122,85,.09)}.rlt1.u{opacity:.5}
+.rlt1 .mono{flex:1;word-break:break-all;font-size:11.5px}.rlt1 small{max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut,#667)}.rlt1 b{color:var(--brand,#0b7a55)}
+.rlcl table{width:100%;border-collapse:collapse;font-size:12px}.rlcl th{position:sticky;top:0;background:var(--panel2,#f3f5f4);text-align:left;padding:5px 6px;z-index:1}
+.rlcl td{padding:3px 4px;border-bottom:1px solid var(--line);vertical-align:middle}.rlcl td input,.rlcl td select{width:100%;box-sizing:border-box;padding:4px 6px}
+.rlcl .rltg{font-size:10.5px;color:var(--mut,#667);word-break:break-all;max-width:260px}.rlmv{white-space:nowrap}
+.rlo2 .rlcolc{width:min(1100px,96vw);max-height:88vh;overflow:auto;padding:18px}
+.rlcg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.rlbox{border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--panel)}
+.rlbox h4{margin:0 0 6px;font-size:13px;display:flex;gap:8px;align-items:baseline}.rlbox h4 a{font-size:11px;font-weight:400;cursor:pointer;color:var(--brand,#0b7a55);text-decoration:underline}
+.rlbox label{display:flex;gap:6px;align-items:center;font-size:12.5px;padding:2px 0}
+@media (max-width:900px){.rled{grid-template-columns:1fr}}
 </style>
 <script>window.LU={"plus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>", "minus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/></svg>", "paste": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/></svg>", "spark": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z\"/><path d=\"M19 17v4M17 19h4\"/></svg>", "trash": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6h18\"/><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6\"/><path d=\"M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/></svg>", "sheet": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M3 15h18M9 3v18\"/></svg>", "filedown": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z\"/><path d=\"M14 2v5h6\"/><path d=\"M12 18v-6\"/><path d=\"m9 15 3 3 3-3\"/></svg>", "dl": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/><path d=\"M12 15V3\"/></svg>", "cols": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 3v18\"/></svg>", "max": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 3h6v6\"/><path d=\"M9 21H3v-6\"/><path d=\"M21 3l-7 7\"/><path d=\"M3 21l7-7\"/></svg>", "min": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 14h6v6\"/><path d=\"M20 10h-6V4\"/><path d=\"m14 10 7-7\"/><path d=\"m3 21 7-7\"/></svg>", "copy": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>", "search": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/></svg>", "help": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><path d=\"M12 17h.01\"/></svg>", "sun": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></svg>", "moon": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg>", "monitor": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg>", "fit": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m18 8 4 4-4 4\"/><path d=\"M2 12h20\"/><path d=\"m6 8-4 4 4 4\"/></svg>", "x": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>", "panel": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M9 3v18\"/></svg>", "list": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01\"/></svg>", "chev": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>", "back": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"/></svg>", "cloud": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 13v8\"/><path d=\"m8 17 4 4 4-4\"/><path d=\"M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24\"/></svg>", "alert": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4M12 17h.01\"/></svg>", "link": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"/></svg>", "check": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>", "folder": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z\"/><path d=\"m9 13 3 3 3-3\"/><path d=\"M12 8v8\"/></svg>", "key": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"7.5\" cy=\"15.5\" r=\"5.5\"/><path d=\"m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3\"/></svg>"};
 window.portalTag=function(ch){ch=String(ch||'').replace(/\D/g,'');return ch.length===50?'nfse':ch.substr(20,2)};
@@ -1098,8 +1133,6 @@ return M[m]?'https://dfe-portal.svrs.rs.gov.br/'+M[m]+'/DownloadXMLDFe':'';};
       <button class="btn" id="btnClear" title="Remover todos os documentos carregados"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Limpar</button>
       <span class="sp"></span>
       <button class="btn xlsx" id="btnXlsx" disabled title="Planilha Excel com 4 abas: Documentos, Itens NF-e (com IBS/CBS/IS), Eventos e Auditoria"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>Excel</button>
-      <button class="btn" id="btnCsvItens" disabled><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>Itens NF-e (CSV)</button>
-      <button class="btn" id="btnCsvNotas" disabled><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>Resumo (CSV)</button>
       <button class="btn" id="btnPdfAll" disabled><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h6"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg>PDF de todos</button>
     </div>
     <div class="errs" id="loadErrs"></div>
@@ -1886,7 +1919,7 @@ const ICON={
 function dirOf(d){if(d.tipo==='NFE'||d.tipo==='NFCE')return d.ide.tpNF==='0'?['in','↙','Entrada']:['out','↗','Saída'];if(d.tipo==='RES')return d.res.tpNF==='0'?['in','↙','Entrada']:['out','↗','Saída'];return['',' ','']}
 function refreshButtons(){
   const has=S.docs.length>0;
-  $('#btnCsvItens').disabled=!S.docs.some(d=>d.tipo==='NFE'||d.tipo==='NFCE');$('#btnXlsx').disabled=!S.docs.length&&!Object.keys(S.eventos).length;$('#btnCsvNotas').disabled=!has;$('#btnPdfAll').disabled=!S.docs.some(d=>d.tipo!=='RES');
+  $('#btnXlsx').disabled=!S.docs.length&&!Object.keys(S.eventos).length;$('#btnPdfAll').disabled=!S.docs.some(d=>d.tipo!=='RES');
   $('#btnCsvKeys').disabled=!S.keys.length;$('#btnCopyOk').disabled=!S.keys.some(k=>k.ok);
 }
 function render(){
@@ -2709,9 +2742,9 @@ const HELP_SEC=[
   </div>`],
  ['exportar','⊞','Exportar',`<h3>Exportar</h3>
   <div class="hrow"><span class="htab">⊞ Excel</span><p>Uma planilha com 4 abas, filtro e cabeçalho congelado: <b>Documentos</b> (situação, eventos, valores, IBS/CBS, nº de erros), <b>Itens NF-e</b> (NCM, CFOP, CST, ICMS, ST, IPI, PIS/COFINS, DIFAL, CST/cClassTrib, BC, alíquotas e valores de IBS UF, IBS Mun, CBS e IS), <b>Eventos</b> (inclusive os sem nota) e <b>Auditoria</b> (todos os alertas). Valores já como número.</p></div>
+  <div class="hrow"><span class="htab">📑 Relatório por tag</span><p>No topo, ao lado do Excel. Você escolhe <b>quais tags do XML viram colunas</b> (como no FSist) e o app monta uma tabela com <b>todos os documentos carregados</b>: uma linha por nota (modelo <i>Sem produtos</i>) ou por item (<i>Com produtos</i>). Há modelos prontos para NF-e, CT-e e NFS-e. Em <b>Colunas</b> você marca o que aparece; em <b>Customizar modelo</b> adiciona qualquer tag encontrada nos XMLs, muda título, formato, valor padrão e grupo. Tem busca, ordenação, totais, <b>Excel</b> e <b>CSV</b>. Os modelos ficam salvos neste navegador; use <b>Exportar modelo</b> / <b>Importar modelo</b> para passar para a equipe (também aceita uma lista de tags, uma por linha).</p></div>
   <div class="hrow"><span class="htab">⤓ Baixar PDF</span><p>Na aba do documento impresso: gera o PDF em A4 daquele documento.</p></div>
   <div class="hrow"><span class="htab">PDF de todos</span><p>No topo: um PDF único com todos os documentos carregados.</p></div>
-  <div class="hrow"><span class="htab">CSV</span><p><b>Resumo (CSV)</b> e <b>Itens NF-e (CSV)</b> continuam disponíveis para quem importa em outro sistema.</p></div>
   <div class="hnote">Os arquivos vão para a pasta de Downloads do navegador. Excel e CSV funcionam sem internet; o PDF precisa de internet.</div>`],
  ['atalhos','⌨️','Atalhos',`<h3>Atalhos de teclado</h3>
   <table class="hk"><tr><td><span class="kb">←</span> <span class="kb">→</span></td><td>Documento anterior / próximo</td></tr>
@@ -2921,8 +2954,6 @@ document.addEventListener('click',e=>{
   const ck=e.target.closest('[data-copykey]');if(ck)copyText(ck.dataset.copykey,'Chave copiada.');
   const g=e.target.closest('[data-goto]');if(g){const d=findDoc(g.dataset.goto)||S.docs.find(x=>x.chave===g.dataset.goto);if(d){S.sel=d.key;document.querySelector('nav.tabs button[data-tab="xml"]').click();render()}}
 });
-$('#btnCsvItens').onclick=()=>{const c=csvItens();saveFile('nfe_itens_auditoria.csv',c,c)};
-$('#btnCsvNotas').onclick=()=>{const c=csvNotas();saveFile(`documentos_resumo_${S.docs.length}.csv`,c,c)};
 $('#btnPdfAll').onclick=()=>gerarPDF(S.docs);
 $('#btnValidar').onclick=validarChaves;
 $('#btnKeysFromXml').onclick=()=>{const ks=S.docs.map(d=>d.chave).filter(k=>/^\d{6}[0-9A-Z]{12}\d{26}$/.test(k||''));if(!ks.length){toast('Nenhum documento com chave de 44 posições carregado.');return}$('#keysIn').value=ks.join('\n');validarChaves()};
@@ -3802,6 +3833,384 @@ function openGrupo(){
 }
 document.addEventListener('click',e=>{if(e.target.closest('[data-grupo]')){e.preventDefault();openGrupo()}});
 (function(){document.querySelectorAll('#btnXlsx').forEach(b=>{if(b.parentNode.querySelector('[data-grupo]'))return;const g=document.createElement('button');g.className='btn';g.setAttribute('data-grupo','');g.title='Empresas do grupo usadas na auditoria';g.textContent='🏢 Grupo';b.parentNode.insertBefore(g,b)})})();
+/* ===================== Relatório por tag (estilo FSist): colunas escolhidas por tag do XML, todos os documentos carregados, Excel/CSV ===================== */
+const RL={m:null,id:'b_nfe_sem',q:'',pag:1,por:100,ord:null,ed:null,filtro:'',cache:null};
+const RL_P='nfeProc>NFe>infNFe>',RL_C='cteProc>CTe>infCte>',RL_N='NFSe>infNFSe>';
+const RL_LS='nfelab-rel-modelos',RL_VIS='nfelab-rel-vis';
+const RL_FMT=[['txt','Texto'],['int','Número inteiro'],['num','Número (até 4 casas)'],['moeda','Moeda R$'],['pct','Percentual'],['data','Data'],['dh','Data e hora'],['cnpj','CNPJ/CPF'],['chave','Chave de acesso'],['tpnf','Entrada/Saída'],['toma','Tomador (CT-e)']];
+const rlC=(tag,tit,fmt,grp,on,pad)=>({tag,tit,fmt:fmt||'txt',grp:grp||'',on:!!on,pad:pad||''});
+
+/* ---------- modelos prontos ---------- */
+function rlNfeCols(itens){
+  const P=RL_P,A=[],add=(t,ti,f,g,on)=>A.push(rlC(t,ti,f,g,on));
+  let g='Dados NFe';
+  add(P+'@Id','Chave','chave',g,1);add(P+'ide>nNF','Número','int',g,1);add(P+'ide>serie','Série','int',g);add(P+'ide>mod','Modelo','txt',g);
+  add(P+'ide>dhEmi|'+P+'ide>dEmi','Emissão','dh',g,1);add(P+'ide>natOp','Natureza da operação','txt',g);add(P+'ide>tpNF','Entrada/Saída','tpnf',g);
+  add(P+'infAdic>infAdFisco','Informações Adicionais do FISCO','txt',g);add(P+'infAdic>infCpl','Informações Complementares','txt',g);add(P+'ide>NFref>refNFe','Chaves referenciadas','txt',g);
+  g='Emitente';const E=P+'emit>';
+  add(E+'CNPJ|'+E+'CPF','CNPJ/CPF','cnpj',g,1);add(E+'IE','Inscrição Estadual','txt',g);add(E+'IEST','Inscrição Estadual ST','txt',g);add(E+'IM','Inscrição Municipal','txt',g);add(E+'CNAE','CNAE','txt',g);
+  add(E+'xNome','Emitente','txt',g,1);add(E+'xFant','Fantasia','txt',g);add(E+'enderEmit>xLgr','Endereço','txt',g);add(E+'enderEmit>nro','Número (end.)','txt',g);add(E+'enderEmit>xCpl','Complemento','txt',g);
+  add(E+'enderEmit>xBairro','Bairro','txt',g);add(E+'enderEmit>xMun','Município','txt',g);add(E+'enderEmit>UF','UF','txt',g);add(E+'enderEmit>CEP','CEP','txt',g);add(E+'enderEmit>xPais','País','txt',g);add(E+'enderEmit>fone','Telefone','txt',g);add(E+'CRT','CRT','txt',g);
+  g='Destinatário';const D=P+'dest>';
+  add(D+'CNPJ|'+D+'CPF|'+D+'idEstrangeiro','CNPJ/CPF','cnpj',g,1);add(D+'indIEDest','Indicador Inscrição Estadual','txt',g);add(D+'IE','Inscrição Estadual','txt',g);add(D+'IM','Inscrição Municipal','txt',g);add(D+'ISUF','Inscrição SUFRAMA','txt',g);
+  add(D+'xNome','Destinatário','txt',g,1);add(D+'enderDest>xLgr','Endereço','txt',g);add(D+'enderDest>nro','Número (end.)','txt',g);add(D+'enderDest>xCpl','Complemento','txt',g);add(D+'enderDest>xBairro','Bairro','txt',g);
+  add(D+'enderDest>xMun','Município','txt',g);add(D+'enderDest>UF','UF','txt',g);add(D+'enderDest>CEP','CEP','txt',g);add(D+'enderDest>xPais','País','txt',g);add(D+'enderDest>fone','Telefone','txt',g);add(D+'email','E-mail','txt',g);
+  g='Transportador';const T=P+'transp>';
+  add(T+'modFrete','Modalidade de Frete','txt',g);add(T+'transporta>CNPJ|'+T+'transporta>CPF','CNPJ/CPF','cnpj',g,1);add(T+'transporta>IE','Inscrição Estadual','txt',g);add(T+'transporta>xNome','Transportador','txt',g,1);
+  add(T+'transporta>xEnder','Endereço','txt',g);add(T+'transporta>xMun','Município','txt',g);add(T+'transporta>UF','UF','txt',g);add(T+'retTransp>vServ','Valor do Serviço','moeda',g);add(T+'retTransp>vBCRet','BC da Retenção do ICMS','moeda',g);
+  add(T+'retTransp>pICMSRet','Alíquota da Retenção','pct',g);add(T+'retTransp>vICMSRet','Valor ICMS Retido','moeda',g);add(T+'retTransp>CFOP','CFOP','txt',g);add(T+'veicTransp>placa','Veículo Placa','txt',g);add(T+'veicTransp>UF','Veículo UF','txt',g);add(T+'veicTransp>RNTC','Veículo RNTC','txt',g);
+  add(T+'vol>qVol','Volumes','int',g);add(T+'vol>pesoL','Peso líquido','num',g);add(T+'vol>pesoB','Peso bruto','num',g);
+  g='Total';const V=P+'total>ICMSTot>';
+  add(V+'vBC','BC do ICMS','moeda',g,1);add(V+'vICMS','ICMS','moeda',g,1);add(V+'vICMSDeson','ICMS desonerado','moeda',g);add(V+'vFCPUFDest','ICMS FCP para UF de destino','moeda',g);add(V+'vICMSUFDest','ICMS de partilha para a UF do destinatário','moeda',g);
+  add(V+'vICMSUFRemet','ICMS de partilha para a UF do remetente','moeda',g);add(V+'vFCP','FCP','moeda',g);add(V+'vBCST','BC do ICMS ST','moeda',g);add(V+'vST','ICMS ST','moeda',g,1);add(V+'vFCPST','FCP retido por substituição tributária','moeda',g);
+  add(V+'vFCPSTRet','FCP retido anteriormente por substituição tributária','moeda',g);add(V+'vProd','Total produtos e serviços','moeda',g,1);add(V+'vFrete','Frete','moeda',g);add(V+'vSeg','Seguro','moeda',g);add(V+'vDesc','Desconto','moeda',g);
+  add(V+'vII','II','moeda',g);add(V+'vIPI','IPI','moeda',g);add(V+'vIPIDevol','IPI devolvido','moeda',g);add(V+'vPIS','PIS','moeda',g);add(V+'vCOFINS','COFINS','moeda',g);add(V+'vOutro','Outras despesas','moeda',g);add(V+'vNF','Total da NF','moeda',g,1);
+  g='IBS/CBS/IS (Reforma)';const R=P+'total>IBSCBSTot>';
+  add(R+'vBCIBSCBS','BC do IBS/CBS','moeda',g);add(R+'gIBS>gIBSUF>vIBSUF','IBS UF','moeda',g);add(R+'gIBS>gIBSMun>vIBSMun','IBS Município','moeda',g);add(R+'gIBS>vIBS','IBS total','moeda',g);
+  add(R+'gIBS>vCredPres','IBS crédito presumido','moeda',g);add(R+'gCBS>vCBS','CBS total','moeda',g);add(R+'gCBS>vCredPres','CBS crédito presumido','moeda',g);add(P+'total>ISTot>vIS','Imposto Seletivo','moeda',g);
+  g='Cobrança e pagamento';
+  add(P+'cobr>fat>nFat','Fatura','txt',g);add(P+'cobr>fat>vLiq','Valor líquido da fatura','moeda',g);add(P+'cobr>dup>dVenc','Vencimentos','data',g);add(P+'cobr>dup>vDup','Valores das duplicatas','moeda',g);
+  add(P+'pag>detPag>tPag','Forma de pagamento','txt',g);add(P+'pag>detPag>vPag','Valor do pagamento','moeda',g);
+  g='Autorização';const Q='nfeProc>protNFe>infProt>';
+  add(Q+'nProt','Protocolo','txt',g);add(Q+'dhRecbto','Data da autorização','dh',g);add(Q+'cStat','Status','txt',g);add(Q+'xMotivo','Motivo','txt',g);
+  g='Item';const I=P+'det>',it=(t,ti,f,on,gg)=>A.push(rlC(I+t,ti,f,gg||g,itens&&on));
+  it('@nItem','Item','int',1);it('prod>cProd','Código','txt',1);it('prod>cEAN','EAN','txt');it('prod>xProd','Descrição','txt',1);it('prod>NCM','NCM','txt',1);it('prod>CEST','CEST','txt');it('prod>cBenef','cBenef','txt');it('prod>CFOP','CFOP','txt',1);
+  it('prod>uCom','Unidade','txt',1);it('prod>qCom','Quantidade','num',1);it('prod>vUnCom','Valor unitário','num',1);it('prod>vProd','Valor do produto','moeda',1);it('prod>vFrete','Frete (item)','moeda');it('prod>vSeg','Seguro (item)','moeda');
+  it('prod>vDesc','Desconto (item)','moeda');it('prod>vOutro','Outras despesas (item)','moeda');it('prod>indTot','Compõe o total','txt');
+  g='ICMS (item)';
+  it('imposto>ICMS>*>orig','Origem','txt',0,g);it('imposto>ICMS>*>CST|'+I+'imposto>ICMS>*>CSOSN','CST/CSOSN','txt',1,g);it('imposto>ICMS>*>vBC','BC do ICMS','moeda',1,g);it('imposto>ICMS>*>pICMS','Alíquota ICMS','pct',1,g);it('imposto>ICMS>*>vICMS','Valor do ICMS','moeda',1,g);
+  it('imposto>ICMS>*>pRedBC','Redução de BC','pct',0,g);it('imposto>ICMS>*>vBCST','BC do ICMS ST','moeda',0,g);it('imposto>ICMS>*>pMVAST','MVA ST','pct',0,g);it('imposto>ICMS>*>pICMSST','Alíquota ICMS ST','pct',0,g);it('imposto>ICMS>*>vICMSST','Valor do ICMS ST','moeda',0,g);
+  it('imposto>ICMS>*>vICMSDeson','ICMS desonerado (item)','moeda',0,g);it('imposto>ICMS>*>vICMSDif','ICMS diferido','moeda',0,g);
+  g='IPI/PIS/COFINS (item)';
+  it('imposto>IPI>*>CST','CST IPI','txt',0,g);it('imposto>IPI>*>vIPI','Valor do IPI','moeda',0,g);it('imposto>PIS>*>CST','CST PIS','txt',0,g);it('imposto>PIS>*>vBC','BC do PIS','moeda',0,g);it('imposto>PIS>*>pPIS','Alíquota PIS','pct',0,g);it('imposto>PIS>*>vPIS','Valor do PIS','moeda',0,g);
+  it('imposto>COFINS>*>CST','CST COFINS','txt',0,g);it('imposto>COFINS>*>vBC','BC da COFINS','moeda',0,g);it('imposto>COFINS>*>pCOFINS','Alíquota COFINS','pct',0,g);it('imposto>COFINS>*>vCOFINS','Valor da COFINS','moeda',0,g);
+  g='IBS/CBS (item)';
+  it('imposto>IBSCBS>CST','CST IBS/CBS','txt',0,g);it('imposto>IBSCBS>cClassTrib','cClassTrib','txt',0,g);it('imposto>IBSCBS>gIBSCBS>vBC','BC do IBS/CBS','moeda',0,g);it('imposto>IBSCBS>gIBSCBS>gIBSUF>pIBSUF','Alíquota IBS UF','pct',0,g);
+  it('imposto>IBSCBS>gIBSCBS>gIBSUF>vIBSUF','IBS UF','moeda',0,g);it('imposto>IBSCBS>gIBSCBS>gIBSMun>pIBSMun','Alíquota IBS Mun.','pct',0,g);it('imposto>IBSCBS>gIBSCBS>gIBSMun>vIBSMun','IBS Município','moeda',0,g);
+  it('imposto>IBSCBS>gIBSCBS>vIBS','IBS total (item)','moeda',0,g);it('imposto>IBSCBS>gIBSCBS>gCBS>pCBS','Alíquota CBS','pct',0,g);it('imposto>IBSCBS>gIBSCBS>gCBS>vCBS','CBS (item)','moeda',0,g);
+  if(itens){/* com produtos: totais desligados para não repetir o valor da nota em cada item */
+    const keep=new Set(['Chave','Número','Emissão','CNPJ/CPF','Emitente','Destinatário']);
+    A.forEach(c=>{if(!c.tag.includes('>det>')&&!(keep.has(c.tit)&&['Dados NFe','Emitente','Destinatário'].includes(c.grp)))c.on=false;if(c.grp==='Transportador')c.on=false})}
+  else A.forEach(c=>{if(c.tag.includes('>det>'))c.on=false});
+  return A}
+function rlCteCols(){
+  const P=RL_C,A=[],a=(t,ti,f,g,on)=>A.push(rlC(t,ti,f,g,on));let g='Dados CT-e';
+  a(P+'@Id','Chave','chave',g,1);a(P+'ide>nCT','Número','int',g,1);a(P+'ide>serie','Série','int',g);a(P+'ide>mod','Modelo','txt',g);a(P+'ide>dhEmi','Emissão','dh',g,1);a(P+'ide>CFOP','CFOP','txt',g,1);a(P+'ide>natOp','Natureza da prestação','txt',g);a(P+'ide>modal','Modal','txt',g);a(P+'ide>tpServ','Tipo de serviço','txt',g);
+  a(P+'ide>toma3>toma|'+P+'ide>toma4>toma','Tomador','toma',g,1);a(P+'compl>xObs','Observações','txt',g);
+  g='Emitente';a(P+'emit>CNPJ','CNPJ','cnpj',g,1);a(P+'emit>IE','Inscrição Estadual','txt',g);a(P+'emit>xNome','Emitente','txt',g,1);a(P+'emit>enderEmit>UF','UF','txt',g);
+  g='Remetente';a(P+'rem>CNPJ|'+P+'rem>CPF','CNPJ/CPF','cnpj',g,1);a(P+'rem>xNome','Remetente','txt',g,1);a(P+'rem>enderReme>xMun','Município','txt',g);a(P+'rem>enderReme>UF','UF','txt',g);
+  g='Destinatário';a(P+'dest>CNPJ|'+P+'dest>CPF','CNPJ/CPF','cnpj',g,1);a(P+'dest>xNome','Destinatário','txt',g,1);a(P+'dest>enderDest>xMun','Município','txt',g);a(P+'dest>enderDest>UF','UF','txt',g);
+  g='Percurso';a(P+'ide>xMunIni','Município de origem','txt',g,1);a(P+'ide>UFIni','UF origem','txt',g,1);a(P+'ide>xMunFim','Município de destino','txt',g,1);a(P+'ide>UFFim','UF destino','txt',g,1);
+  g='Valores';a(P+'vPrest>vTPrest','Valor da prestação','moeda',g,1);a(P+'vPrest>vRec','Valor a receber','moeda',g);a(P+'imp>ICMS>*>CST','CST','txt',g,1);a(P+'imp>ICMS>*>vBC','BC do ICMS','moeda',g,1);a(P+'imp>ICMS>*>pICMS','Alíquota ICMS','pct',g,1);a(P+'imp>ICMS>*>vICMS','ICMS','moeda',g,1);
+  a(P+'imp>vTotTrib','Total de tributos','moeda',g);
+  g='Carga e documentos';a(P+'infCTeNorm>infCarga>vCarga','Valor da carga','moeda',g,1);a(P+'infCTeNorm>infCarga>proPred','Produto predominante','txt',g);a(P+'infCTeNorm>infCarga>infQ>qCarga','Quantidades','num',g);a(P+'infCTeNorm>infDoc>infNFe>chave','NF-e vinculadas','txt',g,1);
+  g='Autorização';a('cteProc>protCTe>infProt>nProt','Protocolo','txt',g);a('cteProc>protCTe>infProt>dhRecbto','Data da autorização','dh',g);a('cteProc>protCTe>infProt>cStat','Status','txt',g);
+  return A}
+function rlNfseCols(){
+  const P=RL_N,A=[],a=(t,ti,f,g,on)=>A.push(rlC(t,ti,f,g,on));let g='Dados NFS-e';
+  a(P+'@Id','Chave','chave',g,1);a(P+'nNFSe','Número','int',g,1);a(P+'nDFSe','Nº DFS-e','txt',g);a(P+'DPS>infDPS>serie','Série DPS','txt',g);a(P+'DPS>infDPS>nDPS','Nº DPS','int',g);a(P+'DPS>infDPS>dhEmi','Emissão','dh',g,1);a(P+'dhProc','Processamento','dh',g);a(P+'xLocPrestacao','Local da prestação','txt',g);
+  g='Prestador';a(P+'emit>CNPJ','CNPJ','cnpj',g,1);a(P+'emit>xNome','Prestador','txt',g,1);
+  g='Tomador';a(P+'DPS>infDPS>toma>CNPJ|'+P+'DPS>infDPS>toma>CPF','CNPJ/CPF','cnpj',g,1);a(P+'DPS>infDPS>toma>xNome','Tomador','txt',g,1);
+  g='Serviço';a(P+'DPS>infDPS>serv>cServ>cTribNac','Código de tributação nacional','txt',g);a(P+'xTribNac','Descrição do código','txt',g);a(P+'DPS>infDPS>serv>cServ>xDescServ','Discriminação','txt',g);
+  g='Valores';a(P+'DPS>infDPS>valores>vServPrest>vServ','Valor do serviço','moeda',g,1);a(P+'valores>vBC','BC do ISS','moeda',g,1);a(P+'valores>pAliqAplic','Alíquota ISS','pct',g,1);a(P+'valores>vISSQN','ISS','moeda',g,1);a(P+'valores>vTotalRet','Retenções','moeda',g);a(P+'valores>vLiq','Valor líquido','moeda',g,1);
+  g='IBS/CBS (Reforma)';a(P+'IBSCBS>valores>vBC','BC do IBS/CBS','moeda',g);a(P+'IBSCBS>totCIBS>gIBS>vIBSTot','IBS','moeda',g);a(P+'IBSCBS>totCIBS>gCBS>vCBS','CBS','moeda',g);a(P+'IBSCBS>totCIBS>vTotNF','Total da NF (IBS/CBS)','moeda',g);
+  return A}
+const RL_DIFAL={"nome":"Teste DIFAL","listaItens":[{"tag":"nfeProc>NFe>infNFe>ide>nNF","titulo":"nNF","tipo":"texto","grupo":"Diversos","visible":true},{"tag":"nfeProc>NFe>infNFe>@Id","titulo":"Chave","tipo":"chave","grupo":"Diversos","visible":true},{"tag":"nfeProc>NFe>infNFe>ide>dhEmi","titulo":"Emissão","tipo":"dd/MM/yyyy HH:mm:ss","grupo":"Diversos","visible":true},{"tag":"nfeProc>NFe>infNFe>ide>dEmi","titulo":"Emissão","tipo":"dd/MM/yyyy","grupo":"Diversos","visible":true},{"tag":"nfeProc>NFe>infNFe>emit>CNPJ","titulo":"Emitente CNPJ/CPF","tipo":"00.000.000/0000-00","grupo":"Emitente","visible":true},{"tag":"nfeProc>NFe>infNFe>emit>CPF","titulo":"Emitente CNPJ/CPF","tipo":"000.000.000-00","grupo":"Emitente","visible":true},{"tag":"nfeProc>NFe>infNFe>emit>IE","titulo":"Emitente IE","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>IEST","titulo":"Emitente IEST","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>IM","titulo":"Emitente IM","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>xNome","titulo":"Emitente","tipo":"texto","grupo":"Emitente","visible":true},{"tag":"nfeProc>NFe>infNFe>emit>xFant","titulo":"Emitente Fantasia","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>enderEmit>xLgr","titulo":"Emitente Endereço","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>enderEmit>nro","titulo":"Emitente Número","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>enderEmit>xCpl","titulo":"Emitente Complemento","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>enderEmit>xMun","titulo":"Emitente Município","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>enderEmit>UF","titulo":"Emitente UF","tipo":"texto","grupo":"Emitente","visible":true},{"tag":"nfeProc>NFe>infNFe>emit>enderEmit>CEP","titulo":"Emitente CEP","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>enderEmit>xPais","titulo":"Emitente País","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>emit>enderEmit>fone","titulo":"Emitente Fone","tipo":"texto","grupo":"Emitente","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>CNPJ","titulo":"Destinatário CNPJ/CPF","tipo":"00.000.000/0000-00","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>CPF","titulo":"Destinatário CNPJ/CPF","tipo":"000.000.000-00","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>idEstrangeiro","titulo":"Destinatário Estrangeiro","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>IE","titulo":"Destinatário IE","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>IM","titulo":"Destinatário IM","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>email","titulo":"Destinatário Email","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>xNome","titulo":"Destinatário","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>enderDest>xLgr","titulo":"Destinatário Endereço","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>enderDest>nro","titulo":"Destinatário Número","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>enderDest>xCpl","titulo":"Destinatário Complemento","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>enderDest>cMun","titulo":"Destinatário Município","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>enderDest>UF","titulo":"Destinatário UF","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>enderDest>CEP","titulo":"Destinatário CEP","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>dest>enderDest>xPais","titulo":"Destinatário País","tipo":"texto","grupo":"Destinatário","visible":false},{"tag":"nfeProc>NFe>infNFe>det","titulo":"","tipo":"grupo","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>@nItem","titulo":"Item","tipo":"000","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>prod>cProd","titulo":"Código Produto","tipo":"texto","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>prod>cEAN","titulo":"Barras","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>prod>xProd","titulo":"Produto","tipo":"texto","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>prod>NCM","titulo":"NCM","tipo":"texto","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>prod>CEST","titulo":"CEST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>prod>CFOP","titulo":"CFOP","tipo":"texto","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>prod>uCom","titulo":"UN","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>prod>qCom","titulo":"Quantidade","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>prod>vProd","titulo":"Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS00>vBC","titulo":"ICMS Base Cálc.","tipo":"R$ #,0.000","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS10>vBC","titulo":"ICMS Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS20>vBC","titulo":"ICMS Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS51>vBC","titulo":"ICMS Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS70>vBC","titulo":"ICMS Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS90>vBC","titulo":"ICMS Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSPart>vBC","titulo":"ICMS Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN900>vBC","titulo":"ICMS Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS00>pICMS","titulo":"ICMS Alíq.","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS10>pICMS","titulo":"ICMS Alíq.","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS20>pICMS","titulo":"ICMS Alíq.","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS51>pICMS","titulo":"ICMS Alíq.","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS70>pICMS","titulo":"ICMS Alíq.","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS90>pICMS","titulo":"ICMS Alíq.","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSPart>pICMS","titulo":"ICMS Alíq.","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN900>pICMS","titulo":"ICMS Alíq.","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS00>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS10>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS20>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS40>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS51>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS70>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS90>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSPart>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN900>vICMS","titulo":"ICMS Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS10>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS30>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS60>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS70>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS90>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSPart>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN201>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN202>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN900>vBCST","titulo":"ICMSST Base Cálc.","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS10>pICMSST","titulo":"ICMSST Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS30>pICMSST","titulo":"ICMSST Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS70>pICMSST","titulo":"ICMSST Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS90>pICMSST","titulo":"ICMSST Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSPart>pICMSST","titulo":"ICMSST Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN201>pICMSST","titulo":"ICMSST Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN202>pICMSST","titulo":"ICMSST Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN900>pICMSST","titulo":"ICMSST Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS10>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS30>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS60>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS70>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS90>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSPart>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN201>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN202>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN900>vICMSST","titulo":"ICMSST Valor","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS10>pMVAST","titulo":"ICMSST MVA Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS30>pMVAST","titulo":"ICMSST MVA Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS70>pMVAST","titulo":"ICMSST MVA Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS90>pMVAST","titulo":"ICMSST MVA Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSPart>pMVAST","titulo":"ICMSST MVA Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN201>pMVAST","titulo":"ICMSST MVA Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN202>pMVAST","titulo":"ICMSST MVA Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSSN900>pMVAST","titulo":"ICMSST MVA Alíq.","tipo":"#,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS00>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS10>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS20>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS30>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS40>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS51>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS60>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS70>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMS90>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSPart>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>ICMS>ICMSST>CST","titulo":"ICMS CST","tipo":"texto","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>IPI","titulo":"IPI","tipo":"R$ #,0.00","grupo":"Produto","visible":false},{"tag":"nfeProc>NFe>infNFe>det>imposto>IPI>IPITrib>vIPI","titulo":"vIPI","tipo":"R$ #,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>prod>vDesc","titulo":"vDesc","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>prod>vOutro","titulo":"vOutro","tipo":"#,0.00","grupo":"Produto","visible":true},{"tag":"nfeProc>NFe>infNFe>det>prod>vFrete","titulo":"vFrete","tipo":"#,0.00","grupo":"Produto","visible":true}]};
+const RL_BUILTIN=()=>[
+  {id:'b_nfe_sem',nome:'NFe Modelo Sem Produtos (Reforma Tributária)',tipos:['NFE','NFCE'],cols:rlNfeCols(false),pre:true},
+  {id:'b_nfe_com',nome:'NFe Modelo Com Produtos (Reforma Tributária)',tipos:['NFE','NFCE'],cols:rlNfeCols(true),pre:true},
+  {id:'b_cte',nome:'CTe Modelo Simples',tipos:['CTE','CTEOS'],cols:rlCteCols(),pre:true},
+  {id:'b_nfse',nome:'NFS-e Modelo Simples (Padrão Nacional)',tipos:['NFSE'],cols:rlNfseCols(),pre:true},
+  (()=>{const m=rlDeFsist(RL_DIFAL);return{id:'b_difal',nome:m.nome,tipos:m.tipos,cols:m.cols,pre:true}})()];
+
+/* ---------- persistência ---------- */
+function rlLoad(k,def){try{const v=JSON.parse(localStorage.getItem(k)||'null');return v==null?def:v}catch(e){return def}}
+function rlSave(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function rlModelos(){
+  const vis=rlLoad(RL_VIS,{}),B=RL_BUILTIN().map(m=>{if(vis[m.id]){const on=new Set(vis[m.id]);m.cols.forEach(c=>c.on=on.has(c.tag))}return m});
+  return B.concat(rlLoad(RL_LS,[]).filter(m=>m&&m.cols&&m.cols.length))}
+const rlAtual=()=>{const L=rlModelos();return L.find(m=>m.id===RL.id)||L[0]};
+function rlPersistVis(m){
+  if(m.pre){const v=rlLoad(RL_VIS,{});v[m.id]=m.cols.filter(c=>c.on).map(c=>c.tag);rlSave(RL_VIS,v)}
+  else{const L=rlLoad(RL_LS,[]),i=L.findIndex(x=>x.id===m.id);if(i>=0){L[i]=m;rlSave(RL_LS,L)}}}
+
+/* ---------- leitura de tags ---------- */
+function rlRoot(d){
+  if(d._rx===d.xml&&d._rd!==undefined)return d._rd;
+  d._rx=d.xml;try{const x=new DOMParser().parseFromString(d.xml||'','application/xml');d._rd=x.getElementsByTagName('parsererror').length?null:x.documentElement}catch(e){d._rd=null}
+  return d._rd}
+const rlNm=(c,s)=>c.localName===s||(s==='*')||(s==='CTe'&&c.localName==='CTeOS')||(s==='cteProc'&&c.localName==='cteOSProc');
+function rlKids(n,s){const o=[];for(let c=n.firstElementChild;c;c=c.nextElementSibling)if(rlNm(c,s))o.push(c);return o}
+function rlNodes(ns,segs){let cur=ns;for(let i=0;i<segs.length&&cur.length;i++)cur=cur.flatMap(n=>rlKids(n,segs[i]));return cur}
+function rlWalk(ns,segs){
+  const last=segs[segs.length-1];
+  if(last&&last[0]==='@'){return rlNodes(ns,segs.slice(0,-1)).map(n=>n.getAttribute(last.slice(1))||'')}
+  return rlNodes(ns,segs).map(n=>n.firstElementChild?'':n.textContent.trim())}
+function rlRel(root,segs){let s=segs;if(/Proc$/.test(s[0])&&!rlNm(root,s[0]))s=s.slice(1);return rlNm(root,s[0])?s.slice(1):null}
+
+/* ---------- formatos ---------- */
+const rlN2=(n,a,b)=>n.toLocaleString('pt-BR',{minimumFractionDigits:a,maximumFractionDigits:b});
+function rlFmt(v,f){
+  v=String(v==null?'':v).trim();if(v==='')return{s:'',n:null,k:''};
+  if(f==='moeda'||f==='num'||f==='pct'||f==='int'){const n=parseFloat(v.replace(',','.'));if(!isFinite(n))return{s:v,n:null,k:v};
+    return{s:f==='moeda'?'R$ '+rlN2(n,2,2):f==='int'?(/^\d+$/.test(v)?v.replace(/^0+(?=\d)/,''):rlN2(n,0,0)):f==='pct'?rlN2(n,2,4)+'%':rlN2(n,2,4),n,k:n}}
+  if(f==='dh'||f==='data'){const m=v.match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}:\d{2}(?::\d{2})?))?/);if(!m)return{s:v,n:null,k:v};
+    const dt=`${m[3]}/${m[2]}/${m[1]}`;return{s:f==='dh'&&m[4]?dt+' '+(m[4].length===5?m[4]+':00':m[4]):dt,n:null,k:v,iso:`${m[1]}-${m[2]}-${m[3]}`}}
+  if(f==='cnpj'){const d=v.replace(/\D/g,'');const s=d.length===14?d.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,'$1.$2.$3/$4-$5'):d.length===11?d.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/,'$1.$2.$3-$4'):v;return{s,n:null,k:d||v}}
+  if(f==='chave'){const s=v.replace(/^\D+/,'');return{s,n:null,k:s}}
+  if(f==='tpnf'){const s=({'0':'Entrada','1':'Saída'})[v]||v;return{s,n:null,k:s}}
+  if(f==='toma'){const s=({'0':'Remetente','1':'Expedidor','2':'Recebedor','3':'Destinatário','4':'Outros'})[v]||v;return{s,n:null,k:s}}
+  return{s:v,n:null,k:v}}
+
+/* ---------- montagem das linhas ---------- */
+function rlEval(root,dets,c){
+  const alts=c.tag.split('|').map(a=>a.split('>')),isItem=alts.some(x=>x.includes('det'));
+  if(isItem){
+    const vals=dets.map(n=>{for(const x of alts){const di=x.indexOf('det');if(di<0)continue;const v=rlWalk([n],x.slice(di+1));if(v.some(y=>y!==''))return v}return[]});
+    return{item:true,vals}}
+  for(const x of alts){const rel=rlRel(root,x);if(!rel)continue;const v=rlWalk([root],rel);if(v.some(y=>y!==''))return{item:false,vals:v}}
+  return{item:false,vals:[]}}
+function rlDocRows(d,cols){
+  const root=rlRoot(d);if(!root)return[];
+  const hasDet=cols.some(c=>c.tag.includes('>det>'));
+  let dets=[];if(hasDet){const rel=rlRel(root,'nfeProc>NFe>infNFe>det'.split('>'));dets=rel?rlNodes([root],rel):[]}
+  const ev=cols.map(c=>rlEval(root,dets,c,hasDet)),n=hasDet?Math.max(1,dets.length):1,rows=[];
+  for(let i=0;i<n;i++){
+    const v=cols.map((c,k)=>{const r=ev[k],raw=r.item?(r.vals[i]||[]):r.vals;
+      let L=raw.filter(x=>x!=='').map(x=>rlFmt(x,c.fmt));
+      if(!L.length)return c.pad!==''?rlFmt(c.pad,c.fmt):{s:'',n:null,k:''};
+      if(L.length===1)return L[0];
+      return{s:L.map(x=>x.s).join(' | '),n:null,k:L.map(x=>x.k).join(' | ')}});
+    rows.push({d,i,v})}
+  return rows}
+function rlRows(m,cols){
+  const docs=S.docs.filter(d=>m.tipos.includes(d.tipo)&&d.xml);
+  const sig=m.id+'|'+cols.map(c=>c.tag+c.fmt+c.pad).join(',')+'|'+docs.map(d=>d.key).join(',');
+  if(RL.cache&&RL.cache.sig===sig)return RL.cache.rows;
+  const rows=[];docs.forEach(d=>rlDocRows(d,cols).forEach(r=>rows.push(r)));
+  RL.cache={sig,rows};return rows}
+
+/* ---------- catálogo de tags (descoberto nos XMLs carregados) ---------- */
+function rlGen(segs){return segs.map((s,i)=>i>0&&['ICMS','IPI','PIS','COFINS'].includes(segs[i-1])&&s.startsWith(segs[i-1])&&s.length>segs[i-1].length?'*':s)}
+const rlTT={nNF:'Número',serie:'Série',mod:'Modelo',dhEmi:'Emissão',natOp:'Natureza da operação','emit>xNome':'Emitente','dest>xNome':'Destinatário','transporta>xNome':'Transportador',xProd:'Descrição',cProd:'Código',NCM:'NCM',CFOP:'CFOP',nItem:'Item',vNF:'Total da NF',vProd:'Valor do produto',qCom:'Quantidade',vUnCom:'Valor unitário',uCom:'Unidade',xMotivo:'Motivo',nProt:'Protocolo',Id:'Chave'};
+function rlFmtDe(leaf){
+  if(leaf==='@Id'||leaf==='chNFe'||leaf==='chCTe')return'chave';
+  if(/^(vUn|vUnCom|vUnTrib|qCom|qTrib|pesoL|pesoB)/.test(leaf)||/^q[A-Z]/.test(leaf))return'num';
+  if(/^v[A-Z]/.test(leaf))return'moeda';if(/^p[A-Z]/.test(leaf))return'pct';if(/^dh[A-Z]/.test(leaf))return'dh';if(/^d(Emi|Venc|Fab|Val|Saida|Ent)/.test(leaf))return'data';
+  if(leaf==='CNPJ'||leaf==='CPF')return'cnpj';if(['nNF','nCT','nMDF','nNFSe','nItem','@nItem','serie'].includes(leaf))return'int';return'txt'}
+function rlCatalogo(m){
+  const map=new Map();
+  const add=(tag,val,doc)=>{let e=map.get(tag);if(!e){e={tag,n:0,ex:'',docs:new Set()};map.set(tag,e)}if(!e.docs.has(doc)){e.docs.add(doc);e.n++}if(!e.ex&&val)e.ex=String(val).slice(0,60)};
+  S.docs.filter(d=>m.tipos.includes(d.tipo)&&d.xml).forEach(d=>{const root=rlRoot(d);if(!root)return;
+    (function w(n,p){if(n.localName==='Signature')return;const q=p.concat(n.localName);
+      for(const a of n.attributes)if(a.name!=='xmlns'&&!a.name.startsWith('xmlns:'))add(rlGen(q).concat('@'+a.name).join('>'),a.value,d.key);
+      if(!n.firstElementChild){add(rlGen(q).join('>'),n.textContent.trim(),d.key);return}
+      for(let c=n.firstElementChild;c;c=c.nextElementSibling)w(c,q)})(root,[])});
+  m.cols.forEach(c=>c.tag.split('|').forEach(t=>{if(!map.has(t))map.set(t,{tag:t,n:0,ex:'',docs:new Set()})}));
+  return[...map.values()].sort((a,b)=>a.tag.localeCompare(b.tag))}
+function rlTituloDe(tag,cat){
+  const segs=tag.split('>'),leaf=segs[segs.length-1],par=segs[segs.length-2]||'';
+  if(rlTT[par+'>'+leaf])return rlTT[par+'>'+leaf];
+  const amb=cat.filter(e=>{const s=e.tag.split('>');return s[s.length-1]===leaf&&s[s.length-2]!==par}).length>0;
+  if(rlTT[leaf]&&!amb)return rlTT[leaf];return amb?`${leaf.replace(/^@/,'')} (${par})`:leaf.replace(/^@/,'')}
+
+/* ---------- tabela ---------- */
+const rlSomavel=c=>c.fmt==='moeda'||(c.fmt==='num'&&/(^|>)v(?!Un)[A-Z]\w*$/.test(String(c.tag).split('|')[0]));
+const rlSum=(rs,ci,item)=>rs.reduce((a,r)=>(item||r.i===0)&&r.v[ci].n!=null?a+r.v[ci].n:a,0);
+function rlFiltrar(rows,cols){
+  let L=rows;const q=RL.q.trim().toLowerCase();
+  if(q)L=L.filter(r=>r.v.some(x=>x.s.toLowerCase().includes(q)));
+  if(RL.ord&&RL.ord.i<cols.length){const i=RL.ord.i,k=RL.ord.d;L=L.slice().sort((a,b)=>{const x=a.v[i],y=b.v[i];let c=(x.n!=null&&y.n!=null)?x.n-y.n:String(x.iso||x.k).localeCompare(String(y.iso||y.k),'pt-BR',{numeric:true});return c*k})}
+  return L}
+function rlHtmlTabela(m,cols,rows){
+  const F=rlFiltrar(rows,cols),tot=F.length,por=RL.por,np=Math.max(1,Math.ceil(tot/por));RL.pag=Math.min(Math.max(1,RL.pag),np);
+  const ini=(RL.pag-1)*por,P=F.slice(ini,ini+por),temG=cols.some(c=>c.grp);
+  const nDocs=new Set(F.map(r=>r.d.key)).size;
+  if(!cols.length)return{html:'<div class="empty" style="padding:40px">Nenhuma coluna marcada. Use <b>Colunas</b> ou <b>Customizar modelo</b>.</div>',tot,np,nDocs,ini:0,n:0};
+  let g='';if(temG){const sp=[];cols.forEach(c=>{const l=sp[sp.length-1];if(l&&l.g===c.grp)l.n++;else sp.push({g:c.grp,n:1})});g='<tr class="rlg">'+sp.map(s=>`<th colspan="${s.n}">${esc(s.g)}</th>`).join('')+'</tr>'}
+  const hd=cols.map((c,i)=>`<th data-rlord="${i}" class="${c.fmt==='moeda'||c.fmt==='num'||c.fmt==='pct'||c.fmt==='int'?'n':''}" title="${esc(c.tag)}">${esc(c.tit)}${RL.ord&&RL.ord.i===i?(RL.ord.d>0?' ▲':' ▼'):''}</th>`).join('');
+  const hasItem=cols.some(c=>c.tag.includes('>det>'));
+  const body=P.map(r=>`<tr data-rlk="${esc(r.d.key)}">${r.v.map((x,i)=>`<td class="${cols[i].fmt==='moeda'||cols[i].fmt==='num'||cols[i].fmt==='pct'||cols[i].fmt==='int'?'n':''}${cols[i].fmt==='chave'?' mono':''}">${esc(x.s)}</td>`).join('')}</tr>`).join('');
+  const somas=cols.map((c,i)=>rlSomavel(c)?'R$ '+rlN2(rlSum(F,i,c.tag.includes('>det>')),2,2):'');
+  const foot=somas.some(Boolean)?`<tr class="rlt"><td colspan="1">Totais${hasItem?' (valores da nota contados uma vez)':''}</td>${somas.slice(1).map(s=>`<td class="n">${s}</td>`).join('')}</tr>`:'';
+  return{html:`<table class="rlt0"><thead>${g}<tr>${hd}</tr></thead><tbody>${body||`<tr><td colspan="${cols.length}" class="mut" style="padding:24px">Nenhum documento deste tipo no app${RL.q?' para esta pesquisa':''}. Carregue XMLs ou ligue a Pasta automática.</td></tr>`}</tbody><tfoot>${foot}</tfoot></table>`,tot,np,nDocs,ini,n:P.length}}
+
+/* ---------- janela principal ---------- */
+function rlFechar(){if(RL.m){RL.m.remove();RL.m=null}RL.ed=null}
+function rlAbrir(){
+  rlFechar();const m=document.createElement('div');m.className='modal rlo';m.innerHTML='<div class="card rlcard" role="dialog" aria-label="Relatório por tag"></div>';
+  document.body.appendChild(m);RL.m=m;RL.q='';RL.pag=1;RL.ord=null;RL.ed=null;RL.filtro='';
+  m.addEventListener('dragover',e=>{e.preventDefault();e.stopPropagation()});m.addEventListener('drop',e=>{e.preventDefault();e.stopPropagation();const f=e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0];if(f)rlImportar(f)});
+  m.addEventListener('click',rlClick);m.addEventListener('input',rlInput);m.addEventListener('change',rlChange);rlDesenhar()}
+function rlDesenhar(){
+  if(!RL.m)return;const card=RL.m.querySelector('.rlcard');
+  if(RL.ed){rlDesenharEditor(card);return}
+  const L=rlModelos(),m=rlAtual();RL.id=m.id;const cols=m.cols.filter(c=>c.on);
+  const T=rlHtmlTabela(m,cols,rlRows(m,cols));
+  const opt=L.map(x=>`<option value="${esc(x.id)}" ${x.id===m.id?'selected':''}>${esc(x.nome)}${x.pre?'':' ★'}</option>`).join('');
+  card.innerHTML=`<div class="rlhd"><div><h2>Relatório por tag</h2><p class="mut">Escolha as tags do XML que viram colunas — uma linha por documento (ou por item). Vale para todos os documentos carregados.</p></div><button class="btn sm" data-rlx title="Fechar (Esc)">✕</button></div>
+  <div class="rltb"><button class="btn pri" data-rled>⚙ Customizar modelo</button><label class="btn" title="Importar um modelo do NF-e Lab ou do FSist (.json), ou uma lista de tags (uma por linha)">📂 Importar modelo<input type="file" id="rlImp" hidden></label><button class="btn" data-rlcolar title="Se o seletor de arquivos não abrir, cole o conteúdo do modelo aqui">📋 Colar modelo</button><button class="btn" data-rlexpm title="Salvar o modelo atual em arquivo para compartilhar com a equipe">⬇ Exportar modelo</button>
+   <span class="rlsp"></span><label class="rlmod">Modelo: <select id="rlSel">${opt}</select></label><button class="btn" data-rlcol>▦ Colunas</button><button class="btn xlsx" data-rlxl>Exportar Excel</button><button class="btn" data-rlcsv>CSV</button></div>
+  <div class="rlsb"><label>Mostrar <select id="rlPor">${[25,50,100,500,1000].map(n=>`<option ${n===RL.por?'selected':''}>${n}</option>`).join('')}</select> resultados por página</label><span class="rlsp"></span><label>Pesquisar <input id="rlQ" value="${esc(RL.q)}" placeholder="em qualquer coluna"></label></div>
+  <div class="rltw">${T.html}</div>
+  <div class="rlft"><span id="rlInfo"></span><span class="rlsp"></span><span id="rlPg"></span></div>`;
+  rlRodape(T)}
+function rlRodape(T){
+  const i=RL.m.querySelector('#rlInfo'),p=RL.m.querySelector('#rlPg');if(!i)return;
+  i.textContent=T.tot?`Mostrando de ${T.ini+1} até ${T.ini+T.n} de ${T.tot} registro(s) · ${T.nDocs} documento(s)`:'Nenhum registro';
+  p.innerHTML=`<button class="btn sm" data-rlpg="-1" ${RL.pag<=1?'disabled':''}>Anterior</button> <b>${RL.pag}</b> / ${T.np} <button class="btn sm" data-rlpg="1" ${RL.pag>=T.np?'disabled':''}>Próximo</button>`}
+function rlAtualizarTabela(){
+  const m=rlAtual(),cols=m.cols.filter(c=>c.on),T=rlHtmlTabela(m,cols,rlRows(m,cols)),w=RL.m&&RL.m.querySelector('.rltw');if(!w)return;
+  w.innerHTML=T.html;rlRodape(T)}
+
+/* ---------- editor de modelo ---------- */
+function rlDesenharEditor(card){
+  const e=RL.ed,cat=RL.cat||(RL.cat=rlCatalogo(e)),f=RL.filtro.trim().toLowerCase(),usadas=new Set(e.cols.flatMap(c=>c.tag.split('|')));
+  const Ldis=cat.filter(t=>!f||t.tag.toLowerCase().includes(f)||String(t.ex).toLowerCase().includes(f)).slice(0,400);
+  card.innerHTML=`<div class="rlhd"><div><h2>Customizar modelo</h2><p class="mut">À esquerda: tags encontradas nos XMLs carregados (clique em + para adicionar). À direita: as colunas do modelo, na ordem do relatório.</p></div></div>
+  <div class="rltb"><label class="rlmod">Nome do modelo: <input id="rlNome" value="${esc(e.nome)}" style="min-width:300px"></label><span class="rlsp"></span><button class="btn pri" data-rlsv>💾 Salvar modelo</button>${e.pre||e.novo?'':'<button class="btn" data-rldel>🗑 Excluir</button>'}<button class="btn" data-rllimp>Limpar colunas</button><button class="btn" data-rledx>Fechar editor</button></div>
+  <div class="rled"><section><h3>Tags disponíveis <small class="mut">(${cat.length}${S.docs.some(d=>e.tipos.includes(d.tipo))?'':' · carregue XMLs deste tipo para ver todas'})</small></h3><input id="rlFil" value="${esc(RL.filtro)}" placeholder="Filtrar tag ou valor de exemplo"><div class="rlcat">${Ldis.map((t,i)=>`<div class="rlt1 ${usadas.has(t.tag)?'u':''}" data-rladd="${esc(t.tag)}" title="${esc(t.tag)}"><span class="mono">${esc(t.tag.replace(/^(nfeProc>NFe>infNFe>|cteProc>CTe>infCte>|NFSe>infNFSe>)/,'…>'))}</span><small>${esc(t.ex)}</small><b>+</b></div>`).join('')||'<div class="mut" style="padding:12px">Nenhuma tag.</div>'}${cat.length>Ldis.length&&!f?'<div class="mut" style="padding:8px">Mostrando 400 — use o filtro.</div>':''}</div></section>
+  <section><h3>Colunas do modelo <small class="mut">(${e.cols.length})</small></h3><div class="rlcl"><table><thead><tr><th></th><th>Exibir</th><th>Título</th><th>Formato</th><th>Padrão</th><th>Grupo</th><th>Tag</th><th></th></tr></thead><tbody>${e.cols.map((c,i)=>`<tr data-rli="${i}"><td class="rlmv"><button class="btn sm" data-rlmv="-1" ${i?'':'disabled'}>↑</button><button class="btn sm" data-rlmv="1" ${i<e.cols.length-1?'':'disabled'}>↓</button></td><td style="text-align:center"><input type="checkbox" data-rlon ${c.on?'checked':''}></td><td><input data-rlf="tit" value="${esc(c.tit)}"></td><td><select data-rlf="fmt">${RL_FMT.map(([k,l])=>`<option value="${k}" ${k===c.fmt?'selected':''}>${l}</option>`).join('')}</select></td><td><input data-rlf="pad" value="${esc(c.pad)}" size="6"></td><td><input data-rlf="grp" value="${esc(c.grp)}" size="12"></td><td class="mono rltg">${esc(c.tag)}</td><td><button class="btn sm" data-rlrm="${i}" title="Remover">✕</button></td></tr>`).join('')||'<tr><td colspan="8" class="mut" style="padding:20px">Sem colunas — adicione tags à esquerda.</td></tr>'}</tbody></table></div></section></div>`}
+
+/* ---------- janela de colunas (marcar/desmarcar) ---------- */
+function rlColunas(){
+  const m=rlAtual(),gr=[];m.cols.forEach((c,i)=>{let g=gr.find(x=>x.g===(c.grp||'Colunas'));if(!g){g={g:c.grp||'Colunas',L:[]};gr.push(g)}g.L.push([c,i])});
+  const w=document.createElement('div');w.className='modal rlo2';
+  w.innerHTML=`<div class="card rlcolc"><div class="rlcg">${gr.map(g=>`<div class="rlbox"><h4>${esc(g.g)} <a data-rlall="${esc(g.g)}">todos</a> <a data-rlnone="${esc(g.g)}">nenhum</a></h4>${g.L.map(([c,i])=>`<label><input type="checkbox" data-rlchk="${i}" ${c.on?'checked':''}> ${esc(c.tit)}</label>`).join('')}</div>`).join('')}</div><div style="text-align:right;margin-top:12px"><button class="btn pri" data-rlok>OK</button></div></div>`;
+  document.body.appendChild(w);
+  w.addEventListener('click',e=>{if(e.target===w||e.target.closest('[data-rlok]')){w.remove();return}
+    const a=e.target.closest('[data-rlall],[data-rlnone]');if(a){const on=a.hasAttribute('data-rlall'),g=gr.find(x=>x.g===(a.dataset.rlall||a.dataset.rlnone));g.L.forEach(([c,i])=>{c.on=on});
+      w.querySelectorAll('[data-rlchk]').forEach(k=>{if(g.L.some(([c,i])=>i===+k.dataset.rlchk))k.checked=on});rlPersistVis(m);RL.cache=null;rlAtualizarTabela()}});
+  w.addEventListener('change',e=>{const k=e.target.closest('[data-rlchk]');if(!k)return;m.cols[+k.dataset.rlchk].on=k.checked;rlPersistVis(m);RL.cache=null;rlAtualizarTabela()})}
+
+/* ---------- exportação ---------- */
+function rlMatriz(){
+  const m=rlAtual(),cols=m.cols.filter(c=>c.on),F=rlFiltrar(rlRows(m,cols),cols),temG=cols.some(c=>c.grp);
+  const num=c=>['moeda','num','pct','int'].includes(c.fmt);
+  const rows=F.map(r=>r.v.map((x,i)=>{const c=cols[i];if(num(c)&&x.n!=null&&!(c.fmt==='int'&&/^0\d/.test(String(x.k))))return x.n;if(c.fmt==='data'&&x.iso)return x.iso;return x.s}));
+  const types=cols.map(c=>c.fmt==='moeda'?'n':c.fmt==='num'||c.fmt==='pct'?'p':c.fmt==='int'?'q':c.fmt==='data'?'d':'s');
+  return{m,cols,rows,types,temG,F}}
+function rlExcel(){
+  const{m,cols,rows,types,temG}=rlMatriz();if(!cols.length||!rows.length){toast('Nada para exportar: marque colunas e carregue documentos deste tipo.');return}
+  const hd=cols.map(c=>c.tit),grp=[];let merges=[];
+  if(temG){let i=0;while(i<cols.length){let j=i;while(j+1<cols.length&&cols[j+1].grp===cols[i].grp)j++;for(let k=i;k<=j;k++)grp[k]=k===i?cols[i].grp:'';if(j>i)merges.push(xlCol(i)+'1:'+xlCol(j)+'1');i=j+1}}
+  const all=(temG?[grp,hd]:[hd]).concat(rows);
+  if(temG){types.dbl=true;types.merges=merges}
+  const widths=cols.map(c=>c.fmt==='chave'?46:c.fmt==='dh'?19:c.fmt==='moeda'?14:/Descri|Raz|Emitente|Destin|Transp|Informa|Observ|Natureza|Discrimina/i.test(c.tit)?36:c.fmt==='cnpj'?19:13);
+  try{const nm=`Relatorio_${m.nome.replace(/[^\w]+/g,'_').slice(0,40)}_${new Date().toISOString().slice(0,10)}.xlsx`;saveFile(nm,xlBook([{name:'Relatório',rows:all,types,widths}]),null);toast(`Excel gerado: ${nm} (${rows.length} linha(s))`)}catch(e){console.error(e);toast('Não consegui gerar o Excel: '+e.message)}}
+function rlCsv(){
+  const{m,cols,F}=rlMatriz();if(!cols.length||!F.length){toast('Nada para exportar.');return}
+  const q=s=>{s=String(s==null?'':s);return /[;"\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s};
+  const csv='﻿'+[cols.map(c=>q(c.tit)).join(';')].concat(F.map(r=>r.v.map((x,i)=>q(x.n!=null&&['moeda','num','pct'].includes(cols[i].fmt)?String(x.n).replace('.',','):x.s)).join(';'))).join('\r\n');
+  saveFile(`Relatorio_${m.nome.replace(/[^\w]+/g,'_').slice(0,40)}_${new Date().toISOString().slice(0,10)}.csv`,csv,csv)}
+function rlExportarModelo(){
+  const m=rlAtual(),o={app:'NF-e Lab',tipo:'modelo-relatorio',nome:m.nome,tipos:m.tipos,cols:m.cols.map(c=>({tag:c.tag,tit:c.tit,fmt:c.fmt,grp:c.grp,on:c.on,pad:c.pad}))};
+  const t=JSON.stringify(o,null,1);saveFile('modelo_'+m.nome.replace(/[^\w]+/g,'_').slice(0,40)+'.json',t,t)}
+function rlDeFsist(o){
+  const fm=t=>{t=String(t||'');if(t==='chave')return'chave';if(/HH/i.test(t))return'dh';if(/^dd\/MM\/yyyy$/i.test(t))return'data';if(/^0+[.\-\/]/.test(t))return'cnpj';if(/^R\$/.test(t))return'moeda';if(/^#/.test(t))return'num';if(/^0+$/.test(t))return'int';return'txt'};
+  const cols=[],by=new Map();
+  for(const it of o.listaItens){
+    if(!it||!it.tag||it.tipo==='grupo')continue;
+    const tag=String(it.tag).trim(),tit=String(it.titulo||'').trim()||tag.split('>').pop().replace(/^@/,''),k=tit+'|'+(it.grupo||''),f=fm(it.tipo);
+    let c=by.get(k);
+    if(c){if(!c.tag.split('|').includes(tag))c.tag+='|'+tag;if(it.visible)c.on=true;if(c.fmt==='txt'&&f!=='txt')c.fmt=f}
+    else{c=rlC(tag,tit,f,it.grupo||'',it.visible!==false);by.set(k,c);cols.push(c)}}
+  const t=cols.map(c=>c.tag).join(' ');
+  return{nome:o.nome||'Modelo FSist',tipos:/cteProc|CTe>/.test(t)?['CTE','CTEOS']:/(^| )NFSe>/.test(t)?['NFSE']:/mdfeProc|MDFe>/.test(t)?['MDFE']:['NFE','NFCE'],cols,fsist:true}}
+function rlImportarTexto(txt,nome){
+  txt=String(txt||'').replace(/^\ufeff/,'').trim();let mod=null,motivo='';
+  if(!txt){toast('O arquivo está vazio.');return}
+  let o=null;try{o=JSON.parse(txt)}catch(e){}
+  if(o&&typeof o==='object'){
+    if(Array.isArray(o.listaItens))mod=rlDeFsist(o);
+    else if(Array.isArray(o.cols))mod={nome:o.nome||nome,tipos:o.tipos||['NFE','NFCE'],cols:o.cols.filter(c=>c&&c.tag).map(c=>rlC(String(c.tag),c.tit||String(c.tag).split('>').pop(),c.fmt||rlFmtDe(String(c.tag).split('>').pop()),c.grp,c.on!==false,c.pad))};
+    else motivo='O JSON não tem "listaItens" (FSist) nem "cols" (NF-e Lab).'}
+  else if(/^\s*[\[{]/.test(txt))motivo='O conteúdo parece JSON, mas está incompleto ou inválido (copie o arquivo inteiro).';
+  if(!mod&&!motivo){
+    const L=txt.split(/\r?\n/).map(l=>l.trim()).filter(l=>l&&l[0]!=='#').map(l=>l.split(/[;\t]/).map(s=>s.trim()));
+    const cols=L.filter(x=>x[0]&&/^[\w@>*|]+$/.test(x[0])).map(x=>{const t=x[0],leaf=t.split('>').pop();return rlC(t,x[1]||leaf.replace(/^@/,''),x[2]&&RL_FMT.some(f=>f[0]===x[2])?x[2]:rlFmtDe(leaf),x[3]||'',true)});
+    const tp=cols.some(c=>/^cteProc|CTe>/.test(c.tag))?['CTE','CTEOS']:cols.some(c=>/^NFSe>/.test(c.tag))?['NFSE']:['NFE','NFCE'];
+    if(cols.length)mod={nome,tipos:tp,cols}}
+  if(!mod||!mod.cols||!mod.cols.length){toast('Não consegui ler o modelo. '+(motivo||'Use o .json do FSist ou do NF-e Lab, ou uma lista de tags (uma por linha).'));return}
+  const L=rlLoad(RL_LS,[]);mod.id='u_'+Date.now().toString(36);mod.nome=(mod.nome||nome)+(rlModelos().some(x=>x.nome===(mod.nome||nome))?' (importado)':'');
+  L.push({id:mod.id,nome:mod.nome,tipos:mod.tipos,cols:mod.cols});rlSave(RL_LS,L);RL.id=mod.id;RL.cache=null;RL.ed=null;RL.q='';RL.ord=null;rlDesenhar();
+  toast(`Modelo "${mod.nome}" importado${mod.fsist?' do FSist':''} com ${mod.cols.length} coluna(s).`)}
+function rlImportar(file){
+  const fr=new FileReader();fr.onload=()=>rlImportarTexto(fr.result,String(file.name||'modelo').replace(/(\.fsist)?\.\w+$/i,''));
+  fr.onerror=()=>toast('Não consegui abrir o arquivo escolhido.');fr.readAsText(file)}
+function rlColar(){
+  const w=document.createElement('div');w.className='modal rlo2';
+  w.innerHTML='<div class="card pccard"><div class="pchd"><div><h2>Colar modelo</h2><p class="mut">Abra o arquivo <b>.fsist.json</b> no Bloco de Notas, copie todo o conteúdo e cole aqui.</p></div><button class="btn sm" data-rlpx>✕</button></div><textarea id="rlPaste" rows="10" placeholder="Cole aqui o conteúdo do modelo (JSON do FSist ou do NF-e Lab) ou uma lista de tags"></textarea><div style="text-align:right;margin-top:10px"><button class="btn pri" data-rlpok>Importar</button></div></div>';
+  document.body.appendChild(w);const ta=w.querySelector('#rlPaste');setTimeout(()=>ta.focus(),30);
+  w.addEventListener('click',e=>{if(e.target===w||e.target.closest('[data-rlpx]'))w.remove();if(e.target.closest('[data-rlpok]')){const t=ta.value;w.remove();rlImportarTexto(t,'Modelo colado')}})}
+
+/* ---------- eventos ---------- */
+function rlClick(e){
+  const t=e.target;
+  if(t===RL.m||t.closest('[data-rlx]')){rlFechar();return}
+  if(t.closest('[data-rled]')){const m=rlAtual();RL.ed=JSON.parse(JSON.stringify(m));RL.cat=null;RL.filtro='';rlDesenhar();return}
+  if(t.closest('[data-rledx]')){RL.ed=null;RL.cat=null;RL.cache=null;rlDesenhar();return}
+  if(t.closest('[data-rlcol]')){rlColunas();return}
+  if(t.closest('[data-rlcolar]')){rlColar();return}
+  if(t.closest('[data-rlxl]')){rlExcel();return}
+  if(t.closest('[data-rlcsv]')){rlCsv();return}
+  if(t.closest('[data-rlexpm]')){rlExportarModelo();return}
+  const og=t.closest('[data-rlord]');if(og){const i=+og.dataset.rlord;RL.ord=RL.ord&&RL.ord.i===i?(RL.ord.d>0?{i,d:-1}:null):{i,d:1};RL.pag=1;rlAtualizarTabela();return}
+  const pg=t.closest('[data-rlpg]');if(pg){RL.pag+=+pg.dataset.rlpg;rlAtualizarTabela();return}
+  const tr=t.closest('tr[data-rlk]');if(tr&&!RL.ed){const k=tr.dataset.rlk;if(findDoc(k)){rlFechar();S.sel=k;S.sub='aud';render();toast('Documento aberto. O relatório continua em 📑 Relatório por tag.')}return}
+  const E=RL.ed;if(!E)return;
+  const ad=t.closest('[data-rladd]');if(ad){const tag=ad.dataset.rladd,leaf=tag.split('>').pop(),cat=RL.cat||[];
+    E.cols.push(rlC(tag,rlTituloDe(tag,cat),rlFmtDe(leaf),'',true));rlDesenharPreservando();return}
+  const rm=t.closest('[data-rlrm]');if(rm){E.cols.splice(+rm.dataset.rlrm,1);rlDesenharPreservando();return}
+  const mv=t.closest('[data-rlmv]');if(mv){const i=+mv.closest('tr').dataset.rli,j=i+(+mv.dataset.rlmv);if(E.cols[j]){[E.cols[i],E.cols[j]]=[E.cols[j],E.cols[i]];rlDesenharPreservando()}return}
+  if(t.closest('[data-rllimp]')){E.cols=[];rlDesenharPreservando();return}
+  if(t.closest('[data-rlsv]')){rlSalvarModelo();return}
+  if(t.closest('[data-rldel]')){if(!confirm('Excluir este modelo?'))return;rlSave(RL_LS,rlLoad(RL_LS,[]).filter(x=>x.id!==E.id));RL.id='b_nfe_sem';RL.ed=null;RL.cache=null;rlDesenhar();toast('Modelo excluído.')}}
+function rlDesenharPreservando(){
+  const card=RL.m.querySelector('.rlcard'),a=card.querySelector('.rlcat'),b=card.querySelector('.rlcl'),sa=a?a.scrollTop:0,sb=b?b.scrollTop:0;
+  rlDesenhar();const a2=RL.m.querySelector('.rlcat'),b2=RL.m.querySelector('.rlcl');if(a2)a2.scrollTop=sa;if(b2)b2.scrollTop=sb}
+function rlSalvarModelo(){
+  const E=RL.ed,nome=(RL.m.querySelector('#rlNome').value||'').trim();if(!nome){toast('Dê um nome ao modelo.');return}
+  if(!E.cols.length){toast('Adicione ao menos uma coluna.');return}
+  const L=rlLoad(RL_LS,[]);
+  let id=E.id;
+  if(E.pre||/^b_/.test(id)){id='u_'+Date.now().toString(36)}
+  const igual=rlModelos().find(x=>x.nome===nome&&x.id!==id);let nm=nome;if(igual)nm=nome+' (meu)';
+  const o={id,nome:nm,tipos:E.tipos,cols:E.cols.map(c=>({tag:c.tag,tit:c.tit,fmt:c.fmt,grp:c.grp,on:c.on!==false,pad:c.pad}))};
+  const i=L.findIndex(x=>x.id===id);if(i>=0)L[i]=o;else L.push(o);rlSave(RL_LS,L);
+  RL.id=id;RL.ed=null;RL.cat=null;RL.cache=null;rlDesenhar();toast(`Modelo "${nm}" salvo.`)}
+function rlInput(e){
+  const t=e.target;
+  if(t.id==='rlQ'){RL.q=t.value;RL.pag=1;const p=t.selectionStart;rlAtualizarTabela();return}
+  if(t.id==='rlFil'){RL.filtro=t.value;const pos=t.selectionStart;rlDesenhar();const n=RL.m.querySelector('#rlFil');if(n){n.focus();n.setSelectionRange(pos,pos)}return}
+  const f=t.closest&&t.closest('[data-rlf]');if(f&&RL.ed){const i=+t.closest('tr').dataset.rli;if(f.dataset.rlf!=='fmt')RL.ed.cols[i][f.dataset.rlf]=t.value}}
+function rlChange(e){
+  const t=e.target;
+  if(t.id==='rlSel'){RL.id=t.value;RL.pag=1;RL.ord=null;RL.q='';rlDesenhar();return}
+  if(t.id==='rlPor'){RL.por=+t.value;RL.pag=1;rlAtualizarTabela();return}
+  if(t.id==='rlImp'&&t.files[0]){rlImportar(t.files[0]);t.value='';return}
+  if(t.matches&&t.matches('[data-rlon]')&&RL.ed){RL.ed.cols[+t.closest('tr').dataset.rli].on=t.checked;return}
+  const f=t.closest&&t.closest('[data-rlf]');if(f&&RL.ed&&f.dataset.rlf==='fmt'){RL.ed.cols[+t.closest('tr').dataset.rli].fmt=t.value}}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const w=document.querySelector('.rlo2');if(w){w.remove();return}if(RL.m&&!document.querySelector('.modal:not(.rlo)'))rlFechar()}});
+
+/* ---------- integração ---------- */
+(function(){
+  /* excel com duas linhas de cabeçalho (faixa de grupos + títulos) */
+  const _xs=xlSheet;
+  xlSheet=function(rows,types,widths){
+    const x=_xs(rows,types,widths);if(!types||!types.dbl)return x;
+    let r=x.replace('ySplit="1" topLeftCell="A2"','ySplit="2" topLeftCell="A3"').replace('<autoFilter ref="A1:','<autoFilter ref="A2:').replace(/<c r="([A-Z]+)2" t="inlineStr">/g,'<c r="$12" s="1" t="inlineStr">');
+    if(types.merges&&types.merges.length)r=r.replace('</worksheet>',`<mergeCells count="${types.merges.length}">${types.merges.map(m=>`<mergeCell ref="${m}"/>`).join('')}</mergeCells></worksheet>`);
+    return r};
+  /* botão na barra superior, ao lado do Excel */
+  document.querySelectorAll('#btnXlsx').forEach(b=>{if(b.parentNode.querySelector('[data-rel]'))return;
+    const g=document.createElement('button');g.className='btn';g.setAttribute('data-rel','');g.title='Relatório por tag: escolha as tags do XML que viram colunas (como no FSist) e exporte para Excel';g.textContent='📑 Relatório por tag';b.parentNode.insertBefore(g,b)});
+  document.querySelectorAll('[data-enter]').forEach(b=>{if(b.parentNode.querySelector('[data-rel]'))return;const g=document.createElement('button');g.className='btn lg';g.setAttribute('data-rel','');g.title='Relatório por tag: monte colunas a partir das tags do XML e importe modelos do FSist';g.textContent='📑 Relatório por tag';b.parentNode.insertBefore(g,b.nextSibling)});
+  document.addEventListener('click',e=>{if(e.target.closest('[data-rel]')){e.preventDefault();rlAbrir()}});
+  /* atualiza sozinho quando entram XMLs novos (Pasta automática) */
+  const _r=render;let tm=null;
+  render=function(){const x=_r.apply(this,arguments);if(RL.m&&!RL.ed){clearTimeout(tm);tm=setTimeout(()=>{RL.cache=null;rlAtualizarTabela()},120)}return x};
+})();
 /* ===================== NF-e Lab instalável (PWA) ===================== */
 (function(){
   const podeSW='serviceWorker' in navigator&&/^https?:$/.test(location.protocol)&&window.parent===window;
@@ -3833,7 +4242,7 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-grupo]')){e.pre
 })();
 
 /* ===================== Versão e aviso de atualização (versao.json ao lado do index.html) ===================== */
-window.NFELAB_BUILD='2026-11-11.3';
+window.NFELAB_BUILD='2026-11-12.5';
 (function(){
   const b=document.querySelector('.brand');if(b)b.title='NF-e Lab · versão '+NFELAB_BUILD;
   function check(){
