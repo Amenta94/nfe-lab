@@ -1,4 +1,4 @@
 {
- "build": "2026-11-10.3",
- "nota": "Auditoria IBS/CBS/IS ampliada, exportação para Excel, eventos (CC-e, manifestação, cancelamento) na lista e no documento, e tutorial atualizado."
+ "build": "2026-11-11.3",
+ "nota": "Correção: carga do ICMS nas regras de benefício SP calculada pela alíquota × (1 − redução de BC), considerando desconto, frete e outras despesas."
 }
