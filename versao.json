@@ -1,4 +1,4 @@
 {
- "build": "2026-11-12.5",
- "nota": "Relatório por tag: modelo \"Teste DIFAL\" agora vem pronto na lista, para toda a equipe, sem precisar importar."
+ "build": "2026-11-12.7",
+ "nota": "Relatório por tag: chave de acesso e números longos agora colam como texto no Excel (sem 4,32E+43)."
 }

@@ -1078,6 +1078,12 @@ html.thx,html.thx *{transition:background-color .3s var(--ease),border-color .3s
 .rlbox h4{margin:0 0 6px;font-size:13px;display:flex;gap:8px;align-items:baseline}.rlbox h4 a{font-size:11px;font-weight:400;cursor:pointer;color:var(--brand,#0b7a55);text-decoration:underline}
 .rlbox label{display:flex;gap:6px;align-items:center;font-size:12.5px;padding:2px 0}
 @media (max-width:900px){.rled{grid-template-columns:1fr}}
+
+#vbar{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:9999;display:flex;align-items:center;gap:12px;background:var(--panel,#fff);color:var(--tx,#222);border:1px solid var(--bd,#d0d7e2);border-radius:12px;padding:10px 14px;box-shadow:0 8px 30px rgba(0,0,0,.25);min-width:360px;max-width:92vw;font-size:13px}
+#vbar .vb-t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#vbar .vb-p{width:140px;height:6px;border-radius:4px;background:rgba(127,127,127,.25);overflow:hidden}
+#vbar .vb-p i{display:block;height:100%;width:0;background:#2f6fed;transition:width .15s}
+.vmore{width:100%;margin:8px 0}
 </style>
 <script>window.LU={"plus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>", "minus": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/></svg>", "paste": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/></svg>", "spark": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z\"/><path d=\"M19 17v4M17 19h4\"/></svg>", "trash": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6h18\"/><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6\"/><path d=\"M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/></svg>", "sheet": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M3 15h18M9 3v18\"/></svg>", "filedown": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z\"/><path d=\"M14 2v5h6\"/><path d=\"M12 18v-6\"/><path d=\"m9 15 3 3 3-3\"/></svg>", "dl": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/><path d=\"M12 15V3\"/></svg>", "cols": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 3v18\"/></svg>", "max": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 3h6v6\"/><path d=\"M9 21H3v-6\"/><path d=\"M21 3l-7 7\"/><path d=\"M3 21l7-7\"/></svg>", "min": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 14h6v6\"/><path d=\"M20 10h-6V4\"/><path d=\"m14 10 7-7\"/><path d=\"m3 21 7-7\"/></svg>", "copy": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>", "search": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/></svg>", "help": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><path d=\"M12 17h.01\"/></svg>", "sun": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></svg>", "moon": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg>", "monitor": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg>", "fit": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m18 8 4 4-4 4\"/><path d=\"M2 12h20\"/><path d=\"m6 8-4 4 4 4\"/></svg>", "x": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>", "panel": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M9 3v18\"/></svg>", "list": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01\"/></svg>", "chev": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>", "back": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"/></svg>", "cloud": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 13v8\"/><path d=\"m8 17 4 4 4-4\"/><path d=\"M4.39 15.66A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24\"/></svg>", "alert": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4M12 17h.01\"/></svg>", "link": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"/></svg>", "check": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>", "folder": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z\"/><path d=\"m9 13 3 3 3-3\"/><path d=\"M12 8v8\"/></svg>", "key": "<svg class=\"lu\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"7.5\" cy=\"15.5\" r=\"5.5\"/><path d=\"m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3\"/></svg>"};
 window.portalTag=function(ch){ch=String(ch||'').replace(/\D/g,'');return ch.length===50?'nfse':ch.substr(20,2)};
@@ -1584,8 +1590,8 @@ async function gunzipB64(b64){const bin=atob(b64.replace(/\s/g,''));const u=new 
 /* ================== estado / ingestão ================== */
 const S={docs:[],eventos:{},erros:[],sel:null,sub:'aud',flt:'all',tipo:'',q:'',keys:[],kflt:'all',keysLixo:0};
 const keyOf=d=>d.chave||`${d.tipo}-${d.emitP?d.emitP.doc:''}-${d.sum?d.sum.num:''}-${d.m?d.m.codVer:''}`;
-const setChaves=()=>new Set(S.docs.filter(x=>x.tipo!=='RES').map(x=>x.chave).filter(Boolean));
-const findDoc=k=>S.docs.find(x=>x.key===k);
+let setChaves=()=>new Set(S.docs.filter(x=>x.tipo!=='RES').map(x=>x.chave).filter(Boolean));
+let findDoc=k=>S.docs.find(x=>x.key===k);
 
 async function ingest(txt,name){
   let r;try{r=parseXML(txt)}catch(e){r={err:'Falha na leitura: '+e.message}}
@@ -1747,7 +1753,7 @@ function auditNFe(n){
   if(n.fat&&n.dups.length){const sd=r2(n.dups.reduce((a,x)=>a+x.vDup,0));if(Math.abs(sd-n.fat.vLiq)>0.011)add('w','Cobrança',`Soma das duplicatas ${f2(sd)} difere do valor líquido da fatura ${f2(n.fat.vLiq)}.`)}
   if(n.totIBS||temIBS){add('i','IBS/CBS',`Grupo IBS/CBS informado em ${temIBS} de ${n.itens.length} item(ns): IBS ${f2(n.totIBS?n.totIBS.vIBS:sm.vIBS)} · CBS ${f2(n.totIBS?n.totIBS.vCBS:sm.vCBS)}.`);if(temIBS&&temIBS<n.itens.length)add('w','IBS/CBS','Grupo IBSCBS presente só em parte dos itens.');if(n.totIBS&&(Math.abs(n.totIBS.vIBS-sm.vIBS)>0.011||Math.abs(n.totIBS.vCBS-sm.vCBS)>0.011))add('e','IBS/CBS',`Totais IBS/CBS (${f2(n.totIBS.vIBS)} / ${f2(n.totIBS.vCBS)}) diferem da soma dos itens (${f2(sm.vIBS)} / ${f2(sm.vCBS)}).`)}
   else add('i','IBS/CBS','Nota sem grupo IBS/CBS (campos da Reforma Tributária não informados).');
-  const ctes=S.docs.filter(x=>(x.tipo==='CTE')&&x.docsNFe.includes(k));if(ctes.length)add('i','Transporte',`NF-e vinculada a ${ctes.length} CT-e carregado(s): nº ${ctes.map(x=>x.ide.nCT).join(', ')}.`);
+  const ctes=vCtesDe(k);if(ctes.length)add('i','Transporte',`NF-e vinculada a ${ctes.length} CT-e carregado(s): nº ${ctes.map(x=>x.ide.nCT).join(', ')}.`);
   return A;
 }
 
@@ -1943,12 +1949,12 @@ function render(){
   document.querySelectorAll('#lmode button').forEach(b=>b.classList.toggle('on',b.dataset.lm===(S.lm||'list')));
   $('#notas').classList.toggle('thgrid',S.lm==='grid');
   if(S.lm==='grid'){
-    $('#notas').innerHTML=L.length?L.map(d=>{const s=sumario(d),lv=isCanc(d)?'x':nivel(d);if(d.tipo!=='RES'&&!d._th){try{d._th=docHTML(d)}catch(er){d._th=''}}
-      return `<div class="th lv-${lv} ${d.key===S.sel?'sel':''}" data-k="${esc(d.key)}" title="${esc(s.tl)} nº ${esc(s.num)}"><div class="thp">${d.tipo==='RES'?'<div class="thres">Só resumo<br>(sem XML completo)</div>':`<div class="thz">${d._th}</div>`}</div><div class="thi">${tpTag(d.tipo,s.tl)}<span class="nm">nº ${esc(s.num)}</span><b>${f2(s.valor)}</b></div><div class="ths">${esc(s.parte||s.emit)}</div></div>`}).join(''):`<div class="empty">Nenhum documento neste filtro.</div>`;
+    $('#notas').innerHTML=L.length?L.slice(0,S.lim||500).map(d=>{const s=sumario(d),lv=isCanc(d)?'x':nivel(d);if(d.tipo!=='RES'&&!d._stub&&!d._th){try{d._th=docHTML(d)}catch(er){d._th=''}}
+      return `<div class="th lv-${lv} ${d.key===S.sel?'sel':''}" data-k="${esc(d.key)}" title="${esc(s.tl)} nº ${esc(s.num)}"><div class="thp">${d.tipo==='RES'?'<div class="thres">Só resumo<br>(sem XML completo)</div>':`<div class="thz">${d._th||''}</div>`}</div><div class="thi">${tpTag(d.tipo,s.tl)}<span class="nm">nº ${esc(s.num)}</span><b>${f2(s.valor)}</b></div><div class="ths">${esc(s.parte||s.emit)}</div></div>`}).join(''):`<div class="empty">Nenhum documento neste filtro.</div>`;
     renderDetail();return;
   }
   let lastDay=null;
-  $('#notas').innerHTML=L.length?L.map(d=>{
+  $('#notas').innerHTML=L.length?L.slice(0,S.lim||500).map(d=>{
     const s=sumario(d),e=cont(d,'e'),w=cont(d,'w'),[sc,stt]=situacao(d),lv=nivel(d),canc=isCanc(d),[dc,da,dl]=dirOf(d);
     const day=fdt(s.dh)||'Sem data';const gh=day!==lastDay?`<div class="gh">${esc(day)}</div>`:'';lastDay=day;
     return `${gh}<div class="nota lv-${canc?'x':lv} ${d.key===S.sel?'sel':''} ${canc?'canc':''}" data-k="${esc(d.key)}">
@@ -2179,7 +2185,7 @@ function renderSecApp(d,semItens){
     return `<div style="margin-bottom:18px"><div style="font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);font-weight:600">${esc(s.t)}</div>${b}</div>`;
   }).join('');
   const links=[...(d.docsNFe||[]),...(d.docAnt||[]),...(d.descargas||[]).flatMap(m=>[...m.ctes,...m.nfes])].filter(k=>findDoc(k));
-  const rev=d.chave?S.docs.filter(x=>(x.docsNFe&&x.docsNFe.includes(d.chave))||(x.descargas&&x.descargas.some(m=>m.ctes.includes(d.chave)||m.nfes.includes(d.chave)))):[];
+  const rev=vRev(d);
   const nav=[...links.map(k=>findDoc(k)),...rev];
   return (nav.length?`<div class="row" style="margin-bottom:14px"><span class="note" style="margin:0">Documentos relacionados no app:</span>${nav.map(x=>`<button class="btn sm" data-goto="${esc(x.key)}">${esc(sumario(x).tl)} nº ${esc(sumario(x).num)}</button>`).join('')}</div>`:'')+html;
 }
@@ -2590,7 +2596,7 @@ function validarChaves(){
   const seen={};S.keys=found.map(k=>{const r=analisarChave(k);r.dup=!!seen[k];seen[k]=1;return r});S.keysLixo=lixo;
   renderChaves();
 }
-function xmlStatus(k){const d=S.docs.find(x=>x.chave===k);return !d?'':d.tipo==='RES'?'resumo':'sim'}
+function xmlStatus(k){const d=findCh(k);return !d?'':d.tipo==='RES'?'resumo':'sim'}
 function renderChaves(){
   refreshButtons();
   const K=S.keys;
@@ -2872,7 +2878,7 @@ function openCompare(){
 }
 function renderCompare(){
   let ov=$('#cmpov');if(!ov){ov=document.createElement('div');ov.id='cmpov';ov.className='cmpov';document.body.appendChild(ov)}
-  const opts=k=>S.docs.filter(x=>x.tipo!=='RES').map(x=>{const s=sumario(x);return `<option value="${esc(x.key)}" ${x.key===k?'selected':''}>${esc(s.tl)} nº ${esc(s.num)} · ${esc((s.parte||s.emit||'').slice(0,40))}</option>`}).join('');
+  const opts=k=>vOpts(k).map(x=>{const s=sumario(x);return `<option value="${esc(x.key)}" ${x.key===k?'selected':''}>${esc(s.tl)} nº ${esc(s.num)} · ${esc((s.parte||s.emit||'').slice(0,40))}</option>`}).join('');
   const pane=(sd,k)=>{const x=findDoc(k);return `<div class="cp"><div class="vtool"><select class="sel" data-cs="${sd}">${opts(k)}</select><button class="btn sm" data-cz="${sd}" data-d="-">−</button><span class="mono" id="cz${sd}" style="min-width:42px;text-align:center;font-size:12px"></span><button class="btn sm" data-cz="${sd}" data-d="+">+</button><button class="btn sm" data-cz="${sd}" data-d="fit">Ajustar</button></div><div class="viewer" id="cv${sd}"><div class="page" id="cpg${sd}">${x?docHTML(x):''}</div></div></div>`};
   ov.innerHTML=`<div class="cmphd"><b>⧉ Comparar documentos</b><span class="sp"></span><span class="mut" style="font-size:12px">Esc para fechar</span><button class="btn sm" data-cx>✕ Fechar</button></div><div class="cmpb">${pane('a',S.cmp.a)}${pane('b',S.cmp.b)}</div>`;
   requestAnimationFrame(()=>{cmpZoom('a');cmpZoom('b')});
@@ -3336,8 +3342,8 @@ function evFaixa(d){
 }
 function evOrfaos(){const ks=new Set(S.docs.map(d=>d.chave));return Object.keys(S.eventos).filter(k=>!ks.has(k))}
 function evDecorar(){
-  document.querySelectorAll('#notas .nota[data-k]').forEach(el=>{const d=S.docs.find(x=>x.key===el.dataset.k);if(!d||!d.chave)return;const h=evChips(d);if(!h)return;const t=el.querySelector('.t1');if(t&&!t.querySelector('.evc'))t.insertAdjacentHTML('beforeend',h)});
-  const det=document.getElementById('detail');const d=S.docs.find(x=>x.key===S.sel);
+  document.querySelectorAll('#notas .nota[data-k]').forEach(el=>{const d=findDoc(el.dataset.k);if(!d||!d.chave)return;const h=evChips(d);if(!h)return;const t=el.querySelector('.t1');if(t&&!t.querySelector('.evc'))t.insertAdjacentHTML('beforeend',h)});
+  const det=document.getElementById('detail');const d=findDoc(S.sel);
   if(det&&d&&d.chave&&!det.querySelector('.evbs')){const f=evFaixa(d);if(f){const tl=det.querySelector('.tl');if(tl)tl.insertAdjacentHTML('afterend',f);else det.insertAdjacentHTML('afterbegin',f)}}
   const er=document.getElementById('loadErrs');if(er){let o=er.querySelector('.evorf');const L=evOrfaos();
     if(!L.length){if(o)o.remove()}else{const html=`<div class="evorf"><b>${L.length} evento(s) importado(s) sem o XML do documento</b> — ${L.slice(0,3).map(k=>`<span class="mono">${k.slice(0,4)}…${k.slice(-6)}</span>`).join(', ')}${L.length>3?'…':''} <button class="btn sm pchave" data-evorf>${LU.dl}Baixar XML dessas chaves</button></div>`;if(o)o.outerHTML=html;else er.insertAdjacentHTML('afterbegin',html)}}
@@ -3829,7 +3835,7 @@ function openGrupo(){
   m.addEventListener('click',e=>{if(e.target===m||e.target.closest('[data-gx]'))m.remove();
     if(e.target.closest('[data-gdef]'))m.querySelector('#gTxt').value=GRP_DEF.map(g=>[g.doc,g.ie,'',g.nome].join(' ; ')).join('\n');
     if(e.target.closest('[data-gok]')){const L=m.querySelector('#gTxt').value.split('\n').map(l=>l.split(';').map(s=>s.trim())).filter(x=>x[0]).map(([doc,ie,uf,nome])=>({doc:doc.replace(/\D/g,''),ie:(ie||'').replace(/\D/g,''),uf:(uf||'').toUpperCase().slice(0,2),nome:nome||doc})).filter(g=>g.doc.length===8||g.doc.length===14);
-      try{localStorage.setItem('nfelab-grupo',JSON.stringify(L))}catch(x){}m.remove();reaudit();render();toast(`${L.length} empresa(s) do grupo salvas — auditoria refeita.`)}});
+      try{localStorage.setItem('nfelab-grupo',JSON.stringify(L))}catch(x){}m.remove();reaudit();if(typeof vTodos==='function')vTodos();render();toast(`${L.length} empresa(s) do grupo salvas — auditoria refeita.`)}});
 }
 document.addEventListener('click',e=>{if(e.target.closest('[data-grupo]')){e.preventDefault();openGrupo()}});
 (function(){document.querySelectorAll('#btnXlsx').forEach(b=>{if(b.parentNode.querySelector('[data-grupo]'))return;const g=document.createElement('button');g.className='btn';g.setAttribute('data-grupo','');g.title='Empresas do grupo usadas na auditoria';g.textContent='🏢 Grupo';b.parentNode.insertBefore(g,b)})})();
@@ -3984,11 +3990,60 @@ function rlDocRows(d,cols){
     rows.push({d,i,v})}
   return rows}
 function rlRows(m,cols){
-  const docs=S.docs.filter(d=>m.tipos.includes(d.tipo)&&d.xml);
+  const docs=S.docs.filter(d=>m.tipos.includes(d.tipo)&&(d.xml||d._stub));
+  if(docs.some(d=>d._stub))return rlRowsV(m,cols,docs);
   const sig=m.id+'|'+cols.map(c=>c.tag+c.fmt+c.pad).join(',')+'|'+docs.map(d=>d.key).join(',');
   if(RL.cache&&RL.cache.sig===sig)return RL.cache.rows;
   const rows=[];docs.forEach(d=>rlDocRows(d,cols).forEach(r=>rows.push(r)));
   RL.cache={sig,rows};return rows}
+/* modo volume: prévia assíncrona (reabre os XMLs sob demanda); a exportação percorre tudo */
+function rlRowsV(m,cols,all){
+  const sig=m.id+'|'+cols.map(c=>c.tag+c.fmt+c.pad).join(',')+'|V'+all.length+'|'+all[0].key+'|'+all[all.length-1].key;
+  if(RL.cache&&RL.cache.sig===sig)return RL.cache.rows;
+  const C={sig,rows:[],carregando:true,lidos:0,total:all.length,parcial:false};RL.cache=C;
+  (async()=>{
+    let t=performance.now();
+    for(const d of all){
+      if(RL.cache!==C)return;
+      if(C.rows.length>=V.PREV){C.parcial=true;break}
+      try{const f=d._stub?await vFull(d,true):d,lite={key:f.key,tipo:f.tipo};rlDocRows(f,cols).forEach(r=>{r.d=lite;C.rows.push(r)})}catch(e){}
+      C.lidos++;
+      if(performance.now()-t>150){t=performance.now();if(RL.m&&!RL.ed&&RL.cache===C)rlAtualizarTabela();await vYield()}
+    }
+    C.carregando=false;if(RL.cache===C&&RL.m&&!RL.ed)rlAtualizarTabela();
+  })();
+  return C.rows}
+const rlVolume=()=>{const m=rlAtual();return S.docs.some(d=>d._stub&&m.tipos.includes(d.tipo))};
+async function rlExportarV(kind){
+  const m=rlAtual(),cols=m.cols.filter(c=>c.on);if(!cols.length){toast('Nada para exportar: marque colunas.');return}
+  const all=S.docs.filter(d=>m.tipos.includes(d.tipo)&&(d.xml||d._stub)),temG=cols.some(c=>c.grp);
+  const num=c=>['moeda','num','pct','int'].includes(c.fmt);
+  const cel=(x,i)=>{const c=cols[i];if(num(c)&&x.n!=null&&!(c.fmt==='int'&&/^0\d/.test(String(x.k))))return x.n;if(c.fmt==='data'&&x.iso)return x.iso;return x.s};
+  const q=s=>{s=String(s==null?'':s);return /[;"\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s};
+  const cc=(x,i)=>q(x.n!=null&&['moeda','num','pct'].includes(cols[i].fmt)?String(x.n).replace('.',','):(rlLongo(x.s)?'="'+x.s+'"':x.s));
+  const parts=[],lin=[];let n=0,corte=false,t=performance.now();V.stop=false;
+  if(kind==='csv')parts.push('\ufeff'+cols.map(c=>q(c.tit)).join(';')+'\r\n');
+  try{
+    for(let i=0;i<all.length&&!V.stop;i++){
+      let f;try{f=all[i]._stub?await vFull(all[i],true):all[i]}catch(e){continue}
+      const R=rlFiltrar(rlDocRows(f,cols),cols);
+      if(kind==='csv'){if(R.length){parts.push(R.map(r=>r.v.map(cc).join(';')).join('\r\n')+'\r\n');n+=R.length}}
+      else for(const r of R){if(lin.length>=V.XLIT){corte=true;break}lin.push(r.v.map(cel));n++}
+      if(performance.now()-t>80){t=performance.now();vProg(`Exportando relatório… ${(i+1).toLocaleString('pt-BR')}/${all.length.toLocaleString('pt-BR')} documentos · ${n.toLocaleString('pt-BR')} linhas`,i+1,all.length);await vYield()}
+    }
+    if(V.stop){toast('Exportação cancelada.');return}
+    const base=`Relatorio_${m.nome.replace(/[^\w]+/g,'_').slice(0,40)}_${new Date().toISOString().slice(0,10)}`;
+    if(kind==='csv'){await saveFile(base+'.csv',new Blob(parts,{type:'text/csv;charset=utf-8'}),null);toast(`CSV gerado: ${n.toLocaleString('pt-BR')} linha(s) de ${all.length.toLocaleString('pt-BR')} documento(s).`);return}
+    vProg('Gerando arquivo…',0,0);await vYield();
+    const hd=cols.map(c=>c.tit),grp=[],merges=[];
+    if(temG){let i=0;while(i<cols.length){let j=i;while(j+1<cols.length&&cols[j+1].grp===cols[i].grp)j++;for(let k=i;k<=j;k++)grp[k]=k===i?cols[i].grp:'';if(j>i)merges.push(xlCol(i)+'1:'+xlCol(j)+'1');i=j+1}}
+    const types=cols.map(c=>c.fmt==='moeda'?'n':c.fmt==='num'||c.fmt==='pct'?'p':c.fmt==='int'?'q':c.fmt==='data'?'d':'s');
+    if(temG){types.dbl=true;types.merges=merges}
+    const widths=cols.map(c=>c.fmt==='chave'?46:c.fmt==='dh'?19:c.fmt==='moeda'?14:/Descri|Raz|Emitente|Destin|Transp|Informa|Observ|Natureza|Discrimina/i.test(c.tit)?36:c.fmt==='cnpj'?19:13);
+    await saveFile(base+'.xlsx',xlBook([{name:'Relatório',rows:(temG?[grp,hd]:[hd]).concat(lin),types,widths}]),null);
+    toast(`Excel gerado: ${n.toLocaleString('pt-BR')} linha(s)${corte?` — limitado a ${V.XLIT.toLocaleString('pt-BR')} linhas (use CSV, que não tem limite, ou filtre e exporte em partes)`:''}.`);
+  }catch(e){console.error(e);toast('Não consegui exportar: '+e.message)}
+  finally{V.stop=false;vProg(null)}}
 
 /* ---------- catálogo de tags (descoberto nos XMLs carregados) ---------- */
 function rlGen(segs){return segs.map((s,i)=>i>0&&['ICMS','IPI','PIS','COFINS'].includes(segs[i-1])&&s.startsWith(segs[i-1])&&s.length>segs[i-1].length?'*':s)}
@@ -4050,14 +4105,15 @@ function rlDesenhar(){
   const opt=L.map(x=>`<option value="${esc(x.id)}" ${x.id===m.id?'selected':''}>${esc(x.nome)}${x.pre?'':' ★'}</option>`).join('');
   card.innerHTML=`<div class="rlhd"><div><h2>Relatório por tag</h2><p class="mut">Escolha as tags do XML que viram colunas — uma linha por documento (ou por item). Vale para todos os documentos carregados.</p></div><button class="btn sm" data-rlx title="Fechar (Esc)">✕</button></div>
   <div class="rltb"><button class="btn pri" data-rled>⚙ Customizar modelo</button><label class="btn" title="Importar um modelo do NF-e Lab ou do FSist (.json), ou uma lista de tags (uma por linha)">📂 Importar modelo<input type="file" id="rlImp" hidden></label><button class="btn" data-rlcolar title="Se o seletor de arquivos não abrir, cole o conteúdo do modelo aqui">📋 Colar modelo</button><button class="btn" data-rlexpm title="Salvar o modelo atual em arquivo para compartilhar com a equipe">⬇ Exportar modelo</button>
-   <span class="rlsp"></span><label class="rlmod">Modelo: <select id="rlSel">${opt}</select></label><button class="btn" data-rlcol>▦ Colunas</button><button class="btn xlsx" data-rlxl>Exportar Excel</button><button class="btn" data-rlcsv>CSV</button></div>
+   <span class="rlsp"></span><label class="rlmod">Modelo: <select id="rlSel">${opt}</select></label><button class="btn" data-rlcol>▦ Colunas</button><button class="btn xlsx" data-rlxl>Exportar Excel</button><button class="btn" data-rlcopy title="Copia a tabela (com o cabeçalho) para colar direto no Excel">📋 Copiar p/ Excel</button><button class="btn" data-rlcsv>CSV</button></div>
   <div class="rlsb"><label>Mostrar <select id="rlPor">${[25,50,100,500,1000].map(n=>`<option ${n===RL.por?'selected':''}>${n}</option>`).join('')}</select> resultados por página</label><span class="rlsp"></span><label>Pesquisar <input id="rlQ" value="${esc(RL.q)}" placeholder="em qualquer coluna"></label></div>
   <div class="rltw">${T.html}</div>
   <div class="rlft"><span id="rlInfo"></span><span class="rlsp"></span><span id="rlPg"></span></div>`;
   rlRodape(T)}
 function rlRodape(T){
   const i=RL.m.querySelector('#rlInfo'),p=RL.m.querySelector('#rlPg');if(!i)return;
-  i.textContent=T.tot?`Mostrando de ${T.ini+1} até ${T.ini+T.n} de ${T.tot} registro(s) · ${T.nDocs} documento(s)`:'Nenhum registro';
+  i.textContent=T.tot?`Mostrando de ${T.ini+1} até ${T.ini+T.n} de ${T.tot} registro(s) · ${T.nDocs} documento(s)`:'Nenhum registro'
+  const C=RL.cache;if(C&&C.total!==undefined)i.textContent+=C.carregando?` · lendo XMLs… ${C.lidos.toLocaleString('pt-BR')}/${C.total.toLocaleString('pt-BR')}`:C.parcial?` · prévia das primeiras ${C.rows.length.toLocaleString('pt-BR')} linhas (de ${C.total.toLocaleString('pt-BR')} documentos) — Exportar CSV/Excel percorre todos`:'';
   p.innerHTML=`<button class="btn sm" data-rlpg="-1" ${RL.pag<=1?'disabled':''}>Anterior</button> <b>${RL.pag}</b> / ${T.np} <button class="btn sm" data-rlpg="1" ${RL.pag>=T.np?'disabled':''}>Próximo</button>`}
 function rlAtualizarTabela(){
   const m=rlAtual(),cols=m.cols.filter(c=>c.on),T=rlHtmlTabela(m,cols,rlRows(m,cols)),w=RL.m&&RL.m.querySelector('.rltw');if(!w)return;
@@ -4091,6 +4147,7 @@ function rlMatriz(){
   const types=cols.map(c=>c.fmt==='moeda'?'n':c.fmt==='num'||c.fmt==='pct'?'p':c.fmt==='int'?'q':c.fmt==='data'?'d':'s');
   return{m,cols,rows,types,temG,F}}
 function rlExcel(){
+  if(rlVolume()){rlExportarV('xlsx');return}
   const{m,cols,rows,types,temG}=rlMatriz();if(!cols.length||!rows.length){toast('Nada para exportar: marque colunas e carregue documentos deste tipo.');return}
   const hd=cols.map(c=>c.tit),grp=[];let merges=[];
   if(temG){let i=0;while(i<cols.length){let j=i;while(j+1<cols.length&&cols[j+1].grp===cols[i].grp)j++;for(let k=i;k<=j;k++)grp[k]=k===i?cols[i].grp:'';if(j>i)merges.push(xlCol(i)+'1:'+xlCol(j)+'1');i=j+1}}
@@ -4099,9 +4156,10 @@ function rlExcel(){
   const widths=cols.map(c=>c.fmt==='chave'?46:c.fmt==='dh'?19:c.fmt==='moeda'?14:/Descri|Raz|Emitente|Destin|Transp|Informa|Observ|Natureza|Discrimina/i.test(c.tit)?36:c.fmt==='cnpj'?19:13);
   try{const nm=`Relatorio_${m.nome.replace(/[^\w]+/g,'_').slice(0,40)}_${new Date().toISOString().slice(0,10)}.xlsx`;saveFile(nm,xlBook([{name:'Relatório',rows:all,types,widths}]),null);toast(`Excel gerado: ${nm} (${rows.length} linha(s))`)}catch(e){console.error(e);toast('Não consegui gerar o Excel: '+e.message)}}
 function rlCsv(){
+  if(rlVolume()){rlExportarV('csv');return}
   const{m,cols,F}=rlMatriz();if(!cols.length||!F.length){toast('Nada para exportar.');return}
   const q=s=>{s=String(s==null?'':s);return /[;"\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s};
-  const csv='﻿'+[cols.map(c=>q(c.tit)).join(';')].concat(F.map(r=>r.v.map((x,i)=>q(x.n!=null&&['moeda','num','pct'].includes(cols[i].fmt)?String(x.n).replace('.',','):x.s)).join(';'))).join('\r\n');
+  const csv='﻿'+[cols.map(c=>q(c.tit)).join(';')].concat(F.map(r=>r.v.map((x,i)=>q(x.n!=null&&['moeda','num','pct'].includes(cols[i].fmt)?String(x.n).replace('.',','):(rlLongo(x.s)?'="'+x.s+'"':x.s))).join(';'))).join('\r\n');
   saveFile(`Relatorio_${m.nome.replace(/[^\w]+/g,'_').slice(0,40)}_${new Date().toISOString().slice(0,10)}.csv`,csv,csv)}
 function rlExportarModelo(){
   const m=rlAtual(),o={app:'NF-e Lab',tipo:'modelo-relatorio',nome:m.nome,tipos:m.tipos,cols:m.cols.map(c=>({tag:c.tag,tit:c.tit,fmt:c.fmt,grp:c.grp,on:c.on,pad:c.pad}))};
@@ -4154,6 +4212,7 @@ function rlClick(e){
   if(t.closest('[data-rlcolar]')){rlColar();return}
   if(t.closest('[data-rlxl]')){rlExcel();return}
   if(t.closest('[data-rlcsv]')){rlCsv();return}
+  if(t.closest('[data-rlcopy]')){rlCopiar();return}
   if(t.closest('[data-rlexpm]')){rlExportarModelo();return}
   const og=t.closest('[data-rlord]');if(og){const i=+og.dataset.rlord;RL.ord=RL.ord&&RL.ord.i===i?(RL.ord.d>0?{i,d:-1}:null):{i,d:1};RL.pag=1;rlAtualizarTabela();return}
   const pg=t.closest('[data-rlpg]');if(pg){RL.pag+=+pg.dataset.rlpg;rlAtualizarTabela();return}
@@ -4211,6 +4270,273 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){const w=document.qu
   const _r=render;let tm=null;
   render=function(){const x=_r.apply(this,arguments);if(RL.m&&!RL.ed){clearTimeout(tm);tm=setTimeout(()=>{RL.cache=null;rlAtualizarTabela()},120)}return x};
 })();
+
+/* copiar para o Excel (TSV com cabeçalho) */
+function rlCopiar(){
+  const m=rlAtual(),cols=m.cols.filter(c=>c.on);
+  if(!cols.length){toast('Marque colunas antes de copiar.');return}
+  const F=rlFiltrar(rlRows(m,cols),cols);
+  if(!F.length){toast('Nada para copiar.');return}
+  const lim=100000,L=F.slice(0,lim),cl=x=>String(x==null?'':x).replace(/[\t\r\n]+/g,' ');
+  const num=c=>['moeda','num','pct'].includes(c.fmt);
+  const tsv=[cols.map(c=>cl(c.tit)).join('\t')].concat(L.map(r=>r.v.map((x,i)=>(v=>rlLongo(v)?'="'+v+'"':v)(cl(num(cols[i])&&x.n!=null?String(x.n).replace('.',','):x.s))).join('\t'))).join('\r\n');
+  const ok=()=>toast(`Copiado: cabeçalho + ${L.length.toLocaleString('pt-BR')} linha(s). Cole no Excel (Ctrl+V).${F.length>lim?' Limitado a '+lim.toLocaleString('pt-BR')+' linhas.':''}${RL.cache&&RL.cache.parcial?' (prévia — use CSV/Excel para tudo)':''}`);
+  const fb=()=>showCopyModal(tsv,'Copie o conteúdo e cole no Excel');
+  try{navigator.clipboard.writeText(tsv).then(ok,fb)}catch(e){fb()}
+}
+
+/* números longos (chave de acesso) / zeros à esquerda: o Excel converteria em notação científica; ="..." força texto */
+const rlLongo=v=>/^\d{12,}$/.test(v)||/^0\d+$/.test(v);
+
+/* =====================================================================
+   MODO VOLUME — milhares/centenas de milhares de XMLs
+   - Os primeiros V.LIM documentos ficam completos (comportamento normal).
+   - Acima disso cada documento vira um "resumo" leve (stub): fica só o que a lista,
+     os totais, a auditoria e os vínculos precisam. O XML continua no disco (File/zip)
+     e é reaberto sob demanda ao clicar no documento (cache LRU de V.CAP docs).
+   - Índices Map (chave / key / vínculos) deixam tudo O(1); lista com janela.
+   ===================================================================== */
+const V={LIM:1500,CAP:250,XLIT:60000,PDFMAX:300,PREV:3000,
+  m:new Map(),ch:new Map(),chSet:new Set(),rev:new Map(),full:new Map(),dirty:new Set(),
+  nDel:0,run:false,stop:false,t:0,exp:false};
+const vYield=()=>new Promise(r=>setTimeout(r,0));
+const vCol=new Intl.Collator(undefined,{numeric:true});
+
+/* ---------- barra de progresso ---------- */
+function vProg(txt,i,n){
+  let b=document.getElementById('vbar');
+  if(txt==null){if(b)b.remove();return}
+  if(!b){b=document.createElement('div');b.id='vbar';b.innerHTML='<div class="vb-t"></div><div class="vb-p"><i></i></div><button class="btn sm" data-vstop>Parar</button>';document.body.appendChild(b)}
+  b.querySelector('.vb-t').textContent=txt;
+  b.querySelector('.vb-p i').style.width=(n?Math.min(100,Math.round(100*i/n)):0)+'%';
+}
+document.addEventListener('click',e=>{if(e.target.closest('[data-vstop]')){V.stop=true;toast('Parando… o que já foi lido fica carregado.')}});
+function vMemCheia(){try{const m=performance.memory;return !!(m&&m.usedJSHeapSize>.85*m.jsHeapSizeLimit)}catch(e){return false}}
+
+/* ---------- índices ---------- */
+function vRebuild(){
+  V.m.clear();V.ch.clear();V.chSet.clear();V.rev.clear();V.nDel=0;
+  S.docs=S.docs.filter(x=>!x._gone);
+  S.docs.forEach(d=>vIndexa(d));
+}
+function vIndexa(o){
+  V.m.set(o.key,o);
+  if(o.chave){const c=V.ch.get(o.chave);if(!c||c._gone||(c.tipo==='RES'&&o.tipo!=='RES'))V.ch.set(o.chave,o);if(o.tipo!=='RES')V.chSet.add(o.chave)}
+  const refs=[];(o.docsNFe||[]).forEach(k=>refs.push(k));(o.descargas||[]).forEach(m=>{(m.ctes||[]).forEach(k=>refs.push(k));(m.nfes||[]).forEach(k=>refs.push(k))});
+  refs.forEach(k=>{let a=V.rev.get(k);if(!a){a=[];V.rev.set(k,a)}if(a[a.length-1]!==o)a.push(o)});
+  return refs;
+}
+function vSync(){if(V.m.size!==S.docs.length-V.nDel)vRebuild()}
+function vDel(o){
+  o._gone=true;V.nDel++;
+  if(V.m.get(o.key)===o)V.m.delete(o.key);
+  if(o.chave&&V.ch.get(o.chave)===o)V.ch.delete(o.chave);
+  V.full.delete(o.key);
+}
+function vReset(){V.m.clear();V.ch.clear();V.chSet.clear();V.rev.clear();V.full.clear();V.dirty.clear();V.nDel=0}
+findDoc=k=>{vSync();const d=V.m.get(k);return d&&d._stub?(V.full.get(k)||d):d};
+setChaves=()=>{vSync();return V.chSet};
+function findCh(k){vSync();const d=V.ch.get(k);return d&&!d._gone?d:undefined}
+function vCtesDe(k){return(V.rev.get(k)||[]).filter(x=>x.tipo==='CTE'&&!x._gone)}
+function vRev(d){if(!d.chave)return[];return[...new Set(V.rev.get(d.chave)||[])].filter(x=>!x._gone)}
+function vOpts(k){const L=S.docs.filter(x=>x.tipo!=='RES');if(L.length<=400)return L;const r=L.slice(0,400),cur=V.m.get(k);if(cur&&!r.includes(cur))r.unshift(cur);return r}
+
+/* ---------- resumo leve ---------- */
+const _sumarioBase=sumario;
+sumario=function(d){if(d._stub)return d.sum;return d._sm||(d._sm=_sumarioBase(d))};
+function vStub(d,src){
+  const s={_stub:1,tipo:d.tipo,key:d.key,chave:d.chave,file:d.file,src,sum:_sumarioBase(d),alertas:d.alertas||[],
+    cStat:d.cStat,cancelada:d.cancelada,docsNFe:d.docsNFe,descargas:d.descargas};
+  if(d.ide)s.ide={tpNF:d.ide.tpNF,nCT:d.ide.nCT,nNF:d.ide.nNF,mod:d.ide.mod,serie:d.ide.serie};
+  if(d.tot)s.tot={vNF:d.tot.vNF,vCarga:d.tot.vCarga};
+  if(d.prot)s.prot={cStat:d.prot.cStat,nProt:d.prot.nProt};
+  if(d.res)s.res={cSit:d.res.cSit,tpNF:d.res.tpNF};
+  if(d.emitP)s.emitP={doc:d.emitP.doc};
+  if(d.m)s.m={codVer:d.m.codVer};
+  if(d.tpAmb)s.tpAmb=d.tpAmb;
+  return s;
+}
+
+/* ---------- reabrir o XML sob demanda ---------- */
+async function vTexto(d){
+  const s=d.src;if(!s)throw new Error('origem do arquivo não guardada');
+  if(s.t!=null)return s.t;
+  if(s.f)return await s.f.text();
+  if(s.z)return await s.z.async('string');
+  throw new Error('origem do arquivo indisponível');
+}
+async function vFull(d,nocache){
+  if(!d._stub)return d;
+  const c=V.full.get(d.key);if(c){if(!nocache){V.full.delete(d.key);V.full.set(d.key,c)}return c}
+  const txt=await vTexto(d);
+  const r=parseXML(txt);if(r.err||!r.docs)throw new Error(r.err||'XML inválido');
+  const x=r.docs.find(z=>keyOf(z)===d.key)||r.docs[0];
+  x.file=d.file;x.xml=txt;x.key=d.key;x.alertas=d.alertas;
+  if(!nocache){V.full.set(d.key,x);if(V.full.size>V.CAP)V.full.delete(V.full.keys().next().value)}
+  return x;
+}
+
+/* ---------- ingest (substitui o original) ---------- */
+ingest=async function(txt,name,src){
+  let r;try{r=parseXML(txt)}catch(e){r={err:'Falha na leitura: '+e.message}}
+  if(r.err){S.erros.push(`${name}: ${r.err}`);return}
+  if(r.zips){
+    if(typeof DecompressionStream==='undefined'){S.erros.push(`${name}: navegador sem suporte a descompactação gzip (lote Distribuição DF-e).`);return}
+    for(const z of r.zips){try{const t=await gunzipB64(z.b64);await ingest(t,`${name} · NSU ${z.nsu} (${z.schema})`,{t})}catch(e){S.erros.push(`${name} NSU ${z.nsu}: ${e.message}`)}}
+    return;
+  }
+  if(r.evento){
+    const e=r.evento;if(!e.ch){S.erros.push(`${name}: evento sem chave do documento`);return}
+    const L=(S.eventos[e.ch]=S.eventos[e.ch]||[]);
+    if(!L.some(x=>x.tpEvento===e.tpEvento&&x.seq===e.seq&&x.dh===e.dh)){
+      L.push(e);
+      const dd=V.ch.get(e.ch);
+      if(dd&&dd._stub&&!dd._gone&&(!/^(NFE|NFCE)$/.test(dd.tipo)||/^(2102|110110)/.test(String(e.tpEvento))))V.dirty.add(dd.key);
+    }
+    return;
+  }
+  vSync();
+  for(const d of r.docs){
+    d.file=name;d.key=keyOf(d);
+    if(d.tipo==='RES'){const o=V.ch.get(d.chave);if(o&&!o._gone&&o.tipo!=='RES')continue}
+    if(d.tipo!=='RES'&&d.chave){const o=V.ch.get(d.chave);if(o&&!o._gone&&o.tipo==='RES')vDel(o)}
+    const old=V.m.get(d.key);if(old&&!old._gone)vDel(old);
+    let o=d;
+    if(S.docs.length>=V.LIM){d.xml=txt;try{d.alertas=auditar(d)}catch(e){d.alertas=[]}o=vStub(d,src||{t:txt})}
+    else d.xml=txt;
+    const refs=vIndexa(o);
+    refs.forEach(k=>{const t=V.ch.get(k);if(t&&t!==o&&t._stub&&!t._gone)V.dirty.add(t.key)});
+    if(d.chave&&V.rev.has(d.chave))V.rev.get(d.chave).forEach(x=>{if(x!==o&&x._stub&&!x._gone)V.dirty.add(x.key)});
+    S.docs.push(o);
+  }
+};
+
+/* ---------- carga de arquivos com progresso ---------- */
+handleFiles=async function(files){
+  S.erros=[];V.stop=false;const n0=S.docs.length;const lista=Array.from(files);let nf=0,nd=0;V.t=performance.now();
+  const tick=async(forca)=>{
+    if(!forca&&performance.now()-V.t<80)return;
+    V.t=performance.now();vProg(`Lendo… ${nf.toLocaleString('pt-BR')}/${lista.length.toLocaleString('pt-BR')} arquivo(s) · ${S.docs.length.toLocaleString('pt-BR')} documento(s)`,nf,lista.length);
+    await vYield();
+    if(vMemCheia()){V.stop=true;S.erros.push('Memória do navegador quase cheia — parei a leitura para não travar. O que já foi lido continua carregado; filtre/exporte e limpe antes de carregar mais.')}
+  };
+  for(const f of lista){
+    if(V.stop)break;
+    try{
+      if(/\.zip$/i.test(f.name)){
+        await loadScript(LIB.zip);const z=await JSZip.loadAsync(f);
+        for(const [nm,en] of Object.entries(z.files)){
+          if(V.stop)break;
+          if(!en.dir&&/\.(xml|txt)$/i.test(nm)){await ingest(await en.async('string'),nm.split('/').pop(),{z:en});nd++;await tick()}
+        }
+      }else{await ingest(await f.text(),f.name,{f});nd++}
+    }catch(e){S.erros.push(`${f.name}: ${e.message}`)}
+    nf++;await tick();
+  }
+  vProg('Auditando…',0,0);await vYield();
+  reaudit();if(!findDoc(S.sel)&&S.docs.length)S.sel=S.docs[0].key;
+  vProg(null);render();
+  const dif=S.docs.length-n0;
+  toast(`${S.docs.length.toLocaleString('pt-BR')} documento(s) no app (${dif>=0?'+'+dif.toLocaleString('pt-BR'):dif}).${V.stop?' Leitura interrompida.':''}`);
+  V.stop=false;
+};
+
+/* ---------- re-auditoria ---------- */
+function vSK(d){if(d._sk)return d._sk;const s=sumario(d);return d._sk=[s.dh||'',String(s.num==null?'':s.num)]}
+reaudit=function(){
+  if(V.nDel){S.docs=S.docs.filter(x=>!x._gone);V.nDel=0;V.chSet.clear();S.docs.forEach(x=>{if(x.chave&&x.tipo!=='RES')V.chSet.add(x.chave)})}
+  for(const d of S.docs){if(!d._stub){d.alertas=auditar(d);d._th=null}}
+  S.docs.sort((a,b)=>{const x=vSK(a),y=vSK(b);return x[0]<y[0]?-1:x[0]>y[0]?1:vCol.compare(x[1],y[1])});
+  vFila();
+};
+function vTodos(){S.docs.forEach(d=>{if(d._stub)V.dirty.add(d.key)});vFila()}
+async function vFila(){
+  if(V.run||!V.dirty.size)return;
+  V.run=true;V.stop=false;let feitos=0,total=0;V.t=performance.now();
+  try{
+    while(V.dirty.size&&!V.stop){
+      const keys=[...V.dirty];V.dirty.clear();total+=keys.length;
+      for(const k of keys){
+        if(V.stop)break;
+        const st=V.m.get(k);if(!st||st._gone||!st._stub)continue;
+        try{const f=await vFull(st,true);st.alertas=auditar(f)}catch(e){}
+        feitos++;
+        if(performance.now()-V.t>80){V.t=performance.now();vProg(`Reauditando vínculos/eventos… ${feitos.toLocaleString('pt-BR')}/${total.toLocaleString('pt-BR')}`,feitos,total);await vYield()}
+      }
+    }
+  }finally{V.run=false;V.stop=false;vProg(null);try{render()}catch(e){}}
+}
+
+/* ---------- detalhe: abre o XML sob demanda ---------- */
+{const _rd=renderDetail;renderDetail=function(){
+  const d=V.m.get(S.sel);
+  if(d&&d._stub&&!V.full.has(d.key)){
+    const D=$('#detail');D.innerHTML='<div class="empty"><div class="empty-ic">⏳</div>Abrindo o XML…</div>';const k=S.sel;
+    vFull(d).then(()=>{if(S.sel===k)_rd()}).catch(e=>{if(S.sel===k)D.innerHTML=`<div class="empty"><div class="empty-ic">⚠</div>Não consegui reabrir o XML deste documento (${esc(e.message)}).<br>O arquivo pode ter sido movido/apagado — carregue-o novamente.</div>`});
+    return;
+  }
+  return _rd.apply(this,arguments);
+}}
+{const _rc=renderCompare;renderCompare=function(){
+  const need=[S.cmp.a,S.cmp.b].map(k=>V.m.get(k)).filter(x=>x&&x._stub&&!V.full.has(x.key));
+  if(need.length){Promise.all(need.map(x=>vFull(x))).then(()=>_rc()).catch(()=>_rc());return}
+  return _rc.apply(this,arguments);
+}}
+
+/* ---------- lista com janela ---------- */
+{const _r=render;render=function(){
+  const fk=[S.tipo,S.flt,S.q,S.lm].join('|');if(fk!==V.fk){V.fk=fk;S.lim=500}
+  const x=_r.apply(this,arguments);
+  try{const n=(S.lastList||[]).length,lim=S.lim||500,box=document.getElementById('notas');
+    if(box&&n>lim)box.insertAdjacentHTML('beforeend',`<button class="btn vmore" data-vmore style="grid-column:1/-1">Mostrar mais ${Math.min(500,n-lim).toLocaleString('pt-BR')} (exibindo ${lim.toLocaleString('pt-BR')} de ${n.toLocaleString('pt-BR')})</button>`)}catch(e){}
+  return x;
+}}
+document.addEventListener('click',e=>{
+  if(!e.target.closest('[data-vmore]'))return;
+  const box=document.getElementById('notas'),st=box?box.scrollTop:0;
+  S.lim=(S.lim||500)+500;render();if(box)box.scrollTop=st;
+});
+
+/* ---------- Excel completo (processa em lotes, reaproveitando xlMontar) ---------- */
+const _exportarExcelBase=exportarExcel;
+exportarExcel=async function(){
+  if(!S.docs.some(d=>d._stub))return _exportarExcelBase();
+  if(V.exp)return;V.exp=true;V.stop=false;
+  const docs0=S.docs,ev0=S.eventos;
+  try{
+    const doc=[],it=[],au=[],evr=[];let hd=null,corte=false;const N=docs0.length,B=400;V.t=performance.now();
+    for(let i=0;i<N&&!V.stop;i+=B){
+      const full=[];for(const d of docs0.slice(i,i+B)){try{full.push(d._stub?await vFull(d,true):d)}catch(e){full.push(null)}}
+      const ok=full.filter(Boolean),sub={};ok.forEach(d=>{if(d.chave&&ev0[d.chave])sub[d.chave]=ev0[d.chave]});
+      let sh;S.docs=ok;S.eventos=sub;try{sh=xlMontar()}finally{S.docs=docs0;S.eventos=ev0}
+      if(!hd)hd=sh;
+      sh[0].rows.slice(1).forEach(r=>doc.push(r));sh[2].rows.slice(1).forEach(r=>evr.push(r));sh[3].rows.slice(1).forEach(r=>au.push(r));
+      for(const r of sh[1].rows.slice(1)){if(it.length<V.XLIT)it.push(r);else{corte=true;break}}
+      if(performance.now()-V.t>80){V.t=performance.now();vProg(`Montando Excel… ${Math.min(i+B,N).toLocaleString('pt-BR')}/${N.toLocaleString('pt-BR')} documentos`,i+B,N);await vYield()}
+    }
+    if(V.stop){toast('Exportação cancelada.');return}
+    Object.keys(ev0).forEach(k=>{if(V.ch.has(k))return;ev0[k].forEach(e=>evr.push([k,'Não','','',EVNOME[e.tpEvento]||e.desc||'',e.tpEvento,e.seq,String(e.dtEnc||e.dh||'').replace('T',' ').slice(0,19),e.nProt,e.xCorrecao||e.xJust||'']))});
+    vProg('Gerando arquivo…',0,0);await vYield();
+    const MAX=1048575,parts=[doc,it,evr,au];
+    const sheets=hd.map((s,i)=>({...s,rows:[s.rows[0]].concat(parts[i].slice(0,MAX))}));
+    const nm=`NF-e_Lab_conferencia_${new Date().toISOString().slice(0,10)}.xlsx`;
+    await saveFile(nm,xlBook(sheets),null);
+    toast(`Excel gerado: ${doc.length.toLocaleString('pt-BR')} documento(s), ${it.length.toLocaleString('pt-BR')} item(ns)${corte?` — aba Itens limitada a ${V.XLIT.toLocaleString('pt-BR')} linhas (filtre por tipo/UF/período e exporte em partes para ver o resto)`:''}.`);
+  }catch(e){console.error(e);toast('Não consegui gerar o Excel: '+e.message)}
+  finally{S.docs=docs0;S.eventos=ev0;V.exp=false;V.stop=false;vProg(null)}
+};
+
+/* ---------- PDF em lote ---------- */
+{const _pdf=gerarPDF;gerarPDF=async function(lista){
+  lista=(lista||[]).filter(d=>d.tipo!=='RES');
+  if(!lista.some(d=>d._stub))return _pdf(lista);
+  if(lista.length>V.PDFMAX){toast(`PDF em lote limitado a ${V.PDFMAX} documentos por arquivo — usei os ${V.PDFMAX} primeiros. Filtre a lista (tipo/busca) e gere em partes.`);lista=lista.slice(0,V.PDFMAX)}
+  const full=[];for(const d of lista){try{full.push(await vFull(d,true))}catch(e){}}
+  return _pdf(full);
+}}
+
+/* ---------- limpar ---------- */
+{const b=document.getElementById('btnClear');if(b){const _c=b.onclick;b.onclick=function(){vReset();return _c&&_c.apply(this,arguments)}}}
 /* ===================== NF-e Lab instalável (PWA) ===================== */
 (function(){
   const podeSW='serviceWorker' in navigator&&/^https?:$/.test(location.protocol)&&window.parent===window;
@@ -4242,7 +4568,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){const w=document.qu
 })();
 
 /* ===================== Versão e aviso de atualização (versao.json ao lado do index.html) ===================== */
-window.NFELAB_BUILD='2026-11-12.5';
+window.NFELAB_BUILD='2026-11-12.7';
 (function(){
   const b=document.querySelector('.brand');if(b)b.title='NF-e Lab · versão '+NFELAB_BUILD;
   function check(){
